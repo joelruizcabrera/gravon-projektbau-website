@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+User-agent: *
+Disallow: /admin/
+Disallow: /_nuxt/
+Disallow: /api/
+Disallow: /.nuxt/
+
+# Sitemap
+Sitemap: https://gravon-projektbau.de/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

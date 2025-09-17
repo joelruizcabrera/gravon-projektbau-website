@@ -1,0 +1,169 @@
+{
+  "nav": {
+    "home": "HOME",
+    "services": "SERVICES",
+    "projects": "REFERENCES",
+    "about": "ABOUT US",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "subtitle": "Turnkey projects with substance.",
+    "cta": "REQUEST CONSULTATION NOW",
+    "learnMore": "Learn more",
+    "scroll": "Scroll",
+    "stats": {
+      "projects": "Projects",
+      "years": "Years",
+      "employees": "Employees",
+      "volume": "Mio. €"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "From initial concept to turnkey handover - we guide you through all project phases with the highest level of professionalism and years of experience.",
+    "learnMore": "Learn more",
+    "viewAll": "View all services",
+    "generalContractor": {
+      "title": "General Contractor",
+      "description": "As a reliable general contractor, we take complete responsibility for your construction project - from planning to turnkey handover.",
+      "feature1": "Unified project responsibility",
+      "feature2": "Coordination of all trades",
+      "feature3": "Schedule and cost guarantee",
+      "feature4": "Comprehensive quality assurance"
+    },
+    "planning": {
+      "title": "Planning & Architecture",
+      "description": "Innovative planning solutions that unite functionality, aesthetics and economy in perfect balance - for future-proof buildings.",
+      "feature1": "Architectural concept development",
+      "feature2": "Technical detail planning",
+      "feature3": "Approval management",
+      "feature4": "3D visualization & BIM"
+    },
+    "projectManagement": {
+      "title": "Project Management",
+      "description": "Professional project management ensures smooth processes, optimal resource utilization and timely completion of your construction project.",
+      "feature1": "Integrated scheduling",
+      "feature2": "Continuous cost controlling",
+      "feature3": "Systematic quality control",
+      "feature4": "Proactive risk management"
+    }
+  },
+  "projects": {
+    "title": "Our References",
+    "subtitle": "Discover a selection of our successfully completed projects - each one proof of our competence and passion for excellent buildings.",
+    "viewAll": "View all projects",
+    "project1": {
+      "title": "Business Tower Frankfurt",
+      "description": "Pioneering office complex in the heart of the financial metropolis with sustainable architecture and state-of-the-art building technology.",
+      "longDescription": "The 20-story Business Tower Frankfurt combines state-of-the-art office technology with sustainable architecture. The building offers 15,000 m² of high-quality office space and has been certified to LEED Gold standard."
+    },
+    "project2": {
+      "title": "Residence Munich Maxvorstadt",
+      "description": "Exclusive residential complex in Munich's most sought-after location with 120 premium residential units and first-class amenities.",
+      "longDescription": "This luxurious residential complex in Munich's Maxvorstadt offers 120 exclusive apartments with upscale amenities. The project includes underground parking, wellness area and 24-hour concierge service."
+    },
+    "project3": {
+      "title": "LogisticHub Hamburg",
+      "description": "State-of-the-art logistics center with fully automated warehouse technology and sustainable energy supply on 25,000 m².",
+      "longDescription": "LogisticHub Hamburg sets new standards in automated warehousing. On 25,000 m², the most modern technologies are used for CO2-neutral and highly efficient logistics processes."
+    },
+    "tags": {
+      "commercial": "Commercial",
+      "office": "Office",
+      "residential": "Residential",
+      "luxury": "Premium",
+      "industrial": "Industrial",
+      "logistics": "Logistics"
+    },
+    "modal": {
+      "details": "Project Details",
+      "client": "Client",
+      "location": "Location",
+      "duration": "Duration",
+      "size": "Size",
+      "services": "Services Provided"
+    }
+  },
+  "about": {
+    "title": "About GRAVON",
+    "paragraph1": "For over 25 years, GRAVON Projektbau has stood for the highest quality, reliability and innovation in construction. As a leading general contractor, we have successfully completed over 200 demanding projects.",
+    "paragraph2": "Our interdisciplinary team of experienced architects, engineers and project managers works closely with our clients to develop customized solutions that are both functional and aesthetically convincing.",
+    "paragraph3": "Sustainability and innovation are at the heart of our work. We consistently rely on the latest construction technologies, environmentally friendly materials and energy-efficient solutions for future-proof buildings.",
+    "yearsExperience": "Years Experience",
+    "stats": {
+      "projects": "Projects",
+      "years": "Years",
+      "employees": "Experts",
+      "volume": "Mio. € Volume"
+    },
+    "learnMore": "More about us"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's realize your next project together. Contact us for a non-binding initial consultation - we look forward to your challenge.",
+    "followUs": "Follow us",
+    "address": {
+      "title": "Our Address"
+    },
+    "phone": {
+      "title": "Phone"
+    },
+    "email": {
+      "title": "Email"
+    },
+    "form": {
+      "title": "Your Project Inquiry",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Your Message",
+      "privacy": "I agree to the processing of my data according to the privacy policy",
+      "send": "SEND MESSAGE",
+      "sending": "Transmitting...",
+      "success": "Thank you for your inquiry! We will contact you within 24 hours.",
+      "error": "Sorry, an error occurred while sending. Please try again or contact us directly by phone.",
+      "firstNamePlaceholder": "Your first name",
+      "lastNamePlaceholder": "Your last name",
+      "emailPlaceholder": "your.email{'@'}company.com",
+      "phonePlaceholder": "+49 (0) 123 456 789",
+      "subjectPlaceholder": "Subject of your inquiry",
+      "messagePlaceholder": "Describe your project to us - we'd be happy to advise you..."
+    }
+  },
+  "footer": {
+    "company": {
+      "description": "GRAVON Projektbau has stood for first-class quality, absolute reliability and pioneering innovation in construction for over 25 years."
+    },
+    "services": {
+      "title": "Our Services",
+      "general": "General Contractor",
+      "planning": "Planning & Architecture",
+      "management": "Project Management",
+      "consulting": "Construction Consulting"
+    },
+    "projects": {
+      "title": "Project Areas",
+      "commercial": "Commercial Construction",
+      "residential": "Residential Construction",
+      "industrial": "Industrial Construction",
+      "infrastructure": "Infrastructure Projects"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "imprint": "Legal Notice"
+    },
+    "rights": "All rights reserved."
+  },
+  "meta": {
+    "home": {
+      "title": "GRAVON Projektbau - Plan. Build. Complete.",
+      "description": "GRAVON Projektbau - Your reliable partner for turnkey projects with substance. General contractor for demanding construction and real estate projects."
+    }
+  }
+}
