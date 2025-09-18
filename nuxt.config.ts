@@ -1,4 +1,4 @@
-// nuxt.config.ts
+// nuxt.config.ts - Vereinfachte Version zur Fehlerbehebung
 export default defineNuxtConfig({
     devtools: { enabled: true },
 
@@ -14,7 +14,7 @@ export default defineNuxtConfig({
         '~/assets/css/main.css'
     ],
 
-    // Enhanced i18n configuration with better static generation support
+    // Enhanced i18n configuration
     i18n: {
         defaultLocale: 'de',
         locales: [
@@ -31,13 +31,6 @@ export default defineNuxtConfig({
                 name: 'English',
                 file: 'en.json',
                 dir: 'ltr'
-            },
-            {
-                code: 'es',
-                iso: 'es-ES',
-                name: 'Español',
-                file: 'es.json',
-                dir: 'ltr'
             }
         ],
         lazy: true,
@@ -49,14 +42,6 @@ export default defineNuxtConfig({
             redirectOn: 'root',
             alwaysRedirect: false,
             fallbackLocale: 'de'
-        },
-        compilation: {
-            strictMessage: false,
-            escapeHtml: false
-        },
-        // Improved static generation
-        precompile: {
-            strictMessage: false
         }
     },
 
@@ -72,30 +57,14 @@ export default defineNuxtConfig({
             meta: [
                 { name: 'description', content: 'GRAVON Projektbau - Ihr zuverlässiger Partner für schlüsselfertige Projekte mit Substanz.' },
                 { name: 'format-detection', content: 'telephone=no' },
-                { name: 'theme-color', content: '#f59e0b' },
-                { name: 'msapplication-TileColor', content: '#f59e0b' },
-                { property: 'og:site_name', content: 'GRAVON Projektbau' },
-                { property: 'og:type', content: 'website' },
-                { name: 'robots', content: 'index, follow' }
+                { name: 'theme-color', content: '#f59e0b' }
             ],
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-                { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-                { rel: 'manifest', href: '/site.webmanifest' },
                 { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
                 { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
                 { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap' }
             ]
-        },
-        // Page transition configuration
-        pageTransition: {
-            name: 'page',
-            mode: 'out-in'
-        },
-        // Layout transition
-        layoutTransition: {
-            name: 'layout',
-            mode: 'out-in'
         }
     },
 
@@ -105,12 +74,6 @@ export default defineNuxtConfig({
             siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.gravon.de',
             gtag: {
                 id: process.env.NUXT_GTAG_ID || ''
-            },
-            // GSAP configuration flags
-            gsap: {
-                enableScrollTrigger: true,
-                refreshOnResize: true,
-                refreshDelay: 100
             }
         }
     },
@@ -123,85 +86,45 @@ export default defineNuxtConfig({
                 '/en',
                 '/services',
                 '/en/services',
-                '/es/services',
                 '/projects',
                 '/en/projects',
-                '/es/projects',
                 '/about',
                 '/en/about',
-                '/es/about',
                 '/contact',
                 '/en/contact',
-                '/es/contact',
                 '/imprint',
                 '/en/imprint',
-                '/es/imprint',
                 '/privacy',
                 '/en/privacy',
-                '/es/privacy',
                 '/terms',
-                '/en/terms',
-                '/es/terms'
+                '/en/terms'
             ],
             crawlLinks: true
-        },
-        // Better static asset handling
-        storage: {
-            redis: {
-                driver: 'redis',
-                // Configure if using Redis for caching
-            }
         }
     },
 
-    // Enhanced SSR configuration for better hydration
+    // Enhanced SSR configuration
     ssr: true,
 
-    // Experimental features for better performance
-    experimental: {
-        payloadExtraction: false, // Better for static generation
-        renderJsonPayloads: true,
-        typedPages: true
-    },
-
-    // Enhanced build optimization
+    // Build optimization
     build: {
-        transpile: ['gsap'], // Ensure GSAP is properly transpiled
-        analyze: process.env.ANALYZE === 'true'
+        transpile: ['gsap'] // Ensure GSAP is properly transpiled
     },
 
-    // Vite configuration for better development and build
+    // Simplified Vite configuration
     vite: {
         css: {
             devSourcemap: true
         },
-        build: {
-            cssCodeSplit: true,
-            rollupOptions: {
-                output: {
-                    manualChunks: {
-                        'gsap': ['gsap'],
-                        'vendor': ['vue', 'vue-router']
-                    }
-                }
-            }
-        },
         optimizeDeps: {
-            include: ['gsap', 'gsap/ScrollTrigger', 'gsap/TextPlugin']
+            include: ['gsap']
         }
     },
 
     // TypeScript configuration
     typescript: {
-        strict: false, // Set to true for stricter type checking
-        typeCheck: false // Enable for type checking during development
-    },
-
-    // Enhanced router options
-    router: {
-        options: {
-            scrollBehaviorType: 'smooth'
-        }
+        strict: false,
+        typeCheck: false
     },
 
     // Plugin configuration
@@ -211,90 +134,13 @@ export default defineNuxtConfig({
         '~/plugins/accessibility.client.js'
     ],
 
-    // Enhanced hooks for better static generation
-    hooks: {
-        // Better handling of GSAP in static generation
-        'render:route': (url, result, context) => {
-            // Inject GSAP initialization for static pages
-            if (result.html) {
-                result.html = result.html.replace(
-                    '</head>',
-                    `
-          <script>
-            // Prevent FOUC for GSAP animations
-            document.documentElement.style.visibility = 'visible';
-            // Initialize scroll behavior
-            if (typeof window !== 'undefined') {
-              window.scrollTo = window.scrollTo || function(x, y) {
-                window.scrollX = x;
-                window.scrollY = y;
-              };
-            }
-          </script>
-          </head>`
-                )
-            }
-        },
-
-        // Optimize static generation
-        'nitro:build:before': () => {
-            console.log('🚀 Optimizing static generation for GSAP compatibility')
-        },
-
-        // Post-build optimizations
-        'nitro:build:public-assets': (nitro) => {
-            console.log('📦 Static assets generated successfully')
-        }
-    },
-
-    // Enhanced webpack configuration for legacy support
-    webpack: {
-        extractCSS: true,
-        optimization: {
-            splitChunks: {
-                chunks: 'all',
-                cacheGroups: {
-                    vendor: {
-                        name: 'vendor',
-                        test: /[\\/]node_modules[\\/]/,
-                        chunks: 'all'
-                    },
-                    gsap: {
-                        name: 'gsap',
-                        test: /[\\/]node_modules[\\/]gsap[\\/]/,
-                        chunks: 'all',
-                        priority: 10
-                    }
-                }
-            }
-        }
-    },
-
     // Security headers
     routeRules: {
         '/**': {
             headers: {
                 'X-Content-Type-Options': 'nosniff',
                 'X-Frame-Options': 'DENY',
-                'X-XSS-Protection': '1; mode=block',
-                'Referrer-Policy': 'strict-origin-when-cross-origin',
-                'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-            }
-        },
-        // Specific rules for static assets
-        '/images/**': {
-            headers: {
-                'Cache-Control': 'public, max-age=31536000, immutable'
-            }
-        },
-        '/js/**': {
-            headers: {
-                'Cache-Control': 'public, max-age=31536000, immutable'
-            }
-        },
-        '/css/**': {
-            headers: {
-                'Cache-Control': 'public, max-age=31536000, immutable'
+                'X-XSS-Protection': '1; mode=block'
             }
         }
     },
@@ -306,5 +152,5 @@ export default defineNuxtConfig({
     },
 
     // Compatibility configuration
-    compatibilityDate: '2025-09-18'
+    compatibilityDate: '2024-11-01'
 })
