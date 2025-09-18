@@ -3,11 +3,7 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
 
     // Enhanced modules configuration
-    modules: [
-        '@nuxtjs/tailwindcss',
-        '@nuxtjs/i18n',
-        '@vueuse/nuxt'
-    ],
+    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@vueuse/nuxt', '@nuxtjs/sitemap'],
 
     // CSS Configuration
     css: [

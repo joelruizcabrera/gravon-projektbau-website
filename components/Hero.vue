@@ -59,7 +59,7 @@
     </div>
 
     <!-- Scroll Indicator -->
-    <div class="scroll-indicator absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce opacity-0">
+    <div class="scroll-indicator absolute bottom-8 mx-auto transform -translate-x-1/2 text-white animate-bounce opacity-0">
       <div class="flex flex-col items-center">
         <span class="text-sm uppercase tracking-wide mb-2">{{ $t('hero.scroll') }}</span>
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
