@@ -1,3 +1,5 @@
+// @ts-ignore-file
+
 <template>
   <div class="min-h-screen flex flex-col">
     <Header />
@@ -8,11 +10,13 @@
   </div>
 </template>
 
-<script setup>
-// Page transition configuration
-import Header from "../components/Header.vue";
-import Fotoer from "../components/Footer.vue";
+<script lang="ts" setup>
+import Header from "~/components/Header.vue"
+import Footer from "~/components/Footer.vue"
 
+const { t } = useI18n()
+
+// Page transition configuration
 definePageMeta({
   pageTransition: {
     name: 'page',
@@ -32,5 +36,22 @@ definePageMeta({
 .page-leave-to {
   opacity: 0;
   transform: translateY(20px);
+}
+
+/* Global scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+  background-color: #fef3c7;
+  color: #92400e;
 }
 </style>

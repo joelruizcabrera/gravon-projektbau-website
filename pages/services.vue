@@ -4,7 +4,7 @@
     <section class="relative py-32 bg-slate-900 text-white">
       <div class="absolute inset-0">
         <img
-            src="/images/services-hero.jpg"
+            src="/images/frankfurt-skyline.jpg"
             alt="GRAVON Services"
             class="w-full h-full object-cover opacity-30"
         />

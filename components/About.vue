@@ -41,7 +41,7 @@
         <div class="about-image">
           <div class="relative">
             <img
-                src="/images/about-team.jpg"
+                src="/images/frankfurt-skyline.jpg"
                 alt="GRAVON Team"
                 class="w-full h-auto rounded-2xl shadow-2xl"
             />

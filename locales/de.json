@@ -4,7 +4,10 @@
     "services": "LEISTUNGEN",
     "projects": "REFERENZEN",
     "about": "ÜBER UNS",
-    "contact": "KONTAKT"
+    "contact": "KONTAKT",
+    "switchLanguage": "Sprache wechseln",
+    "openMobileMenu": "Menü öffnen",
+    "closeMobileMenu": "Menü schließen"
   },
   "hero": {
     "subtitle": "Schlüsselfertige Projekte mit Substanz.",
@@ -23,96 +26,361 @@
     "subtitle": "Von der ersten Idee bis zur schlüsselfertigen Übergabe - wir begleiten Sie durch alle Projektphasen mit höchster Professionalität und langjähriger Erfahrung.",
     "learnMore": "Mehr erfahren",
     "viewAll": "Alle Leistungen ansehen",
+    "badge": "Service",
+    "included": "Inbegriffen",
+    "benefits": "Ihre Vorteile",
+    "requestQuote": "Angebot anfordern",
+    "downloadBrochure": "Broschüre herunterladen",
     "generalContractor": {
       "title": "Generalunternehmen",
       "description": "Als zuverlässiger Generalunternehmer übernehmen wir die komplette Verantwortung für Ihr Bauprojekt - von der Planung bis zur schlüsselfertigen Übergabe.",
+      "longDescription": "Als erfahrener Generalunternehmer bieten wir Ihnen die komplette Projektabwicklung aus einer Hand. Von der ersten Planungsphase bis zur finalen Übergabe koordinieren wir alle Gewerke und garantieren Ihnen höchste Qualität, Termin- und Kostensicherheit.",
       "feature1": "Einheitliche Projektverantwortung",
       "feature2": "Koordination aller Gewerke",
       "feature3": "Termin- und Kostengarantie",
-      "feature4": "Umfassende Qualitätssicherung"
+      "feature4": "Umfassende Qualitätssicherung",
+      "detailedFeature1": "Komplette Projektabwicklung aus einer Hand",
+      "detailedFeature2": "Professionelle Koordination aller Gewerke",
+      "detailedFeature3": "Verbindliche Termin- und Kostengarantie",
+      "detailedFeature4": "Lückenlose Qualitätssicherung und -kontrolle",
+      "detailedFeature5": "Umfassendes Gewährleistungsmanagement",
+      "detailedFeature6": "Transparente Kommunikation und Berichterstattung"
     },
     "planning": {
       "title": "Planung & Architektur",
       "description": "Innovative Planungslösungen, die Funktionalität, Ästhetik und Wirtschaftlichkeit in perfekter Balance vereinen - für zukunftsfähige Bauwerke.",
+      "longDescription": "Unsere erfahrenen Architekten und Planer entwickeln innovative Lösungen, die höchsten ästhetischen Ansprüchen genügen und dabei wirtschaftlich sowie funktional überzeugen. Von der ersten Skizze bis zur Ausführungsplanung.",
       "feature1": "Architektonische Konzeptentwicklung",
       "feature2": "Technische Detailplanung",
       "feature3": "Genehmigungsmanagement",
-      "feature4": "3D-Visualisierung & BIM"
+      "feature4": "3D-Visualisierung & BIM",
+      "detailedFeature1": "Innovative architektonische Konzeptentwicklung",
+      "detailedFeature2": "Detaillierte technische Planung aller Gewerke",
+      "detailedFeature3": "Professionelles Genehmigungsmanagement",
+      "detailedFeature4": "Moderne 3D-Visualisierung und BIM-Modelling",
+      "detailedFeature5": "Nachhaltige und energieeffiziente Planungsansätze",
+      "detailedFeature6": "Optimierung von Kosten und Ressourcen"
     },
     "projectManagement": {
       "title": "Projektsteuerung",
       "description": "Professionelle Projektsteuerung gewährleistet reibungslose Abläufe, optimale Ressourcennutzung und termingerechte Fertigstellung Ihres Bauvorhabens.",
+      "longDescription": "Durch systematische Projektsteuerung und -kontrolle sorgen wir für optimale Abläufe, effiziente Ressourcennutzung und die termingerechte Realisierung Ihres Bauvorhabens. Transparente Kommunikation und kontinuierliches Monitoring sind dabei unser Standard.",
       "feature1": "Integrierte Terminplanung",
       "feature2": "Kontinuierliches Kostencontrolling",
       "feature3": "Systematische Qualitätskontrolle",
-      "feature4": "Proaktives Risikomanagement"
+      "feature4": "Proaktives Risikomanagement",
+      "detailedFeature1": "Professionelle integrierte Terminplanung",
+      "detailedFeature2": "Kontinuierliches und transparentes Kostencontrolling",
+      "detailedFeature3": "Systematische Qualitätskontrolle in allen Phasen",
+      "detailedFeature4": "Proaktives Risikomanagement und -minimierung",
+      "detailedFeature5": "Regelmäßige Berichterstattung und Kommunikation",
+      "detailedFeature6": "Koordination zwischen allen Projektbeteiligten"
     },
-    "planning": "Planung & Architektur",
-    "generalContractor": "Generalunternehmen",
-    "projectManagement": "Projektsteuerung"
+    "overview": {
+      "point1": "Einheitliche Projektverantwortung",
+      "point2": "Koordination aller Gewerke",
+      "point3": "Termin- und Kostengarantie",
+      "point4": "Umfassende Qualitätssicherung",
+      "point5": "Architektonische Konzeptentwicklung",
+      "point6": "Technische Detailplanung",
+      "point7": "Genehmigungsmanagement",
+      "point8": "3D-Visualisierung & BIM",
+      "point9": "Integrierte Terminplanung",
+      "point10": "Kontinuierliches Kostencontrolling",
+      "point11": "Systematische Qualitätskontrolle",
+      "point12": "Proaktives Risikomanagement"
+    },
+    "process": {
+      "title": "Unser Projektablauf",
+      "subtitle": "Ein bewährter Prozess für erfolgreiche Projekte - von der ersten Idee bis zur schlüsselfertigen Übergabe.",
+      "duration": "Dauer",
+      "step1": {
+        "title": "Beratung & Konzept",
+        "description": "Analyse Ihrer Anforderungen und Entwicklung eines maßgeschneiderten Konzepts."
+      },
+      "step2": {
+        "title": "Planung & Genehmigung",
+        "description": "Detaillierte Planung und Abwicklung aller erforderlichen Genehmigungsverfahren."
+      },
+      "step3": {
+        "title": "Ausführung & Kontrolle",
+        "description": "Professionelle Bauausführung mit kontinuierlicher Qualitäts- und Terminüberwachung."
+      },
+      "step4": {
+        "title": "Übergabe & Service",
+        "description": "Schlüsselfertige Übergabe und umfassender After-Sales-Service."
+      }
+    },
+    "industries": {
+      "title": "Unsere Branchen",
+      "subtitle": "Wir realisieren Projekte in verschiedenen Bereichen mit branchenspezifischer Expertise.",
+      "commercial": "Gewerbebau",
+      "commercialDesc": "Bürogebäude, Einkaufszentren und Gewerbeparks",
+      "residential": "Wohnungsbau",
+      "residentialDesc": "Wohnanlagen, Mehrfamilienhäuser und Stadtquartiere",
+      "industrial": "Industriebau",
+      "industrialDesc": "Produktionshallen, Logistikzentren und Industrieanlagen",
+      "infrastructure": "Infrastruktur",
+      "infrastructureDesc": "Verkehrswege, Brücken und öffentliche Gebäude"
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "subtitle": "Antworten auf die wichtigsten Fragen zu unseren Leistungen.",
+      "q1": "Wie lange dauert ein typisches Bauprojekt?",
+      "a1": "Die Projektdauer hängt von der Größe und Komplexität ab. Kleinere Projekte dauern 6-12 Monate, größere Vorhaben 18-36 Monate. Wir erstellen für jedes Projekt einen detaillierten Terminplan.",
+      "q2": "Bieten Sie eine Kostengarantie?",
+      "a2": "Ja, als Generalunternehmer bieten wir Ihnen eine verbindliche Kostengarantie nach Vertragsabschluss. Zusätzliche Kosten entstehen nur bei Änderungswünschen Ihrerseits.",
+      "q3": "Welche Planungsleistungen sind inbegriffen?",
+      "a3": "Unsere Planungsleistungen umfassen die komplette Architektur- und Fachplanung, 3D-Visualisierung, Genehmigungsplanung sowie die Koordination aller technischen Gewerke.",
+      "q4": "Arbeiten Sie auch außerhalb Deutschlands?",
+      "a4": "Derzeit konzentrieren wir uns auf Projekte in Deutschland, Österreich und der Schweiz. Für internationale Projekte arbeiten wir mit bewährten Partnern zusammen.",
+      "q5": "Wie läuft die Qualitätssicherung ab?",
+      "a5": "Wir führen regelmäßige Qualitätskontrollen durch alle Bauphasen durch. Zusätzlich arbeiten wir mit unabhängigen Prüfern und sind nach ISO 9001 zertifiziert."
+    },
+    "cta": {
+      "title": "Bereit für Ihr Projekt?",
+      "subtitle": "Lassen Sie uns gemeinsam Ihre Vision verwirklichen. Kontaktieren Sie uns für eine unverbindliche Beratung.",
+      "contact": "Jetzt Kontakt aufnehmen",
+      "download": "Broschüre herunterladen"
+    },
+    "meta": {
+      "description": "GRAVON Projektbau Leistungen: Generalunternehmen, Planung & Architektur, Projektsteuerung. Ihr Partner für schlüsselfertige Bauprojekte."
+    }
   },
   "projects": {
     "title": "Unsere Referenzen",
     "subtitle": "Entdecken Sie eine Auswahl unserer erfolgreich realisierten Projekte - jedes ein Beweis für unsere Kompetenz und Leidenschaft für exzellente Bauwerke.",
+    "heroSubtitle": "Über 200 erfolgreich realisierte Projekte sprechen für unsere Expertise und Zuverlässigkeit.",
     "viewAll": "Alle Projekte ansehen",
-    "project1": {
-      "title": "Business Tower Frankfurt",
-      "description": "Wegweisender Bürokomplex im Herzen der Finanzmetropole mit nachhaltiger Architektur und modernster Gebäudetechnik.",
-      "longDescription": "Der 20-stöckige Business Tower Frankfurt vereint modernste Bürotechnik mit nachhaltiger Architektur. Das Gebäude bietet 15.000 m² hochwertige Bürofläche und wurde nach LEED Gold Standard zertifiziert."
-    },
-    "project2": {
-      "title": "Residenz München Maxvorstadt",
-      "description": "Exklusive Wohnanlage in Münchens gefragtester Lage mit 120 Premium-Wohneinheiten und erstklassiger Ausstattung.",
-      "longDescription": "Diese luxuriöse Wohnanlage in der Münchner Maxvorstadt bietet 120 exklusive Apartments mit gehobener Ausstattung. Das Projekt umfasst Tiefgarage, Wellness-Bereich und 24h-Concierge-Service."
-    },
-    "project3": {
-      "title": "LogisticHub Hamburg",
-      "description": "Hochmodernes Logistikzentrum mit vollautomatisierter Lagertechnik und nachhaltiger Energieversorgung auf 25.000 m².",
-      "longDescription": "Das LogisticHub Hamburg setzt neue Maßstäbe in der automatisierten Lagerhaltung. Auf 25.000 m² werden modernste Technologien für CO2-neutrale und hocheffiziente Logistikprozesse eingesetzt."
+    "loadMore": "Weitere Projekte laden",
+    "loading": "Lädt...",
+    "categories": {
+      "all": "Alle Projekte",
+      "commercial": "Gewerbebau",
+      "residential": "Wohnungsbau",
+      "industrial": "Industriebau",
+      "infrastructure": "Infrastruktur"
     },
     "tags": {
-      "commercial": "Gewerbe",
       "office": "Büro",
-      "residential": "Wohnen",
-      "luxury": "Premium",
-      "industrial": "Industrie",
-      "logistics": "Logistik"
+      "modern": "Modern",
+      "sustainable": "Nachhaltig",
+      "luxury": "Luxus",
+      "apartments": "Apartments",
+      "premium": "Premium",
+      "logistics": "Logistik",
+      "automated": "Automatisiert",
+      "retail": "Einzelhandel",
+      "entertainment": "Entertainment",
+      "bridge": "Brücke",
+      "engineering": "Ingenieurbau",
+      "public": "Öffentlich",
+      "healthcare": "Gesundheitswesen",
+      "complex": "Komplex"
     },
     "modal": {
+      "description": "Projektbeschreibung",
+      "challenges": "Herausforderungen",
+      "gallery": "Bildergalerie",
       "details": "Projektdetails",
       "client": "Bauherr",
       "location": "Standort",
       "duration": "Bauzeit",
       "size": "Größe",
-      "services": "Erbrachte Leistungen"
+      "year": "Jahr",
+      "services": "Erbrachte Leistungen",
+      "tags": "Kategorien",
+      "contact": "Ähnliches Projekt anfragen"
+    },
+    "stats": {
+      "title": "Unsere Erfolgsbilanz",
+      "subtitle": "Zahlen, die für sich sprechen - eine Übersicht unserer realisierten Projekte.",
+      "completed": "Abgeschlossene Projekte",
+      "volume": "Mio. € Bauvolumen",
+      "years": "Jahre Erfahrung",
+      "satisfaction": "% Kundenzufriedenheit"
+    },
+    "project1": {
+      "title": "Business Tower Frankfurt",
+      "description": "Wegweisender Bürokomplex im Herzen der Finanzmetropole mit nachhaltiger Architektur und modernster Gebäudetechnik.",
+      "longDescription": "Der 20-stöckige Business Tower Frankfurt vereint modernste Bürotechnik mit nachhaltiger Architektur. Das Gebäude bietet 15.000 m² hochwertige Bürofläche und wurde nach LEED Gold Standard zertifiziert.",
+      "fullDescription": "Der Business Tower Frankfurt ist ein wegweisendes Projekt im Herzen der Finanzmetropole. Mit seiner nachhaltigen Architektur und modernsten Gebäudetechnik setzt er neue Maßstäbe für ökologisches Bauen in urbanen Räumen. Das 20-stöckige Hochhaus bietet auf 15.000 m² Nutzfläche hochwertige Büroräume für internationale Unternehmen.",
+      "challenge1": "Integration modernster Smart-Building-Technologie",
+      "challenge2": "LEED Gold Zertifizierung erreichen",
+      "challenge3": "Bauen im laufenden Stadtbetrieb"
+    },
+    "project2": {
+      "title": "Residenz München Maxvorstadt",
+      "description": "Exklusive Wohnanlage in Münchens gefragtester Lage mit 120 Premium-Wohneinheiten und erstklassiger Ausstattung.",
+      "longDescription": "Diese luxuriöse Wohnanlage in der Münchner Maxvorstadt bietet 120 exklusive Apartments mit gehobener Ausstattung. Das Projekt umfasst Tiefgarage, Wellness-Bereich und 24h-Concierge-Service.",
+      "fullDescription": "Die Residenz München Maxvorstadt ist ein Luxusprojekt in einer der begehrtesten Lagen Münchens. Die Wohnanlage mit 120 exklusiven Apartments verbindet klassische Münchner Architektur mit modernstem Wohnkomfort. Jede Wohnung verfügt über hochwertige Ausstattung und großzügige Balkone oder Terrassen.",
+      "challenge1": "Denkmalschutzauflagen berücksichtigen",
+      "challenge2": "Luxuriöse Ausstattung in historischem Umfeld",
+      "challenge3": "Lärmschutz in zentraler Innenstadtlage"
+    },
+    "project3": {
+      "title": "LogisticHub Hamburg",
+      "description": "Hochmodernes Logistikzentrum mit vollautomatisierter Lagertechnik und nachhaltiger Energieversorgung auf 25.000 m².",
+      "longDescription": "Das LogisticHub Hamburg setzt neue Maßstäbe in der automatisierten Lagerhaltung. Auf 25.000 m² werden modernste Technologien für CO2-neutrale und hocheffiziente Logistikprozesse eingesetzt.",
+      "fullDescription": "Das LogisticHub Hamburg ist ein Meilenstein moderner Logistikarchitektur. Mit vollautomatisierter Lagertechnik und nachhaltiger Energieversorgung durch Solaranlagen und Geothermie erreicht das Zentrum CO2-Neutralität. Die intelligente Gebäudetechnik optimiert alle Prozesse für maximale Effizienz.",
+      "challenge1": "Integration komplexer Automatisierungstechnik",
+      "challenge2": "CO2-neutrale Energieversorgung realisieren",
+      "challenge3": "24/7 Betrieb während der Bauphase"
+    },
+    "project4": {
+      "title": "Shopping Center Berlin",
+      "description": "Modernes Einkaufszentrum mit innovativem Einzelhandelskonzept und Unterhaltungsbereich auf 45.000 m².",
+      "longDescription": "Ein zukunftsweisendes Einkaufszentrum in Berlin mit innovativen Einzelhandelskonzepten, einem großen Entertainmentbereich und nachhaltiger Gebäudetechnik.",
+      "fullDescription": "Das Shopping Center Berlin verbindet Einzelhandel, Gastronomie und Entertainment unter einem Dach. Mit 45.000 m² Fläche bietet es Platz für über 150 Geschäfte, ein Multiplex-Kino und einen Food Court. Das nachhaltige Energiekonzept macht es zu einem der umweltfreundlichsten Einkaufszentren Deutschlands.",
+      "challenge1": "Komplexe Infrastruktur für verschiedene Nutzungen",
+      "challenge2": "Hohe Besucherströme während der Bauphase managen"
+    },
+    "project5": {
+      "title": "Rheinbrücke Köln",
+      "description": "Neue Straßen- und Bahnbrücke über den Rhein mit innovativer Ingenieurskunst und nachhaltigen Materialien.",
+      "longDescription": "Eine neue kombinierte Straßen- und Bahnbrücke über den Rhein in Köln, die mit innovativer Ingenieurskunst und nachhaltigen Materialien realisiert wurde.",
+      "fullDescription": "Die neue Rheinbrücke Köln ist ein Meisterwerk moderner Ingenieurskunst. Die 1.200 Meter lange Brücke kombiniert Straßen- und Bahnverkehr und wurde mit nachhaltigen Materialien und innovativen Bautechniken realisiert. Sie verbessert die Verkehrsinfrastruktur der Region erheblich.",
+      "challenge1": "Bauen über einem der meistbefahrenen Wasserwege Europas",
+      "challenge2": "Minimale Beeinträchtigung des Schiffsverkehrs"
+    },
+    "project6": {
+      "title": "Klinikum Stuttgart Neubau",
+      "description": "Hochmoderner Klinikneubau mit neuester Medizintechnik und patientenorientierter Architektur auf 32.000 m².",
+      "longDescription": "Ein neues Klinikgebäude in Stuttgart mit modernster Medizintechnik, patientenorientierter Architektur und energieeffizienten Gebäudesystemen.",
+      "fullDescription": "Der Neubau des Klinikums Stuttgart setzt neue Standards im Krankenhausbau. Auf 32.000 m² entstanden moderne Behandlungsräume, Operationssäle und Patientenzimmer. Die Architektur orientiert sich an den Bedürfnissen von Patienten und Personal, während modernste Medizintechnik integriert wurde.",
+      "challenge1": "Hygieneanforderungen in allen Bauphasen",
+      "challenge2": "Komplexe technische Infrastruktur für Medizintechnik",
+      "challenge3": "Bauen im laufenden Krankenhausbetrieb"
+    },
+    "meta": {
+      "description": "GRAVON Projektbau Referenzen: Über 200 erfolgreich realisierte Projekte in Gewerbe-, Wohnungs-, Industrie- und Infrastrukturbau."
     }
   },
   "about": {
     "title": "Über GRAVON",
+    "heroSubtitle": "Seit über 25 Jahren Ihr Partner für anspruchsvolle Bauprojekte - mit Leidenschaft, Expertise und Innovation.",
     "paragraph1": "Seit über 25 Jahren steht GRAVON Projektbau für höchste Qualität, Zuverlässigkeit und Innovation im Bauwesen. Als führendes Generalunternehmen haben wir über 200 anspruchsvolle Projekte erfolgreich realisiert.",
     "paragraph2": "Unser interdisziplinäres Team aus erfahrenen Architekten, Ingenieuren und Projektmanagern arbeitet eng mit unseren Kunden zusammen, um maßgeschneiderte Lösungen zu entwickeln, die sowohl funktional als auch ästhetisch überzeugen.",
     "paragraph3": "Nachhaltigkeit und Innovation stehen im Mittelpunkt unserer Arbeit. Wir setzen konsequent auf modernste Bautechnologien, umweltfreundliche Materialien und energieeffiziente Lösungen für zukunftsfähige Gebäude.",
     "yearsExperience": "Jahre Erfahrung",
-    "stats": {
-      "projects": "Projekte",
-      "years": "Jahre",
-      "employees": "Experten",
-      "volume": "Mio. € Volumen"
+    "story": {
+      "title": "Unsere Geschichte",
+      "paragraph1": "1998 gründeten Dr. Michael Gravon und sein Team GRAVON Projektbau mit der Vision, Bauprojekte auf höchstem Niveau zu realisieren. Was als kleines Planungsbüro in Frankfurt begann, entwickelte sich über die Jahre zu einem der führenden Generalunternehmen Deutschlands.",
+      "paragraph2": "Der Schlüssel unseres Erfolgs liegt in der Kombination aus traditionellem Handwerk und innovativen Technologien. Wir haben uns stets an den neuesten Entwicklungen orientiert und dabei unsere Grundwerte - Qualität, Zuverlässigkeit und Kundennähe - nie aus den Augen verloren.",
+      "paragraph3": "Heute beschäftigen wir über 50 qualifizierte Mitarbeiter an drei Standorten und haben ein Bauvolumen von über 500 Millionen Euro realisiert. Unsere Projekte prägen das Stadtbild deutscher Metropolen und setzen Maßstäbe für nachhaltiges Bauen."
     },
-    "learnMore": "Mehr über uns"
+    "timeline": {
+      "founded": "Gründung von GRAVON Projektbau in Frankfurt",
+      "expansion": "Expansion nach München und Hamburg",
+      "digital": "Digitalisierung und BIM-Einführung",
+      "today": "Über 200 Projekte und 500 Mio. € Bauvolumen"
+    },
+    "team": {
+      "title": "Unser Führungsteam",
+      "subtitle": "Erfahrene Experten mit Leidenschaft für exzellente Bauprojekte",
+      "ceo": {
+        "position": "Geschäftsführer",
+        "description": "Bauingenieur mit über 30 Jahren Branchenerfahrung und Spezialist für komplexe Großprojekte."
+      },
+      "architect": {
+        "position": "Leitende Architektin",
+        "description": "Spezialistin für nachhaltige Architektur und innovative Planungskonzepte mit internationalem Renommee."
+      },
+      "pm": {
+        "position": "Leiter Projektmanagement",
+        "description": "Experte für Projektsteuerung und Terminplanung mit ausgeprägtem Fokus auf Qualität und Effizienz."
+      }
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "subtitle": "Die Grundprinzipien, die unser Handeln bestimmen und unseren Erfolg ausmachen.",
+      "quality": {
+        "title": "Qualität",
+        "description": "Höchste Standards in allen Projektphasen - von der Planung bis zur Fertigstellung."
+      },
+      "sustainability": {
+        "title": "Nachhaltigkeit",
+        "description": "Umweltfreundliche und energieeffiziente Lösungen für zukunftsfähige Gebäude."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Einsatz modernster Technologien und Verfahren für optimale Projektergebnisse."
+      },
+      "partnership": {
+        "title": "Partnerschaft",
+        "description": "Langfristige Kundenbeziehungen auf Basis von Vertrauen und Zuverlässigkeit."
+      }
+    },
+    "stats": {
+      "title": "Zahlen & Fakten",
+      "subtitle": "Unsere Erfolgsbilanz in Zahlen - ein Beweis für Kompetenz und Zuverlässigkeit.",
+      "projects": "Projekte",
+      "projectsDesc": "Erfolgreich abgeschlossen",
+      "years": "Jahre",
+      "yearsDesc": "Branchenerfahrung",
+      "employees": "Experten",
+      "employeesDesc": "Qualifizierte Mitarbeiter",
+      "volume": "Mio. € Volumen",
+      "volumeDesc": "Realisiertes Bauvolumen"
+    },
+    "certifications": {
+      "title": "Zertifizierungen & Standards",
+      "subtitle": "Unsere Qualifikationen und Zertifizierungen bestätigen unseren hohen Qualitätsanspruch.",
+      "iso9001": "Qualitätsmanagement nach ISO 9001",
+      "iso14001": "Umweltmanagement nach ISO 14001",
+      "dgnb": "Zertifizierung für nachhaltiges Bauen",
+      "vbi": "Mitgliedschaft im Verband Beratender Ingenieure"
+    },
+    "cta": {
+      "title": "Werden Sie unser nächster Erfolg",
+      "subtitle": "Lassen Sie uns gemeinsam Ihr Projekt verwirklichen. Mit über 25 Jahren Erfahrung sind wir Ihr idealer Partner.",
+      "contact": "Jetzt Kontakt aufnehmen",
+      "projects": "Unsere Projekte ansehen"
+    },
+    "learnMore": "Mehr über uns",
+    "meta": {
+      "description": "Über GRAVON Projektbau: 25+ Jahre Erfahrung, 200+ Projekte, 50+ Experten. Ihr zuverlässiger Partner für anspruchsvolle Bauprojekte."
+    }
   },
   "contact": {
     "title": "Kontakt",
     "subtitle": "Lassen Sie uns gemeinsam Ihr nächstes Projekt verwirklichen. Kontaktieren Sie uns für eine unverbindliche Erstberatung - wir freuen uns auf Ihre Herausforderung.",
     "followUs": "Folgen Sie uns",
+    "info": {
+      "title": "Kontaktinformationen"
+    },
     "address": {
       "title": "Unsere Adresse"
     },
     "phone": {
-      "title": "Telefon"
+      "title": "Telefon",
+      "hours": "Mo-Fr: 8:00 - 18:00 Uhr"
     },
     "email": {
       "title": "E-Mail"
+    },
+    "map": {
+      "title": "Standort",
+      "placeholder": "Interaktive Karte wird hier geladen"
+    },
+    "locations": {
+      "title": "Unsere Standorte",
+      "subtitle": "GRAVON ist an drei strategischen Standorten in Deutschland vertreten.",
+      "frankfurt": {
+        "title": "Frankfurt am Main",
+        "subtitle": "Hauptsitz",
+        "description": "Unser Hauptsitz im Herzen der Finanzmetropole - zentral gelegen für Projekte in ganz Deutschland."
+      },
+      "munich": {
+        "title": "München",
+        "subtitle": "Süddeutschland",
+        "description": "Unser Standort für Bayern und den süddeutschen Raum mit Fokus auf Wohn- und Gewerbeprojekte."
+      },
+      "hamburg": {
+        "title": "Hamburg",
+        "subtitle": "Norddeutschland",
+        "description": "Hanseatische Kompetenz für Norddeutschland mit Schwerpunkt Logistik und Industriebau."
+      }
     },
     "form": {
       "title": "Ihre Projektanfrage",
@@ -120,9 +388,19 @@
       "lastName": "Nachname",
       "email": "E-Mail-Adresse",
       "phone": "Telefonnummer",
+      "company": "Unternehmen",
+      "companyPlaceholder": "Ihr Unternehmen",
+      "projectType": "Projekttyp",
+      "selectProjectType": "Projekttyp wählen",
+      "projectTypes": {
+        "commercial": "Gewerbebau",
+        "residential": "Wohnungsbau",
+        "industrial": "Industriebau",
+        "infrastructure": "Infrastruktur"
+      },
       "subject": "Betreff",
       "message": "Ihre Nachricht",
-      "privacy": "Ich stimme der Verarbeitung meiner Daten gemäß Datenschutzerklärung zu",
+      "privacy": "Ich stimme der Verarbeitung meiner Daten gemäß",
       "send": "NACHRICHT SENDEN",
       "sending": "Wird übertragen...",
       "success": "Vielen Dank für Ihre Anfrage! Wir melden uns innerhalb von 24 Stunden bei Ihnen zurück.",
@@ -132,12 +410,24 @@
       "emailPlaceholder": "ihre.email{'@'}unternehmen.de",
       "phonePlaceholder": "+49 (0) 123 456 789",
       "subjectPlaceholder": "Betreff Ihrer Anfrage",
-      "messagePlaceholder": "Beschreiben Sie uns Ihr Projekt - wir beraten Sie gerne..."
+      "messagePlaceholder": "Beschreiben Sie uns Ihr Projekt - wir beraten Sie gerne...",
+      "errors": {
+        "firstNameRequired": "Vorname ist erforderlich",
+        "lastNameRequired": "Nachname ist erforderlich",
+        "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "subjectRequired": "Betreff ist erforderlich",
+        "messageRequired": "Nachricht ist erforderlich",
+        "privacyRequired": "Bitte stimmen Sie der Datenschutzerklärung zu"
+      }
+    },
+    "meta": {
+      "description": "Kontakt zu GRAVON Projektbau: Telefonisch, per E-Mail oder über unser Kontaktformular. Wir beraten Sie gerne zu Ihrem Bauprojekt."
     }
   },
   "footer": {
     "company": {
-      "description": "GRAVON Projektbau steht seit über 25 Jahren für erstklassige Qualität, absolute Zuverlässigkeit und wegweisende Innovation im Bauwesen."
+      "description": "GRAVON Projektbau steht seit über 25 Jahren für erstklassige Qualität, absolute Zuverlässigkeit und wegweisende Innovation im Bauwesen.",
+      "certifications": "Zertifizierungen"
     },
     "services": {
       "title": "Unsere Leistungen",
@@ -154,14 +444,261 @@
       "infrastructure": "Infrastrukturprojekte"
     },
     "contact": {
-      "title": "Kontakt"
+      "title": "Kontakt",
+      "cta": "Projekt anfragen"
+    },
+    "newsletter": {
+      "title": "Newsletter abonnieren",
+      "subtitle": "Bleiben Sie auf dem Laufenden über unsere neuesten Projekte und Branchennews.",
+      "placeholder": "Ihre E-Mail-Adresse",
+      "subscribe": "Abonnieren",
+      "subscribing": "Wird gesendet...",
+      "disclaimer": "Sie können sich jederzeit wieder abmelden. Datenschutz"
     },
     "legal": {
       "privacy": "Datenschutz",
       "terms": "AGB",
-      "imprint": "Impressum"
+      "imprint": "Impressum",
+      "sitemap": "Sitemap"
     },
-    "rights": "Alle Rechte vorbehalten."
+    "rights": "Alle Rechte vorbehalten.",
+    "backToTop": "Nach oben"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "subtitle": "Ihre Privatsphäre ist uns wichtig. Hier erfahren Sie, wie wir mit Ihren Daten umgehen.",
+    "intro": {
+      "title": "Einleitung",
+      "content1": "Wir freuen uns über Ihr Interesse an unserem Unternehmen. Der Schutz Ihrer persönlichen Daten ist uns sehr wichtig. In dieser Datenschutzerklärung informieren wir Sie über die Verarbeitung personenbezogener Daten bei der Nutzung unserer Website.",
+      "content2": "Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen."
+    },
+    "responsible": {
+      "title": "Verantwortlicher"
+    },
+    "collection": {
+      "title": "Datenerfassung",
+      "website": {
+        "title": "Website-Besuch",
+        "content": "Beim Besuch unserer Website werden automatisch Informationen an den Server unserer Website gesendet. Diese Informationen werden temporär in einem sogenannten Logfile gespeichert."
+      },
+      "contact": {
+        "title": "Kontaktformular",
+        "content": "Bei der Nutzung unseres Kontaktformulars erheben wir personenbezogene Daten nur in dem Umfang, den Sie uns freiwillig mitteilen."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "Unsere Website verwendet Cookies. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden."
+      }
+    },
+    "usage": {
+      "title": "Verwendung der Daten",
+      "purpose1": "Bearbeitung Ihrer Anfragen und Kommunikation",
+      "purpose2": "Verbesserung unserer Website und Services",
+      "purpose3": "Erfüllung rechtlicher Verpflichtungen",
+      "purpose4": "Schutz vor Missbrauch und Betrug"
+    },
+    "rights": {
+      "title": "Ihre Rechte",
+      "access": {
+        "title": "Auskunftsrecht",
+        "content": "Sie haben das Recht, Auskunft über die zu Ihrer Person gespeicherten Daten zu erhalten."
+      },
+      "correction": {
+        "title": "Berichtigungsrecht",
+        "content": "Sie haben das Recht, unrichtige Daten korrigieren zu lassen."
+      },
+      "deletion": {
+        "title": "Löschungsrecht",
+        "content": "Sie haben das Recht auf Löschung Ihrer personenbezogenen Daten."
+      },
+      "objection": {
+        "title": "Widerspruchsrecht",
+        "content": "Sie haben das Recht, der Verarbeitung Ihrer Daten zu widersprechen."
+      }
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "Bei Fragen zum Datenschutz können Sie sich jederzeit an unseren Datenschutzbeauftragten wenden:",
+      "dpo": "Datenschutzbeauftragter"
+    },
+    "lastUpdated": "Letzte Aktualisierung",
+    "meta": {
+      "description": "Datenschutzerklärung von GRAVON Projektbau - Informationen zum Umgang mit Ihren personenbezogenen Daten."
+    }
+  },
+  "imprint": {
+    "title": "Impressum",
+    "subtitle": "Rechtliche Angaben zu GRAVON Projektbau GmbH gemäß § 5 TMG.",
+    "company": {
+      "title": "Unternehmensangaben"
+    },
+    "legal": {
+      "title": "Rechtliche Angaben",
+      "management": "Geschäftsführung",
+      "register": "Handelsregister",
+      "vat": "Umsatzsteuer-ID",
+      "chamber": "Kammer"
+    },
+    "locations": {
+      "title": "Weitere Standorte",
+      "munich": "Büro München",
+      "hamburg": "Büro Hamburg"
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "content": {
+        "title": "Haftung für Inhalte",
+        "text1": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.",
+        "text2": "Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht unter allen Umständen verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen."
+      },
+      "links": {
+        "title": "Haftung für Links",
+        "text1": "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.",
+        "text2": "Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen."
+      },
+      "copyright": {
+        "title": "Urheberrecht",
+        "text1": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.",
+        "text2": "Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+      }
+    },
+    "dispute": {
+      "title": "Streitbeilegung",
+      "content": "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+    },
+    "legalContact": {
+      "title": "Kontakt für rechtliche Fragen",
+      "content": "Für rechtliche Fragen und Anliegen wenden Sie sich bitte an:"
+    },
+    "lastUpdated": "Letzte Aktualisierung",
+    "meta": {
+      "description": "Impressum von GRAVON Projektbau - Rechtliche Angaben und Kontaktinformationen des Unternehmens."
+    }
+  },
+  "terms": {
+    "title": "Allgemeine Geschäftsbedingungen",
+    "subtitle": "Unsere Geschäftsbedingungen für Bau- und Planungsleistungen.",
+    "intro": {
+      "title": "Einleitung",
+      "content1": "Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge über Bau- und Planungsleistungen der GRAVON Projektbau GmbH.",
+      "content2": "Abweichende Bedingungen des Auftraggebers werden nur wirksam, wenn wir diesen ausdrücklich schriftlich zustimmen."
+    },
+    "scope": {
+      "title": "Geltungsbereich",
+      "paragraph1": "Diese AGB gelten für alle Leistungen der GRAVON Projektbau GmbH im Bereich Generalunternehmen, Planung und Projektsteuerung.",
+      "paragraph2": "Sie gelten auch für künftige Geschäftsbeziehungen, ohne dass wir gesondert auf sie hinweisen müssen.",
+      "paragraph3": "Änderungen und Ergänzungen dieser AGB bedürfen der Schriftform."
+    },
+    "contract": {
+      "title": "Vertragsabschluss",
+      "paragraph1": "Der Vertragsabschluss erfolgt durch unser schriftliches Angebot und dessen schriftliche Annahme durch den Auftraggeber.",
+      "paragraph2": "Die Projektabwicklung erfolgt in folgenden Phasen:",
+      "phases": {
+        "title": "Projektphasen",
+        "phase1": "Bedarfsplanung und Vorentwurf",
+        "phase2": "Entwurfs- und Genehmigungsplanung",
+        "phase3": "Ausführungsplanung und Ausschreibung",
+        "phase4": "Bauausführung und Objektüberwachung"
+      }
+    },
+    "services": {
+      "title": "Leistungsumfang",
+      "planning": {
+        "title": "Planungsleistungen",
+        "item1": "Architektonische Entwürfe",
+        "item2": "Technische Planung",
+        "item3": "Genehmigungsverfahren",
+        "item4": "3D-Visualisierung"
+      },
+      "execution": {
+        "title": "Ausführungsleistungen",
+        "item1": "Koordination aller Gewerke",
+        "item2": "Qualitätskontrolle",
+        "item3": "Terminüberwachung",
+        "item4": "Abnahme und Übergabe"
+      }
+    },
+    "payment": {
+      "title": "Preise und Zahlung",
+      "paragraph1": "Unsere Preise verstehen sich zuzüglich der gesetzlichen Mehrwertsteuer.",
+      "paragraph2": "Die Zahlung erfolgt nach Rechnungsstellung innerhalb von 14 Tagen ohne Abzug.",
+      "schedule": {
+        "title": "Zahlungsplan",
+        "item1": "30% bei Vertragsabschluss",
+        "item2": "40% bei Baubeginn",
+        "item3": "25% bei Rohbaufertigstellung",
+        "item4": "5% nach Abnahme"
+      }
+    },
+    "deadlines": {
+      "title": "Termine und Fristen",
+      "paragraph1": "Vereinbarte Termine sind nur dann verbindlich, wenn sie ausdrücklich als solche bezeichnet werden.",
+      "paragraph2": "Verzögerungen durch höhere Gewalt oder unvorhersehbare Umstände gehen nicht zu unseren Lasten.",
+      "paragraph3": "Bei Terminverzug sind wir berechtigt, eine angemessene Fristverlängerung zu verlangen."
+    },
+    "warranty": {
+      "title": "Gewährleistung",
+      "paragraph1": "Wir gewährleisten unsere Leistungen entsprechend den gesetzlichen Bestimmungen.",
+      "paragraph2": "Die Gewährleistungsfristen richten sich nach der Art der erbrachten Leistung:",
+      "periods": {
+        "title": "Gewährleistungsfristen",
+        "building": "Bauwerke: 5 Jahre",
+        "technical": "Technische Anlagen: 2 Jahre",
+        "equipment": "Ausstattung: 1 Jahr"
+      }
+    },
+    "liability": {
+      "title": "Haftung",
+      "paragraph1": "Unsere Haftung für Schäden ist auf Vorsatz und grobe Fahrlässigkeit beschränkt.",
+      "paragraph2": "Bei leichter Fahrlässigkeit haften wir nur bei Verletzung wesentlicher Vertragspflichten.",
+      "paragraph3": "Die Haftung ist der Höhe nach auf die typischen und vorhersehbaren Schäden begrenzt."
+    },
+    "insurance": {
+      "title": "Versicherung",
+      "liability": {
+        "title": "Betriebshaftpflicht",
+        "amount": "10 Mio. €"
+      },
+      "professional": {
+        "title": "Berufshaftpflicht",
+        "amount": "5 Mio. €"
+      },
+      "construction": {
+        "title": "Bauleistungsversicherung",
+        "amount": "Projektspezifisch"
+      }
+    },
+    "final": {
+      "title": "Schlussbestimmungen",
+      "law": "Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts.",
+      "court": "Gerichtsstand ist Frankfurt am Main.",
+      "severability": "Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit des übrigen Vertrages unberührt."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "Bei Fragen zu diesen AGB wenden Sie sich an:"
+    },
+    "lastUpdated": "Letzte Aktualisierung",
+    "meta": {
+      "description": "Allgemeine Geschäftsbedingungen von GRAVON Projektbau für Bau- und Planungsleistungen."
+    }
+  },
+  "error": {
+    "404": {
+      "title": "Seite nicht gefunden",
+      "message": "Die angeforderte Seite existiert nicht oder wurde verschoben. Überprüfen Sie die URL oder kehren Sie zur Startseite zurück."
+    },
+    "500": {
+      "title": "Serverfehler",
+      "message": "Es ist ein unerwarteter Fehler aufgetreten. Unser Team wurde benachrichtigt und arbeitet an einer Lösung."
+    },
+    "generic": {
+      "title": "Ein Fehler ist aufgetreten",
+      "message": "Entschuldigung, etwas ist schief gelaufen. Bitte versuchen Sie es erneut."
+    },
+    "tryAgain": "Erneut versuchen",
+    "goHome": "Zur Startseite",
+    "needHelp": "Benötigen Sie Hilfe? Kontaktieren Sie uns:"
   },
   "meta": {
     "home": {

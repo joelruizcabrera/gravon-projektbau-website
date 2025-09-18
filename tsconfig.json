@@ -1,0 +1,7 @@
+{
+  "files": [],
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "types": ["node"]
+  }
+}

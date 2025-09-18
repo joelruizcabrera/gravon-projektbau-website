@@ -1,14 +1,45 @@
 User-agent: *
 Allow: /
 
+# Block admin and api areas
 User-agent: *
 Disallow: /admin/
 Disallow: /_nuxt/
 Disallow: /api/
 Disallow: /.nuxt/
+Disallow: /.well-known/
+
+# Block legal pages from indexing
+User-agent: *
+Disallow: /privacy
+Disallow: /terms
+Disallow: /imprint
+Disallow: /en/privacy
+Disallow: /en/terms
+Disallow: /en/imprint
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block specific bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
 
 # Sitemap
-Sitemap: https://gravon-projektbau.de/sitemap.xml
+Sitemap: https://www.gravon.de/sitemap.xml
 
-# Crawl-delay
+# Crawl-delay for general bots
 Crawl-delay: 1
+
+# Cache directive
+Cache-Control: public, max-age=86400

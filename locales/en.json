@@ -4,7 +4,10 @@
     "services": "SERVICES",
     "projects": "REFERENCES",
     "about": "ABOUT US",
-    "contact": "CONTACT"
+    "contact": "CONTACT",
+    "switchLanguage": "Switch language",
+    "openMobileMenu": "Open menu",
+    "closeMobileMenu": "Close menu"
   },
   "hero": {
     "subtitle": "Turnkey projects with substance.",
@@ -23,93 +26,361 @@
     "subtitle": "From initial concept to turnkey handover - we guide you through all project phases with the highest level of professionalism and years of experience.",
     "learnMore": "Learn more",
     "viewAll": "View all services",
+    "badge": "Service",
+    "included": "Included",
+    "benefits": "Your Benefits",
+    "requestQuote": "Request Quote",
+    "downloadBrochure": "Download Brochure",
     "generalContractor": {
       "title": "General Contractor",
       "description": "As a reliable general contractor, we take complete responsibility for your construction project - from planning to turnkey handover.",
+      "longDescription": "As an experienced general contractor, we offer you complete project management from a single source. From the initial planning phase to final handover, we coordinate all trades and guarantee you the highest quality, schedule and cost security.",
       "feature1": "Unified project responsibility",
       "feature2": "Coordination of all trades",
       "feature3": "Schedule and cost guarantee",
-      "feature4": "Comprehensive quality assurance"
+      "feature4": "Comprehensive quality assurance",
+      "detailedFeature1": "Complete project management from a single source",
+      "detailedFeature2": "Professional coordination of all trades",
+      "detailedFeature3": "Binding schedule and cost guarantee",
+      "detailedFeature4": "Comprehensive quality assurance and control",
+      "detailedFeature5": "Comprehensive warranty management",
+      "detailedFeature6": "Transparent communication and reporting"
     },
     "planning": {
       "title": "Planning & Architecture",
       "description": "Innovative planning solutions that unite functionality, aesthetics and economy in perfect balance - for future-proof buildings.",
+      "longDescription": "Our experienced architects and planners develop innovative solutions that meet the highest aesthetic standards while being economical and functional. From initial sketch to detailed execution planning.",
       "feature1": "Architectural concept development",
       "feature2": "Technical detail planning",
       "feature3": "Approval management",
-      "feature4": "3D visualization & BIM"
+      "feature4": "3D visualization & BIM",
+      "detailedFeature1": "Innovative architectural concept development",
+      "detailedFeature2": "Detailed technical planning of all trades",
+      "detailedFeature3": "Professional approval management",
+      "detailedFeature4": "Modern 3D visualization and BIM modeling",
+      "detailedFeature5": "Sustainable and energy-efficient planning approaches",
+      "detailedFeature6": "Optimization of costs and resources"
     },
     "projectManagement": {
       "title": "Project Management",
       "description": "Professional project management ensures smooth processes, optimal resource utilization and timely completion of your construction project.",
+      "longDescription": "Through systematic project management and control, we ensure optimal processes, efficient resource utilization and timely realization of your construction project. Transparent communication and continuous monitoring are our standard.",
       "feature1": "Integrated scheduling",
       "feature2": "Continuous cost controlling",
       "feature3": "Systematic quality control",
-      "feature4": "Proactive risk management"
+      "feature4": "Proactive risk management",
+      "detailedFeature1": "Professional integrated scheduling",
+      "detailedFeature2": "Continuous and transparent cost controlling",
+      "detailedFeature3": "Systematic quality control in all phases",
+      "detailedFeature4": "Proactive risk management and minimization",
+      "detailedFeature5": "Regular reporting and communication",
+      "detailedFeature6": "Coordination between all project participants"
+    },
+    "overview": {
+      "point1": "Unified project responsibility",
+      "point2": "Coordination of all trades",
+      "point3": "Schedule and cost guarantee",
+      "point4": "Comprehensive quality assurance",
+      "point5": "Architectural concept development",
+      "point6": "Technical detail planning",
+      "point7": "Approval management",
+      "point8": "3D visualization & BIM",
+      "point9": "Integrated scheduling",
+      "point10": "Continuous cost controlling",
+      "point11": "Systematic quality control",
+      "point12": "Proactive risk management"
+    },
+    "process": {
+      "title": "Our Project Process",
+      "subtitle": "A proven process for successful projects - from initial concept to turnkey handover.",
+      "duration": "Duration",
+      "step1": {
+        "title": "Consultation & Concept",
+        "description": "Analysis of your requirements and development of a customized concept."
+      },
+      "step2": {
+        "title": "Planning & Approval",
+        "description": "Detailed planning and processing of all required approval procedures."
+      },
+      "step3": {
+        "title": "Execution & Control",
+        "description": "Professional construction execution with continuous quality and schedule monitoring."
+      },
+      "step4": {
+        "title": "Handover & Service",
+        "description": "Turnkey handover and comprehensive after-sales service."
+      }
+    },
+    "industries": {
+      "title": "Our Industries",
+      "subtitle": "We realize projects in various sectors with industry-specific expertise.",
+      "commercial": "Commercial Construction",
+      "commercialDesc": "Office buildings, shopping centers and business parks",
+      "residential": "Residential Construction",
+      "residentialDesc": "Residential complexes, apartment buildings and urban districts",
+      "industrial": "Industrial Construction",
+      "industrialDesc": "Production halls, logistics centers and industrial facilities",
+      "infrastructure": "Infrastructure",
+      "infrastructureDesc": "Transportation routes, bridges and public buildings"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Answers to the most important questions about our services.",
+      "q1": "How long does a typical construction project take?",
+      "a1": "Project duration depends on size and complexity. Smaller projects take 6-12 months, larger projects 18-36 months. We create a detailed schedule for each project.",
+      "q2": "Do you offer a cost guarantee?",
+      "a2": "Yes, as a general contractor we offer you a binding cost guarantee after contract conclusion. Additional costs only arise from your change requests.",
+      "q3": "What planning services are included?",
+      "a3": "Our planning services include complete architectural and technical planning, 3D visualization, approval planning and coordination of all technical trades.",
+      "q4": "Do you also work outside Germany?",
+      "a4": "Currently we focus on projects in Germany, Austria and Switzerland. For international projects we work with proven partners.",
+      "q5": "How does quality assurance work?",
+      "a5": "We conduct regular quality controls throughout all construction phases. Additionally, we work with independent inspectors and are ISO 9001 certified."
+    },
+    "cta": {
+      "title": "Ready for Your Project?",
+      "subtitle": "Let us realize your vision together. Contact us for a non-binding consultation.",
+      "contact": "Contact Us Now",
+      "download": "Download Brochure"
+    },
+    "meta": {
+      "description": "GRAVON Projektbau Services: General Contractor, Planning & Architecture, Project Management. Your partner for turnkey construction projects."
     }
   },
   "projects": {
     "title": "Our References",
     "subtitle": "Discover a selection of our successfully completed projects - each one proof of our competence and passion for excellent buildings.",
+    "heroSubtitle": "Over 200 successfully completed projects speak for our expertise and reliability.",
     "viewAll": "View all projects",
-    "project1": {
-      "title": "Business Tower Frankfurt",
-      "description": "Pioneering office complex in the heart of the financial metropolis with sustainable architecture and state-of-the-art building technology.",
-      "longDescription": "The 20-story Business Tower Frankfurt combines state-of-the-art office technology with sustainable architecture. The building offers 15,000 m² of high-quality office space and has been certified to LEED Gold standard."
-    },
-    "project2": {
-      "title": "Residence Munich Maxvorstadt",
-      "description": "Exclusive residential complex in Munich's most sought-after location with 120 premium residential units and first-class amenities.",
-      "longDescription": "This luxurious residential complex in Munich's Maxvorstadt offers 120 exclusive apartments with upscale amenities. The project includes underground parking, wellness area and 24-hour concierge service."
-    },
-    "project3": {
-      "title": "LogisticHub Hamburg",
-      "description": "State-of-the-art logistics center with fully automated warehouse technology and sustainable energy supply on 25,000 m².",
-      "longDescription": "LogisticHub Hamburg sets new standards in automated warehousing. On 25,000 m², the most modern technologies are used for CO2-neutral and highly efficient logistics processes."
+    "loadMore": "Load more projects",
+    "loading": "Loading...",
+    "categories": {
+      "all": "All Projects",
+      "commercial": "Commercial",
+      "residential": "Residential",
+      "industrial": "Industrial",
+      "infrastructure": "Infrastructure"
     },
     "tags": {
-      "commercial": "Commercial",
       "office": "Office",
-      "residential": "Residential",
-      "luxury": "Premium",
-      "industrial": "Industrial",
-      "logistics": "Logistics"
+      "modern": "Modern",
+      "sustainable": "Sustainable",
+      "luxury": "Luxury",
+      "apartments": "Apartments",
+      "premium": "Premium",
+      "logistics": "Logistics",
+      "automated": "Automated",
+      "retail": "Retail",
+      "entertainment": "Entertainment",
+      "bridge": "Bridge",
+      "engineering": "Engineering",
+      "public": "Public",
+      "healthcare": "Healthcare",
+      "complex": "Complex"
     },
     "modal": {
+      "description": "Project Description",
+      "challenges": "Challenges",
+      "gallery": "Image Gallery",
       "details": "Project Details",
       "client": "Client",
       "location": "Location",
       "duration": "Duration",
       "size": "Size",
-      "services": "Services Provided"
+      "year": "Year",
+      "services": "Services Provided",
+      "tags": "Categories",
+      "contact": "Request Similar Project"
+    },
+    "stats": {
+      "title": "Our Track Record",
+      "subtitle": "Numbers that speak for themselves - an overview of our completed projects.",
+      "completed": "Completed Projects",
+      "volume": "Mio. € Construction Volume",
+      "years": "Years Experience",
+      "satisfaction": "% Customer Satisfaction"
+    },
+    "project1": {
+      "title": "Business Tower Frankfurt",
+      "description": "Pioneering office complex in the heart of the financial metropolis with sustainable architecture and state-of-the-art building technology.",
+      "longDescription": "The 20-story Business Tower Frankfurt combines state-of-the-art office technology with sustainable architecture. The building offers 15,000 m² of high-quality office space and has been certified to LEED Gold standard.",
+      "fullDescription": "The Business Tower Frankfurt is a pioneering project in the heart of the financial metropolis. With its sustainable architecture and state-of-the-art building technology, it sets new standards for ecological construction in urban spaces. The 20-story high-rise offers 15,000 m² of usable space with high-quality office space for international companies.",
+      "challenge1": "Integration of state-of-the-art smart building technology",
+      "challenge2": "Achieving LEED Gold certification",
+      "challenge3": "Construction in ongoing city operations"
+    },
+    "project2": {
+      "title": "Residence Munich Maxvorstadt",
+      "description": "Exclusive residential complex in Munich's most sought-after location with 120 premium residential units and first-class amenities.",
+      "longDescription": "This luxurious residential complex in Munich's Maxvorstadt offers 120 exclusive apartments with upscale amenities. The project includes underground parking, wellness area and 24-hour concierge service.",
+      "fullDescription": "The Residence Munich Maxvorstadt is a luxury project in one of Munich's most desirable locations. The residential complex with 120 exclusive apartments combines classic Munich architecture with the most modern living comfort. Each apartment features high-quality amenities and spacious balconies or terraces.",
+      "challenge1": "Consider monument protection requirements",
+      "challenge2": "Luxurious amenities in historic environment",
+      "challenge3": "Noise protection in central downtown location"
+    },
+    "project3": {
+      "title": "LogisticHub Hamburg",
+      "description": "State-of-the-art logistics center with fully automated warehouse technology and sustainable energy supply on 25,000 m².",
+      "longDescription": "LogisticHub Hamburg sets new standards in automated warehousing. On 25,000 m², the most modern technologies are used for CO2-neutral and highly efficient logistics processes.",
+      "fullDescription": "LogisticHub Hamburg is a milestone in modern logistics architecture. With fully automated warehouse technology and sustainable energy supply through solar systems and geothermal energy, the center achieves CO2 neutrality. The intelligent building technology optimizes all processes for maximum efficiency.",
+      "challenge1": "Integration of complex automation technology",
+      "challenge2": "Realize CO2-neutral energy supply",
+      "challenge3": "24/7 operation during construction phase"
+    },
+    "project4": {
+      "title": "Shopping Center Berlin",
+      "description": "Modern shopping center with innovative retail concept and entertainment area on 45,000 m².",
+      "longDescription": "A forward-looking shopping center in Berlin with innovative retail concepts, a large entertainment area and sustainable building technology.",
+      "fullDescription": "The Shopping Center Berlin combines retail, gastronomy and entertainment under one roof. With 45,000 m² of space, it offers room for over 150 shops, a multiplex cinema and a food court. The sustainable energy concept makes it one of the most environmentally friendly shopping centers in Germany.",
+      "challenge1": "Complex infrastructure for various uses",
+      "challenge2": "Manage high visitor flows during construction phase"
+    },
+    "project5": {
+      "title": "Rhine Bridge Cologne",
+      "description": "New road and rail bridge over the Rhine with innovative engineering and sustainable materials.",
+      "longDescription": "A new combined road and rail bridge over the Rhine in Cologne, realized with innovative engineering and sustainable materials.",
+      "fullDescription": "The new Rhine Bridge Cologne is a masterpiece of modern engineering. The 1,200-meter-long bridge combines road and rail traffic and was realized with sustainable materials and innovative construction techniques. It significantly improves the region's transportation infrastructure.",
+      "challenge1": "Construction over one of Europe's busiest waterways",
+      "challenge2": "Minimal impact on shipping traffic"
+    },
+    "project6": {
+      "title": "Stuttgart Hospital New Building",
+      "description": "Ultra-modern hospital building with latest medical technology and patient-oriented architecture on 32,000 m².",
+      "longDescription": "A new hospital building in Stuttgart with state-of-the-art medical technology, patient-oriented architecture and energy-efficient building systems.",
+      "fullDescription": "The new building of Stuttgart Hospital sets new standards in hospital construction. On 32,000 m², modern treatment rooms, operating theaters and patient rooms were created. The architecture is oriented to the needs of patients and staff, while state-of-the-art medical technology was integrated.",
+      "challenge1": "Hygiene requirements in all construction phases",
+      "challenge2": "Complex technical infrastructure for medical technology",
+      "challenge3": "Construction during ongoing hospital operations"
+    },
+    "meta": {
+      "description": "GRAVON Projektbau References: Over 200 successfully completed projects in commercial, residential, industrial and infrastructure construction."
     }
   },
   "about": {
     "title": "About GRAVON",
+    "heroSubtitle": "For over 25 years your partner for demanding construction projects - with passion, expertise and innovation.",
     "paragraph1": "For over 25 years, GRAVON Projektbau has stood for the highest quality, reliability and innovation in construction. As a leading general contractor, we have successfully completed over 200 demanding projects.",
     "paragraph2": "Our interdisciplinary team of experienced architects, engineers and project managers works closely with our clients to develop customized solutions that are both functional and aesthetically convincing.",
     "paragraph3": "Sustainability and innovation are at the heart of our work. We consistently rely on the latest construction technologies, environmentally friendly materials and energy-efficient solutions for future-proof buildings.",
     "yearsExperience": "Years Experience",
-    "stats": {
-      "projects": "Projects",
-      "years": "Years",
-      "employees": "Experts",
-      "volume": "Mio. € Volume"
+    "story": {
+      "title": "Our Story",
+      "paragraph1": "In 1998, Dr. Michael Gravon and his team founded GRAVON Projektbau with the vision of realizing construction projects at the highest level. What began as a small planning office in Frankfurt developed over the years into one of Germany's leading general contractors.",
+      "paragraph2": "The key to our success lies in the combination of traditional craftsmanship and innovative technologies. We have always oriented ourselves to the latest developments while never losing sight of our core values - quality, reliability and customer proximity.",
+      "paragraph3": "Today we employ over 50 qualified employees at three locations and have realized a construction volume of over 500 million euros. Our projects shape the cityscape of German metropolises and set standards for sustainable construction."
     },
-    "learnMore": "More about us"
+    "timeline": {
+      "founded": "Foundation of GRAVON Projektbau in Frankfurt",
+      "expansion": "Expansion to Munich and Hamburg",
+      "digital": "Digitalization and BIM introduction",
+      "today": "Over 200 projects and 500 million € construction volume"
+    },
+    "team": {
+      "title": "Our Leadership Team",
+      "subtitle": "Experienced experts with passion for excellent construction projects",
+      "ceo": {
+        "position": "Managing Director",
+        "description": "Civil engineer with over 30 years of industry experience and specialist for complex major projects."
+      },
+      "architect": {
+        "position": "Lead Architect",
+        "description": "Specialist for sustainable architecture and innovative planning concepts with international reputation."
+      },
+      "pm": {
+        "position": "Head of Project Management",
+        "description": "Expert for project management and scheduling with pronounced focus on quality and efficiency."
+      }
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "The core principles that determine our actions and make our success.",
+      "quality": {
+        "title": "Quality",
+        "description": "Highest standards in all project phases - from planning to completion."
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "Environmentally friendly and energy-efficient solutions for future-proof buildings."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Use of cutting-edge technologies and processes for optimal project results."
+      },
+      "partnership": {
+        "title": "Partnership",
+        "description": "Long-term customer relationships based on trust and reliability."
+      }
+    },
+    "stats": {
+      "title": "Facts & Figures",
+      "subtitle": "Our track record in numbers - proof of competence and reliability.",
+      "projects": "Projects",
+      "projectsDesc": "Successfully completed",
+      "years": "Years",
+      "yearsDesc": "Industry experience",
+      "employees": "Experts",
+      "employeesDesc": "Qualified employees",
+      "volume": "Mio. € Volume",
+      "volumeDesc": "Realized construction volume"
+    },
+    "certifications": {
+      "title": "Certifications & Standards",
+      "subtitle": "Our qualifications and certifications confirm our high quality standards.",
+      "iso9001": "Quality management according to ISO 9001",
+      "iso14001": "Environmental management according to ISO 14001",
+      "dgnb": "Certification for sustainable construction",
+      "vbi": "Membership in the Association of Consulting Engineers"
+    },
+    "cta": {
+      "title": "Become Our Next Success",
+      "subtitle": "Let us realize your project together. With over 25 years of experience, we are your ideal partner.",
+      "contact": "Contact Us Now",
+      "projects": "View Our Projects"
+    },
+    "learnMore": "More about us",
+    "meta": {
+      "description": "About GRAVON Projektbau: 25+ years experience, 200+ projects, 50+ experts. Your reliable partner for demanding construction projects."
+    }
   },
   "contact": {
     "title": "Contact",
     "subtitle": "Let's realize your next project together. Contact us for a non-binding initial consultation - we look forward to your challenge.",
     "followUs": "Follow us",
+    "info": {
+      "title": "Contact Information"
+    },
     "address": {
       "title": "Our Address"
     },
     "phone": {
-      "title": "Phone"
+      "title": "Phone",
+      "hours": "Mon-Fri: 8:00 AM - 6:00 PM"
     },
     "email": {
       "title": "Email"
+    },
+    "map": {
+      "title": "Location",
+      "placeholder": "Interactive map will be loaded here"
+    },
+    "locations": {
+      "title": "Our Locations",
+      "subtitle": "GRAVON is represented at three strategic locations in Germany.",
+      "frankfurt": {
+        "title": "Frankfurt am Main",
+        "subtitle": "Headquarters",
+        "description": "Our headquarters in the heart of the financial metropolis - centrally located for projects throughout Germany."
+      },
+      "munich": {
+        "title": "Munich",
+        "subtitle": "Southern Germany",
+        "description": "Our location for Bavaria and southern Germany with focus on residential and commercial projects."
+      },
+      "hamburg": {
+        "title": "Hamburg",
+        "subtitle": "Northern Germany",
+        "description": "Hanseatic competence for northern Germany with focus on logistics and industrial construction."
+      }
     },
     "form": {
       "title": "Your Project Inquiry",
@@ -117,9 +388,19 @@
       "lastName": "Last Name",
       "email": "Email Address",
       "phone": "Phone Number",
+      "company": "Company",
+      "companyPlaceholder": "Your Company",
+      "projectType": "Project Type",
+      "selectProjectType": "Select Project Type",
+      "projectTypes": {
+        "commercial": "Commercial Construction",
+        "residential": "Residential Construction",
+        "industrial": "Industrial Construction",
+        "infrastructure": "Infrastructure"
+      },
       "subject": "Subject",
       "message": "Your Message",
-      "privacy": "I agree to the processing of my data according to the privacy policy",
+      "privacy": "I agree to the processing of my data according to the",
       "send": "SEND MESSAGE",
       "sending": "Transmitting...",
       "success": "Thank you for your inquiry! We will contact you within 24 hours.",
@@ -129,12 +410,24 @@
       "emailPlaceholder": "your.email{'@'}company.com",
       "phonePlaceholder": "+49 (0) 123 456 789",
       "subjectPlaceholder": "Subject of your inquiry",
-      "messagePlaceholder": "Describe your project to us - we'd be happy to advise you..."
+      "messagePlaceholder": "Describe your project to us - we'd be happy to advise you...",
+      "errors": {
+        "firstNameRequired": "First name is required",
+        "lastNameRequired": "Last name is required",
+        "emailInvalid": "Please enter a valid email address",
+        "subjectRequired": "Subject is required",
+        "messageRequired": "Message is required",
+        "privacyRequired": "Please agree to the privacy policy"
+      }
+    },
+    "meta": {
+      "description": "Contact GRAVON Projektbau: By phone, email or via our contact form. We are happy to advise you on your construction project."
     }
   },
   "footer": {
     "company": {
-      "description": "GRAVON Projektbau has stood for first-class quality, absolute reliability and pioneering innovation in construction for over 25 years."
+      "description": "GRAVON Projektbau has stood for first-class quality, absolute reliability and pioneering innovation in construction for over 25 years.",
+      "certifications": "Certifications"
     },
     "services": {
       "title": "Our Services",
@@ -151,14 +444,261 @@
       "infrastructure": "Infrastructure Projects"
     },
     "contact": {
-      "title": "Contact"
+      "title": "Contact",
+      "cta": "Request Project"
+    },
+    "newsletter": {
+      "title": "Subscribe Newsletter",
+      "subtitle": "Stay updated on our latest projects and industry news.",
+      "placeholder": "Your email address",
+      "subscribe": "Subscribe",
+      "subscribing": "Sending...",
+      "disclaimer": "You can unsubscribe at any time. Privacy Policy"
     },
     "legal": {
       "privacy": "Privacy Policy",
       "terms": "Terms & Conditions",
-      "imprint": "Legal Notice"
+      "imprint": "Legal Notice",
+      "sitemap": "Sitemap"
     },
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Your privacy is important to us. Here you can learn how we handle your data.",
+    "intro": {
+      "title": "Introduction",
+      "content1": "We are pleased about your interest in our company. The protection of your personal data is very important to us. In this privacy policy, we inform you about the processing of personal data when using our website.",
+      "content2": "Personal data is any information relating to an identified or identifiable natural person."
+    },
+    "responsible": {
+      "title": "Data Controller"
+    },
+    "collection": {
+      "title": "Data Collection",
+      "website": {
+        "title": "Website Visit",
+        "content": "When visiting our website, information is automatically sent to the server of our website. This information is temporarily stored in a so-called log file."
+      },
+      "contact": {
+        "title": "Contact Form",
+        "content": "When using our contact form, we collect personal data only to the extent that you voluntarily provide it to us."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "Our website uses cookies. Cookies are small text files that are stored on your device."
+      }
+    },
+    "usage": {
+      "title": "Use of Data",
+      "purpose1": "Processing your inquiries and communication",
+      "purpose2": "Improving our website and services",
+      "purpose3": "Fulfilling legal obligations",
+      "purpose4": "Protection against misuse and fraud"
+    },
+    "rights": {
+      "title": "Your Rights",
+      "access": {
+        "title": "Right of Access",
+        "content": "You have the right to obtain information about the data stored about you."
+      },
+      "correction": {
+        "title": "Right of Rectification",
+        "content": "You have the right to have incorrect data corrected."
+      },
+      "deletion": {
+        "title": "Right of Erasure",
+        "content": "You have the right to deletion of your personal data."
+      },
+      "objection": {
+        "title": "Right to Object",
+        "content": "You have the right to object to the processing of your data."
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "If you have any questions about data protection, you can contact our data protection officer at any time:",
+      "dpo": "Data Protection Officer"
+    },
+    "lastUpdated": "Last Updated",
+    "meta": {
+      "description": "Privacy Policy of GRAVON Projektbau - Information on how we handle your personal data."
+    }
+  },
+  "imprint": {
+    "title": "Legal Notice",
+    "subtitle": "Legal information about GRAVON Projektbau GmbH according to § 5 TMG.",
+    "company": {
+      "title": "Company Information"
+    },
+    "legal": {
+      "title": "Legal Information",
+      "management": "Management",
+      "register": "Commercial Register",
+      "vat": "VAT ID",
+      "chamber": "Chamber"
+    },
+    "locations": {
+      "title": "Other Locations",
+      "munich": "Munich Office",
+      "hamburg": "Hamburg Office"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "content": {
+        "title": "Liability for Content",
+        "text1": "As a service provider, we are responsible for our own content on these pages according to general laws in accordance with § 7 para. 1 TMG.",
+        "text2": "According to §§ 8 to 10 TMG, however, we as a service provider are not obligated to monitor transmitted or stored third-party information under all circumstances."
+      },
+      "links": {
+        "title": "Liability for Links",
+        "text1": "Our offer contains links to external third-party websites over whose content we have no influence.",
+        "text2": "Therefore, we cannot assume any liability for these external contents."
+      },
+      "copyright": {
+        "title": "Copyright",
+        "text1": "The content and works created by the site operators on these pages are subject to German copyright law.",
+        "text2": "Duplication, processing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator."
+      }
+    },
+    "dispute": {
+      "title": "Dispute Resolution",
+      "content": "We are not willing or obligated to participate in dispute resolution procedures before a consumer arbitration board."
+    },
+    "legalContact": {
+      "title": "Contact for Legal Questions",
+      "content": "For legal questions and concerns, please contact:"
+    },
+    "lastUpdated": "Last Updated",
+    "meta": {
+      "description": "Legal Notice of GRAVON Projektbau - Legal information and contact details of the company."
+    }
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "subtitle": "Our terms and conditions for construction and planning services.",
+    "intro": {
+      "title": "Introduction",
+      "content1": "These General Terms and Conditions (GTC) apply to all contracts for construction and planning services by GRAVON Projektbau GmbH.",
+      "content2": "Deviating conditions of the client only become effective if we expressly agree to them in writing."
+    },
+    "scope": {
+      "title": "Scope of Application",
+      "paragraph1": "These GTC apply to all services of GRAVON Projektbau GmbH in the areas of general contracting, planning and project management.",
+      "paragraph2": "They also apply to future business relationships without us having to refer to them separately.",
+      "paragraph3": "Changes and additions to these GTC require written form."
+    },
+    "contract": {
+      "title": "Contract Conclusion",
+      "paragraph1": "The contract is concluded through our written offer and its written acceptance by the client.",
+      "paragraph2": "Project execution takes place in the following phases:",
+      "phases": {
+        "title": "Project Phases",
+        "phase1": "Needs planning and preliminary design",
+        "phase2": "Design and approval planning",
+        "phase3": "Execution planning and tendering",
+        "phase4": "Construction execution and site supervision"
+      }
+    },
+    "services": {
+      "title": "Scope of Services",
+      "planning": {
+        "title": "Planning Services",
+        "item1": "Architectural designs",
+        "item2": "Technical planning",
+        "item3": "Approval procedures",
+        "item4": "3D visualization"
+      },
+      "execution": {
+        "title": "Execution Services",
+        "item1": "Coordination of all trades",
+        "item2": "Quality control",
+        "item3": "Schedule monitoring",
+        "item4": "Acceptance and handover"
+      }
+    },
+    "payment": {
+      "title": "Prices and Payment",
+      "paragraph1": "Our prices are exclusive of statutory VAT.",
+      "paragraph2": "Payment is due within 14 days of invoicing without deduction.",
+      "schedule": {
+        "title": "Payment Schedule",
+        "item1": "30% upon contract conclusion",
+        "item2": "40% at construction start",
+        "item3": "25% upon shell completion",
+        "item4": "5% after acceptance"
+      }
+    },
+    "deadlines": {
+      "title": "Deadlines and Time Limits",
+      "paragraph1": "Agreed deadlines are only binding if they are expressly designated as such.",
+      "paragraph2": "Delays due to force majeure or unforeseeable circumstances are not our responsibility.",
+      "paragraph3": "In case of delay, we are entitled to request a reasonable extension of time."
+    },
+    "warranty": {
+      "title": "Warranty",
+      "paragraph1": "We warrant our services in accordance with legal provisions.",
+      "paragraph2": "Warranty periods depend on the type of service provided:",
+      "periods": {
+        "title": "Warranty Periods",
+        "building": "Buildings: 5 years",
+        "technical": "Technical systems: 2 years",
+        "equipment": "Equipment: 1 year"
+      }
+    },
+    "liability": {
+      "title": "Liability",
+      "paragraph1": "Our liability for damages is limited to intent and gross negligence.",
+      "paragraph2": "In case of slight negligence, we are only liable for breach of essential contractual obligations.",
+      "paragraph3": "Liability is limited in amount to typical and foreseeable damages."
+    },
+    "insurance": {
+      "title": "Insurance",
+      "liability": {
+        "title": "General Liability",
+        "amount": "10 Mio. €"
+      },
+      "professional": {
+        "title": "Professional Liability",
+        "amount": "5 Mio. €"
+      },
+      "construction": {
+        "title": "Construction Insurance",
+        "amount": "Project-specific"
+      }
+    },
+    "final": {
+      "title": "Final Provisions",
+      "law": "German law applies excluding the UN Convention on Contracts for the International Sale of Goods.",
+      "court": "Place of jurisdiction is Frankfurt am Main.",
+      "severability": "Should individual provisions be invalid, the validity of the remaining contract remains unaffected."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "For questions about these GTC, please contact:"
+    },
+    "lastUpdated": "Last Updated",
+    "meta": {
+      "description": "General Terms and Conditions of GRAVON Projektbau for construction and planning services."
+    }
+  },
+  "error": {
+    "404": {
+      "title": "Page not found",
+      "message": "The requested page does not exist or has been moved. Please check the URL or return to the homepage."
+    },
+    "500": {
+      "title": "Server error",
+      "message": "An unexpected error has occurred. Our team has been notified and is working on a solution."
+    },
+    "generic": {
+      "title": "An error occurred",
+      "message": "Sorry, something went wrong. Please try again."
+    },
+    "tryAgain": "Try again",
+    "goHome": "Go to homepage",
+    "needHelp": "Need help? Contact us:"
   },
   "meta": {
     "home": {
