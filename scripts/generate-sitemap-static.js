@@ -188,10 +188,10 @@ const generateAlternateLinks = (path) => {
     if (cleanPath === '') cleanPath = '/'
 
     return `
-    <xhtml:link rel="alternate" hreflang="de" href="${baseURL}${cleanPath}" />
-    <xhtml:link rel="alternate" hreflang="en" href="${baseURL}/en${cleanPath}" />
-    <xhtml:link rel="alternate" hreflang="es" href="${baseURL}/es${cleanPath}" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="${baseURL}${cleanPath}" />`
+    <link rel="alternate" hreflang="de" href="${baseURL}${cleanPath}" />
+    <link rel="alternate" hreflang="en" href="${baseURL}/en${cleanPath}" />
+    <link rel="alternate" hreflang="es" href="${baseURL}/es${cleanPath}" />
+    <link rel="alternate" hreflang="x-default" href="${baseURL}${cleanPath}" />`
 }
 
 const generateImageTags = (images = []) => {
