@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
 
     // Enhanced modules configuration
-    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@vueuse/nuxt', '@nuxtjs/sitemap', '@nuxtjs/robots'],
+    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@vueuse/nuxt', '@nuxtjs/sitemap'],
 
     // CSS Configuration
     css: [
@@ -16,28 +16,28 @@ export default defineNuxtConfig({
         locales: [
             {
                 code: 'de',
-                language: 'de-DE',
+                iso: 'de-DE',
                 name: 'Deutsch',
                 file: 'de.json',
                 dir: 'ltr'
             },
             {
                 code: 'en',
-                language: 'en-US',
+                iso: 'en-US',
                 name: 'English',
                 file: 'en.json',
                 dir: 'ltr'
             },
             {
                 code: 'es',
-                language: 'es-ES',
+                iso: 'es-ES',
                 name: 'Español',
                 file: 'es.json',
                 dir: 'ltr'
             }
         ],
         lazy: true,
-        langDir: 'locales',
+        langDir: 'locales/',
         strategy: 'prefix_except_default',
         detectBrowserLanguage: {
             useCookie: true,
