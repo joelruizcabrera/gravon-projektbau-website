@@ -1,19 +1,13 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="relative py-32 bg-slate-900 text-white">
-      <div class="absolute inset-0">
-        <img
-            src="/images/frankfurt-skyline.jpg"
-            alt="GRAVON Services"
-            class="w-full h-full object-cover opacity-30"
-        />
-      </div>
-      <div class="relative container mx-auto px-4 lg:px-8 text-center">
-        <h1 class="hero-title text-5xl lg:text-6xl font-bold mb-6">{{ $t('services.title') }}</h1>
-        <p class="text-xl max-w-3xl mx-auto">{{ $t('services.subtitle') }}</p>
-      </div>
-    </section>
+    <PageHero
+        :title="$t('services.title')"
+        :subtitle="$t('services.subtitle')"
+        background-image="/images/frankfurt-skyline.jpg"
+        height="medium"
+        :show-breadcrumbs="true"
+    />
 
     <!-- Service Overview -->
     <section class="section-padding bg-white">
@@ -250,9 +244,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const { t } = useI18n()
 const localePath = useLocalePath()
 
-// Reactive data
-const activeFaq = ref(null)
-
 // SEO
 useHead({
   title: t('services.title') + ' - GRAVON Projektbau',
@@ -260,17 +251,10 @@ useHead({
     {
       name: 'description',
       content: t('services.meta.description')
-    },
-    {
-      property: 'og:title',
-      content: t('services.title') + ' - GRAVON Projektbau'
-    },
-    {
-      property: 'og:description',
-      content: t('services.meta.description')
     }
   ]
 })
+
 
 // Service data
 const serviceOverview = [
@@ -430,83 +414,15 @@ const toggleFaq = (index) => {
 
 // Animations
 onMounted(() => {
-  // Hero animation
-  gsap.from('.hero-title', {
-    duration: 1,
-    y: 50,
-    opacity: 0,
-    ease: 'power3.out'
-  })
+  const { $animationUtils } = useNuxtApp()
 
   // Service cards animation
-  gsap.from('.service-overview-card', {
-    scrollTrigger: {
-      trigger: '.service-overview-card',
-      start: 'top 80%'
-    },
-    duration: 1,
-    y: 50,
-    opacity: 0,
-    stagger: 0.2,
-    ease: 'power3.out'
+  $animationUtils.staggerCards('.service-overview-card', {
+    stagger: 0.2
   })
 
   // Detailed services animation
-  gsap.from('.service-detail-content', {
-    scrollTrigger: {
-      trigger: '.service-detail-content',
-      start: 'top 80%'
-    },
-    duration: 1,
-    x: -50,
-    opacity: 0,
-    stagger: 0.3,
-    ease: 'power3.out'
-  })
-
-  gsap.from('.service-detail-image', {
-    scrollTrigger: {
-      trigger: '.service-detail-image',
-      start: 'top 80%'
-    },
-    duration: 1,
-    x: 50,
-    opacity: 0,
-    stagger: 0.3,
-    ease: 'power3.out'
-  })
-
-  // Process steps animation
-  gsap.from('.process-step', {
-    scrollTrigger: {
-      trigger: '.process-step',
-      start: 'top 85%'
-    },
-    duration: 1,
-    y: 30,
-    opacity: 0,
-    stagger: 0.15,
-    ease: 'power3.out'
-  })
-
-  // Industries animation
-  gsap.from('.industry-card', {
-    scrollTrigger: {
-      trigger: '.industry-card',
-      start: 'top 85%'
-    },
-    duration: 1,
-    scale: 0.9,
-    opacity: 0,
-    stagger: 0.1,
-    ease: 'back.out(1.7)'
-  })
-
-  // FAQ animation
-  /*gsap.from('.faq-item', {
-    scrollTrigger: {
-      trigger: '.f15 12a3 3 0 11-6 0 3 3 0 016 0zM8 8a3 3 0 11-6 0 3 3 0 016 0zM16 8a3 3 0 11-6 0 3 3 0 016 0z'
-    }
-  })*/
+  $animationUtils.slideInFromLeft('.service-detail-content')
+  $animationUtils.slideInFromRight('.service-detail-image')
 })
 </script>

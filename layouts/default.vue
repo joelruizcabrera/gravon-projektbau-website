@@ -1,8 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col">
     <Header />
-
-    <!-- Main Content mit korrektem tabindex für Skip Links -->
     <main
         id="main-content"
         class="flex-grow pt-20"
@@ -11,7 +9,6 @@
     >
       <slot />
     </main>
-
     <Footer />
   </div>
 </template>
@@ -20,10 +17,20 @@
 import Header from "~/components/Header.vue"
 import Footer from "~/components/Footer.vue"
 
-const { t } = useI18n()
-const route = useRoute()
+// HTML head setup
+useHead({
+  htmlAttrs: {
+    lang: 'de',
+    class: 'no-js' // Initial no-js Klasse
+  },
+  script: [
+    {
+      innerHTML: 'document.documentElement.className = document.documentElement.className.replace("no-js", "js");',
+      type: 'text/javascript'
+    }
+  ]
+})
 
-// Page transition configuration
 definePageMeta({
   pageTransition: {
     name: 'page',

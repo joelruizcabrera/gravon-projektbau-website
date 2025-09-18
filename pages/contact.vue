@@ -1,20 +1,13 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="relative py-32 bg-slate-900 text-white">
-      <div class="absolute inset-0">
-        <img
-            src="/images/frankfurt-skyline.jpg"
-            alt="GRAVON Kontakt"
-            class="w-full h-full object-cover opacity-30"
-        />
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/40"></div>
-      </div>
-      <div class="relative container mx-auto px-4 lg:px-8 text-center">
-        <h1 class="text-5xl lg:text-6xl font-bold mb-6">{{ $t('contact.title') }}</h1>
-        <p class="text-xl max-w-3xl mx-auto">{{ $t('contact.subtitle') }}</p>
-      </div>
-    </section>
+    <PageHero
+        :title="$t('contact.title')"
+        :subtitle="$t('contact.subtitle')"
+        background-image="/images/frankfurt-skyline.jpg"
+        height="medium"
+        :show-breadcrumbs="true"
+    />
 
     <!-- Contact Content -->
     <section class="section-padding bg-white">

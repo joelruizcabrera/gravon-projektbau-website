@@ -1,73 +1,34 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="relative py-32 bg-slate-900 text-white">
-      <div class="absolute inset-0">
-        <img
-            src="/images/frankfurt-skyline.jpg"
-            alt="GRAVON Team"
-            class="w-full h-full object-cover opacity-30"
-        />
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/40"></div>
-      </div>
-      <div class="relative container mx-auto px-4 lg:px-8 text-center">
-        <h1 class="text-5xl lg:text-6xl font-bold mb-6">{{ $t('about.title') }}</h1>
-        <p class="text-xl max-w-3xl mx-auto">{{ $t('about.heroSubtitle') }}</p>
-      </div>
-    </section>
+    <PageHero
+        :title="$t('about.title')"
+        :subtitle="$t('about.subtitle')"
+        background-image="/images/frankfurt-skyline.jpg"
+        height="medium"
+        :show-breadcrumbs="true"
+    />
 
     <!-- Company Story -->
     <section class="section-padding bg-white">
       <div class="container mx-auto">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 class="text-4xl font-bold text-gray-900 mb-8">{{ $t('about.story.title') }}</h2>
-            <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+          <div class="gsap-slide-left">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">
+              {{ $t('about.story.title') }}
+            </h2>
+            <div class="space-y-6 text-gray-600">
               <p>{{ $t('about.story.paragraph1') }}</p>
               <p>{{ $t('about.story.paragraph2') }}</p>
               <p>{{ $t('about.story.paragraph3') }}</p>
             </div>
-
-            <!-- Timeline -->
-            <div class="mt-12 space-y-8">
-              <div class="flex items-center space-x-4">
-                <div class="w-4 h-4 bg-yellow-500 rounded-full"></div>
-                <div>
-                  <div class="font-semibold text-gray-900">1998</div>
-                  <div class="text-gray-600">{{ $t('about.timeline.founded') }}</div>
-                </div>
-              </div>
-              <div class="flex items-center space-x-4">
-                <div class="w-4 h-4 bg-yellow-500 rounded-full"></div>
-                <div>
-                  <div class="font-semibold text-gray-900">2005</div>
-                  <div class="text-gray-600">{{ $t('about.timeline.expansion') }}</div>
-                </div>
-              </div>
-              <div class="flex items-center space-x-4">
-                <div class="w-4 h-4 bg-yellow-500 rounded-full"></div>
-                <div>
-                  <div class="font-semibold text-gray-900">2015</div>
-                  <div class="text-gray-600">{{ $t('about.timeline.digital') }}</div>
-                </div>
-              </div>
-              <div class="flex items-center space-x-4">
-                <div class="w-4 h-4 bg-yellow-500 rounded-full"></div>
-                <div>
-                  <div class="font-semibold text-gray-900">2023</div>
-                  <div class="text-gray-600">{{ $t('about.timeline.today') }}</div>
-                </div>
-              </div>
-            </div>
           </div>
-
-          <div class="relative">
+          <div class="gsap-slide-right">
             <img
                 src="/images/frankfurt-skyline.jpg"
                 alt="GRAVON Geschichte"
-                class="w-full h-auto rounded-2xl shadow-2xl"
+                class="w-full rounded-2xl shadow-lg"
             />
-            <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-yellow-500 rounded-2xl opacity-20 -z-10"></div>
           </div>
         </div>
       </div>
@@ -76,9 +37,13 @@
     <!-- Leadership Team -->
     <section class="section-padding bg-gray-50">
       <div class="container mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-900 mb-6">{{ $t('about.team.title') }}</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">{{ $t('about.team.subtitle') }}</p>
+        <div class="text-center mb-20">
+          <h2 class="gsap-animate text-4xl font-bold text-gray-900 mb-6">
+            {{ $t('about.team.title') }}
+          </h2>
+          <p class="gsap-animate text-xl text-gray-600 max-w-3xl mx-auto">
+            {{ $t('about.team.subtitle') }}
+          </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -302,6 +267,7 @@ const certifications = [
     logo: '/images/certs/vbi.png'
   }
 ]
+
 
 const animateCounters = () => {
   const counters = document.querySelectorAll('.counter')

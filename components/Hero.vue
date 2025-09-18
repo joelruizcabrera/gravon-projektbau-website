@@ -1,50 +1,48 @@
 <template>
   <section class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
-    <!-- Background Image with Parallax Effect -->
+    <!-- Background mit optimiertem Image -->
     <div class="absolute inset-0 z-0">
       <NuxtImg
           src="/images/frankfurt-skyline.jpg"
-          alt="Frankfurt Skyline - GRAVON Projektbau Hintergrund"
+          alt="Frankfurt Skyline - GRAVON Projektbau"
           width="1920"
           height="1080"
           format="webp"
-          quality="85"
           loading="eager"
           fetchpriority="high"
-          preload
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover parallax-bg"
           :style="{
-            contentVisibility: 'visible',
-            containIntrinsicSize: '1920px 1080px'
-          }"
+          contentVisibility: 'visible',
+          containIntrinsicSize: '1920px 1080px'
+        }"
       />
       <div class="absolute inset-0 hero-gradient"></div>
     </div>
 
     <!-- Animated Background Elements -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="floating-shape w-20 h-20 bg-yellow-500 rounded-full opacity-20 absolute top-1/4 left-1/4"></div>
-      <div class="floating-shape w-32 h-32 bg-blue-500 rounded-full opacity-10 absolute top-3/4 right-1/4" style="animation-delay: 2s;"></div>
-      <div class="floating-shape w-16 h-16 bg-white rounded-full opacity-30 absolute top-1/2 right-1/3" style="animation-delay: 4s;"></div>
+      <div class="floating-shape w-20 h-20 bg-yellow-500 rounded-full opacity-20 absolute top-1/4 left-1/4 gsap-fade"></div>
+      <div class="floating-shape w-32 h-32 bg-blue-500 rounded-full opacity-10 absolute top-3/4 right-1/4 gsap-fade" style="animation-delay: 2s;"></div>
+      <div class="floating-shape w-16 h-16 bg-white rounded-full opacity-30 absolute top-1/2 right-1/3 gsap-fade" style="animation-delay: 4s;"></div>
     </div>
 
-    <!-- Content -->
+    <!-- Content mit GSAP Klassen -->
     <div class="relative z-10 container mx-auto px-4 lg:px-8 text-center text-white">
       <div class="hero-content max-w-5xl mx-auto">
-        <!-- Main Title -->
+        <!-- Main Title mit GSAP Klassen -->
         <h1 class="hero-title mb-8 leading-tight">
-          <span class="hero-word block text-5xl lg:text-7xl xl:text-8xl font-bold text-shadow-lg">PLANEN.</span>
-          <span class="hero-word block text-5xl lg:text-7xl xl:text-8xl font-bold text-shadow-lg">BAUEN.</span>
-          <span class="hero-word block text-5xl lg:text-7xl xl:text-8xl font-bold text-shadow-lg">VOLLENDEN.</span>
+          <span class="hero-word hero-animate-title block text-5xl lg:text-7xl xl:text-8xl font-bold text-shadow-lg">PLANEN.</span>
+          <span class="hero-word hero-animate-title block text-5xl lg:text-7xl xl:text-8xl font-bold text-shadow-lg">BAUEN.</span>
+          <span class="hero-word hero-animate-title block text-5xl lg:text-7xl xl:text-8xl font-bold text-shadow-lg">VOLLENDEN.</span>
         </h1>
 
         <!-- Subtitle -->
-        <p class="hero-subtitle text-xl lg:text-2xl mb-12 max-w-3xl mx-auto font-light text-shadow opacity-0">
+        <p class="hero-subtitle hero-animate-subtitle text-xl lg:text-2xl mb-12 max-w-3xl mx-auto font-light text-shadow">
           {{ $t('hero.subtitle') }}
         </p>
 
         <!-- CTA Buttons -->
-        <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center opacity-0">
+        <div class="hero-cta hero-animate-cta flex flex-col sm:flex-row gap-4 justify-center">
           <button
               @click="scrollToContact"
               class="btn-primary group hover:scale-105 transform transition-all duration-300"
@@ -64,7 +62,7 @@
         </div>
 
         <!-- Trust Indicators -->
-        <div class="hero-stats mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto opacity-0">
+        <div class="hero-stats hero-animate-stats mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           <div v-for="stat in stats" :key="stat.label" class="text-center stat-item">
             <div class="text-3xl lg:text-4xl font-bold text-yellow-500 mb-2 counter" :data-target="stat.value">0</div>
             <div class="text-sm uppercase tracking-wide text-gray-300">{{ $t(stat.label) }}</div>
@@ -74,7 +72,7 @@
     </div>
 
     <!-- Scroll Indicator -->
-    <div class="scroll-indicator absolute bottom-8 mx-auto transform -translate-x-1/2 text-white animate-bounce opacity-0">
+    <div class="scroll-indicator gsap-fade absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white">
       <div class="flex flex-col items-center">
         <span class="text-sm uppercase tracking-wide mb-2">{{ $t('hero.scroll') }}</span>
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -115,16 +113,13 @@ const initAnimations = () => {
     return
   }
 
-  // Set initial states
-  $gsap.set('.hero-word', { y: 100, opacity: 0 })
-  $gsap.set('.hero-subtitle', { y: 50, opacity: 0 })
-  $gsap.set('.hero-cta', { y: 30, opacity: 0 })
-  $gsap.set('.hero-stats', { y: 20, opacity: 0 })
-  $gsap.set('.scroll-indicator', { y: 10, opacity: 0 })
-
-  // Create main timeline
-  const tl = $gsap.timeline({
-    delay: 0.5,
+  // Create main timeline for hero animations
+  const heroTL = $gsap.timeline({
+    delay: 0.3,
+    onStart: () => {
+      // Entferne no-js Klasse falls vorhanden
+      document.documentElement.classList.remove('no-js')
+    },
     onComplete: () => {
       // Start floating animations after main animation
       $gsap.to('.floating-shape', {
@@ -139,61 +134,78 @@ const initAnimations = () => {
           from: 'random'
         }
       })
+
+      // Bounce animation für scroll indicator
+      $gsap.to('.scroll-indicator', {
+        y: '+=10',
+        duration: 1.5,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+      })
     }
   })
 
-  // Animate title words
-  tl.to('.hero-word', {
+  // Animate title words sequenziell
+  heroTL.to('.hero-word', {
     duration: 1.2,
     y: 0,
     opacity: 1,
-    stagger: 0.3,
+    stagger: 0.2,
     ease: 'power3.out'
   })
 
   // Animate subtitle
-  tl.to('.hero-subtitle', {
+  heroTL.to('.hero-subtitle', {
     duration: 1,
     y: 0,
     opacity: 1,
     ease: 'power3.out'
-  }, '-=0.5')
+  }, '-=0.4')
 
   // Animate CTA buttons
-  tl.to('.hero-cta', {
+  heroTL.to('.hero-cta', {
     duration: 0.8,
     y: 0,
     opacity: 1,
     ease: 'power3.out'
-  }, '-=0.3')
+  }, '-=0.2')
 
   // Animate stats
-  tl.to('.hero-stats', {
+  heroTL.to('.hero-stats', {
     duration: 0.6,
     y: 0,
     opacity: 1,
     ease: 'power3.out'
-  }, '-=0.2')
+  }, '-=0.1')
 
   // Animate scroll indicator
-  tl.to('.scroll-indicator', {
+  heroTL.to('.scroll-indicator', {
     duration: 0.5,
     y: 0,
     opacity: 1,
     ease: 'power3.out'
-  }, '-=0.2')
+  }, '-=0.1')
 
-  // Counter animations
-  if ($animationUtils) {
-    setTimeout(() => {
+  // Floating shapes animieren
+  heroTL.to('.floating-shape', {
+    duration: 0.8,
+    opacity: 1,
+    ease: 'power2.out',
+    stagger: 0.2
+  }, '-=0.5')
+
+  // Counter animations mit delay
+  setTimeout(() => {
+    if ($animationUtils) {
       $animationUtils.counter('.counter', {
-        duration: 2,
-        delay: 1.5
+        duration: 2.5,
+        delay: 0
       })
-    }, 1500)
-  }
+    }
+  }, 2000)
 
-  // Parallax effect
+  // Parallax effect für Background
   $ScrollTrigger.create({
     trigger: '.hero-section',
     start: 'top bottom',
@@ -202,7 +214,7 @@ const initAnimations = () => {
     onUpdate: (self) => {
       const progress = self.progress
       $gsap.set('.parallax-bg', {
-        y: progress * -100
+        y: progress * -50 // Reduziert für bessere Performance
       })
     }
   })
@@ -210,9 +222,10 @@ const initAnimations = () => {
 
 // Initialize animations when component is mounted
 onMounted(() => {
-  nextTick(() => {
-    setTimeout(initAnimations, 100)
-  })
+  // Kleiner delay um sicherzustellen dass GSAP geladen ist
+  setTimeout(() => {
+    initAnimations()
+  }, 50)
 })
 
 // Cleanup on unmount
@@ -224,19 +237,10 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+/* Hardware-beschleunigte Animationen */
 .parallax-bg {
-  background-image: url('/images/frankfurt-skyline.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform: translateZ(0); /* Hardware acceleration */
+  transform: translateZ(0);
   will-change: transform;
-}
-
-@media (max-width: 768px) {
-  .parallax-bg {
-    background-attachment: scroll;
-  }
 }
 
 .hero-gradient {
@@ -244,58 +248,33 @@ onUnmounted(() => {
 }
 
 .floating-shape {
-  animation: float 6s ease-in-out infinite;
-  will-change: transform;
+  will-change: transform, opacity;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(5deg); }
-}
-
-.hero-word {
-  display: inline-block;
-}
-
-.counter {
-  font-variant-numeric: tabular-nums;
-}
-
-/* Performance optimizations */
 .hero-section {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
 
-/* Responsive adjustments */
-@media (max-width: 640px) {
-  .hero-word {
-    font-size: 3rem !important;
-  }
-
-  .hero-subtitle {
-    font-size: 1.1rem !important;
-  }
-
-  .hero-cta {
-    flex-direction: column;
-  }
-
-  .hero-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+/* Performance optimiert für mobile */
+@media (max-width: 768px) {
+  .parallax-bg {
+    will-change: auto; /* Disable auf mobile für bessere Performance */
   }
 }
 
-/* Accessibility improvements */
+/* Accessibility - Reduzierte Bewegung */
 @media (prefers-reduced-motion: reduce) {
-  .floating-shape,
-  .scroll-indicator {
+  .floating-shape {
     animation: none !important;
   }
 
   .parallax-bg {
     transform: none !important;
+  }
+
+  .scroll-indicator {
+    animation: none !important;
   }
 }
 </style>

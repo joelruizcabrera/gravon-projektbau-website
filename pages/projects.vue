@@ -1,36 +1,35 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="relative py-32 bg-slate-900 text-white">
-      <div class="absolute inset-0">
-        <img
-            src="/images/frankfurt-skyline.jpg"
-            alt="GRAVON Projekte"
-            class="w-full h-full object-cover opacity-30"
-        />
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/40"></div>
-      </div>
-      <div class="relative container mx-auto px-4 lg:px-8 text-center">
-        <h1 class="text-5xl lg:text-6xl font-bold mb-6">{{ $t('projects.title') }}</h1>
-        <p class="text-xl max-w-3xl mx-auto">{{ $t('projects.heroSubtitle') }}</p>
-      </div>
-    </section>
+    <PageHero
+        :title="$t('projects.title')"
+        :subtitle="$t('projects.subtitle')"
+        background-image="/images/frankfurt-skyline.jpg"
+        height="medium"
+        :show-breadcrumbs="true"
+        badge="Referenzen"
+        :stats="projectStats"
+    />
 
     <!-- Filter Section -->
-    <section class="section-padding bg-white border-b border-gray-200">
+    <section class="section-padding bg-white">
       <div class="container mx-auto">
-        <div class="flex flex-wrap justify-center gap-4">
-          <button
-              v-for="category in categories"
-              :key="category.id"
-              @click="activeCategory = category.id"
-              class="px-6 py-3 rounded-full font-medium transition-all duration-300"
-              :class="activeCategory === category.id
-                ? 'bg-yellow-500 text-black'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
-          >
-            {{ $t(category.name) }}
-          </button>
+        <div class="text-center">
+          <div class="inline-flex bg-gray-100 rounded-full p-2 gsap-animate">
+            <button
+                v-for="category in categories"
+                :key="category"
+                @click="activeCategory = category"
+                :class="[
+                'px-6 py-3 rounded-full transition-all duration-300',
+                activeCategory === category
+                  ? 'bg-yellow-500 text-black shadow-lg'
+                  : 'text-gray-600 hover:text-gray-900'
+              ]"
+            >
+              {{ $t(`projects.categories.${category}`) }}
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -46,11 +45,12 @@
               @click="openProjectModal(project)"
           >
             <div class="relative h-64 overflow-hidden">
-              <img
+              <NuxtImg
                   :src="project.image"
                   :alt="$t(project.title)"
+                  :placeholder="'/images/frankfurt-skyline.jpg'"
                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
+              ></NuxtImg>
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 
               <!-- Category Badge -->
@@ -309,14 +309,7 @@ useHead({
 })
 
 // Categories
-const categories = [
-  { id: 'all', name: 'projects.categories.all' },
-  { id: 'commercial', name: 'projects.categories.commercial' },
-  { id: 'residential', name: 'projects.categories.residential' },
-  { id: 'industrial', name: 'projects.categories.industrial' },
-  { id: 'infrastructure', name: 'projects.categories.infrastructure' }
-]
-
+const categories = ['all', 'residential', 'commercial', 'industrial']
 // All projects data
 const allProjects = [
   {
@@ -462,10 +455,10 @@ const allProjects = [
 
 // Project statistics
 const projectStats = [
-  { value: '200', label: 'projects.stats.completed' },
-  { value: '500', label: 'projects.stats.volume' },
-  { value: '25', label: 'projects.stats.years' },
-  { value: '95', label: 'projects.stats.satisfaction' }
+  { value: '150', label: 'projects.stats.completed' },
+  { value: '25', label: 'projects.stats.ongoing' },
+  { value: '500', label: 'projects.stats.totalValue' },
+  { value: '98', label: 'projects.stats.satisfaction' }
 ]
 
 // Computed properties

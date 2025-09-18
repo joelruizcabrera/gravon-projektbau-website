@@ -20,7 +20,7 @@
         Zur Navigation springen
       </a>
     </div>
-    <nav class="container mx-auto px-4 lg:px-8 py-6" role="navigation" aria-label="Hauptnavigation">
+    <nav class="container mx-auto px-4 lg:px-8 py-6" role="navigation" aria-label="Hauptnavigation" id="main-navigation">
       <div class="flex justify-between items-center">
         <!-- Logo -->
         <NuxtLinkLocale

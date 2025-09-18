@@ -108,6 +108,106 @@
         height: auto;
         max-width: 100%;
     }
+    .gsap-animate {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: none; /* Verhindert CSS Transitions die mit GSAP interferieren */
+    }
+
+    .gsap-slide-left {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: none;
+    }
+
+    .gsap-slide-right {
+        opacity: 0;
+        transform: translateX(50px);
+        transition: none;
+    }
+
+    .gsap-scale {
+        opacity: 0;
+        transform: scale(0.9);
+        transition: none;
+    }
+
+    .gsap-fade {
+        opacity: 0;
+        transition: none;
+    }
+
+    /* Hero spezifische Klassen */
+    .hero-animate-title {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: none;
+    }
+
+    .hero-animate-subtitle {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: none;
+    }
+
+    .hero-animate-cta {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: none;
+    }
+
+    .hero-animate-stats {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: none;
+    }
+
+    .page-hero-title-word {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: none;
+    }
+
+    .page-hero-subtitle {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: none;
+    }
+
+    .page-hero-cta {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: none;
+    }
+
+    .page-hero-stats {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: none;
+    }
+
+    .page-hero-badge {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: none;
+    }
+
+    .page-hero-scroll {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: none;
+    }
+
+    /* Fallbacks für no-js */
+    .no-js .page-hero-title-word,
+    .no-js .page-hero-subtitle,
+    .no-js .page-hero-cta,
+    .no-js .page-hero-stats,
+    .no-js .page-hero-badge,
+    .no-js .page-hero-scroll {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 @layer components {
