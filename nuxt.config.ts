@@ -20,21 +20,21 @@ export default defineNuxtConfig({
         locales: [
             {
                 code: 'de',
-                iso: 'de-DE',
+                language: 'de-DE',
                 name: 'Deutsch',
                 file: 'de.json',
                 dir: 'ltr'
             },
             {
                 code: 'en',
-                iso: 'en-US',
+                language: 'en-US',
                 name: 'English',
                 file: 'en.json',
                 dir: 'ltr'
             },
             {
                 code: 'es',
-                iso: 'es-ES',
+                language: 'es-ES',
                 name: 'Español',
                 file: 'es.json',
                 dir: 'ltr'
@@ -131,7 +131,7 @@ export default defineNuxtConfig({
             devSourcemap: true
         },
         optimizeDeps: {
-            include: ['gsap']
+            include: ['gsap', 'vue-router'],
         }
     },
 
