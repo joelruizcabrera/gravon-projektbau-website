@@ -276,7 +276,7 @@ onUnmounted(() => {
 
 /* Performance optimizations */
 .services-grid {
-  contain: layout style paint;
+  contain: layout style;
 }
 
 /* Responsive design */
