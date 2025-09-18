@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isReady" class="relative language-switcher" ref="dropdownRef">
+  <div class="relative language-switcher" ref="dropdownRef">
     <button
         @click="toggleDropdown"
         class="flex items-center space-x-2 text-white hover:text-yellow-500 transition-colors duration-300 p-2 rounded-lg hover:bg-white hover:bg-opacity-10"
@@ -24,10 +24,12 @@
       </svg>
     </button>
 
+    <!-- Desktop Dropdown -->
     <Transition name="dropdown">
       <div
-          v-if="isOpen"
-          class="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50 min-w-[160px]"
+          v-if="isOpen && !isMobile"
+          class="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden min-w-[160px]"
+          style="z-index: 9999;"
           role="menu"
           :aria-label="$t('nav.switchLanguage')"
       >
@@ -69,12 +71,66 @@
         </NuxtLinkLocale>
       </div>
     </Transition>
+
+    <!-- Mobile Dropdown (using Teleport to avoid clipping) -->
+    <Teleport to="body">
+      <Transition name="dropdown">
+        <div
+            v-if="isOpen && isMobile"
+            class="fixed inset-0 z-[10000] flex items-start justify-end pt-20 pr-4"
+            @click="closeDropdown"
+        >
+          <div
+              class="bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden min-w-[200px] max-w-[90vw]"
+              role="menu"
+              :aria-label="$t('nav.switchLanguage')"
+              @click.stop
+          >
+            <NuxtLinkLocale
+                v-for="locale in availableLocales"
+                :key="locale.code"
+                :to="getLocalizedPath(locale.code)"
+                @click="handleLocaleClick(locale)"
+                class="flex items-center space-x-3 px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200 no-underline"
+                :class="{ 'bg-yellow-50 border-l-4 border-yellow-500': locale.code === currentLocaleCode }"
+                role="menuitem"
+                :aria-current="locale.code === currentLocaleCode ? 'true' : 'false'"
+            >
+              <!-- Flag placeholder -->
+              <div class="w-8 h-6 bg-gray-200 rounded-sm flex items-center justify-center overflow-hidden">
+                <span
+                    class="text-xs font-bold"
+                    :class="getFlagClass(locale.code)"
+                    :title="locale.name"
+                >
+                  {{ locale.code.toUpperCase() }}
+                </span>
+              </div>
+
+              <div class="flex-1">
+                <div class="font-medium">{{ locale.name }}</div>
+                <div class="text-xs text-gray-500">{{ locale.nativeName || locale.name }}</div>
+              </div>
+
+              <svg
+                  v-if="locale.code === currentLocaleCode"
+                  class="w-4 h-4 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+              >
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </NuxtLinkLocale>
+          </div>
+        </div>
+      </Transition>
+    </Teleport>
   </div>
 </template>
 
 <script setup>
 // Reactive state
-const isReady = ref(false)
 const isOpen = ref(false)
 const dropdownRef = ref(null)
 
@@ -85,70 +141,40 @@ const localeConfig = {
   es: { name: 'Español', nativeName: 'Español', flag: '🇪🇸' }
 }
 
-// Initialize with fallbacks for static generation
-let currentLocale, locales, switchLocalePath, route
-let $t = (key) => key // Fallback translation function
+// Safe i18n initialization with fallbacks
+let currentLocale, locales, switchLocalePath, route, t
 
-// Safe initialization of i18n
-const initializeI18n = () => {
-  try {
-    if (process.client) {
-      // Client-side: Full i18n functionality
-      const i18n = useI18n()
-      currentLocale = i18n.locale
-      locales = i18n.locales
-      switchLocalePath = useSwitchLocalePath()
-      route = useRoute()
-
-      // Enhanced translation function with fallbacks
-      const { t } = i18n
-      $t = (key) => {
-        try {
-          return t(key)
-        } catch (error) {
-          const fallbackTranslations = {
-            'nav.switchLanguage': 'Switch language'
-          }
-          return fallbackTranslations[key] || key
-        }
-      }
-    } else {
-      // Server-side: Use minimal fallbacks for SSG
-      currentLocale = ref('de')
-      locales = ref([
-        { code: 'de', name: 'Deutsch' },
-        { code: 'en', name: 'English' }
-      ])
-      switchLocalePath = (locale) => locale === 'de' ? '/' : `/${locale}/`
-      route = { path: '/' }
+try {
+  const i18n = useI18n()
+  currentLocale = i18n.locale
+  locales = i18n.locales
+  t = i18n.t
+  switchLocalePath = useSwitchLocalePath()
+  route = useRoute()
+} catch (error) {
+  // Fallbacks for SSG/SSR issues
+  console.warn('i18n initialization error, using fallbacks:', error)
+  currentLocale = ref('de')
+  locales = ref([
+    { code: 'de', name: 'Deutsch' },
+    { code: 'en', name: 'English' }
+  ])
+  t = (key) => {
+    const fallbacks = {
+      'nav.switchLanguage': 'Sprache wechseln'
     }
-
-    isReady.value = true
-  } catch (error) {
-    console.warn('LanguageSwitch initialization error:', error)
-
-    // Final fallback
-    currentLocale = ref('de')
-    locales = ref([
-      { code: 'de', name: 'Deutsch' },
-      { code: 'en', name: 'English' }
-    ])
-    switchLocalePath = (locale) => locale === 'de' ? '/' : `/${locale}/`
-    route = { path: '/' }
-
-    isReady.value = true
+    return fallbacks[key] || key
   }
+  switchLocalePath = (locale) => locale === 'de' ? '/' : `/${locale}/`
+  route = { path: '/' }
 }
 
 // Computed properties with safe access
 const currentLocaleCode = computed(() => {
-  if (!isReady.value) return 'de'
   return currentLocale?.value || 'de'
 })
 
 const availableLocales = computed(() => {
-  if (!isReady.value) return []
-
   if (!Array.isArray(locales?.value)) {
     return [
       { code: 'en', name: 'English', nativeName: 'English' }
@@ -164,9 +190,14 @@ const availableLocales = computed(() => {
       }))
 })
 
+// Mobile detection
+const isMobile = computed(() => {
+  if (!process.client) return false
+  return window.innerWidth < 768
+})
+
 // Methods
 const toggleDropdown = () => {
-  if (!isReady.value) return
   isOpen.value = !isOpen.value
 }
 
@@ -192,16 +223,6 @@ const handleLocaleClick = (locale) => {
 }
 
 const getLocalizedPath = (localeCode) => {
-  if (!isReady.value || !switchLocalePath) {
-    // Fallback path construction
-    const isDefaultLocale = localeCode === 'de'
-    if (isDefaultLocale) {
-      return '/'
-    } else {
-      return `/${localeCode}/`
-    }
-  }
-
   try {
     return switchLocalePath(localeCode)
   } catch (error) {
@@ -230,6 +251,18 @@ const getFlagClass = (localeCode) => {
   return flagColors[localeCode] || 'text-gray-600'
 }
 
+// Safe translation function
+const $t = (key) => {
+  try {
+    return t(key)
+  } catch (error) {
+    const fallbacks = {
+      'nav.switchLanguage': 'Sprache wechseln'
+    }
+    return fallbacks[key] || key
+  }
+}
+
 // Event handlers
 const handleClickOutside = (event) => {
   if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
@@ -243,34 +276,19 @@ const handleEscape = (event) => {
   }
 }
 
-const handleFocusOut = (event) => {
-  // Close dropdown if focus moves outside the component
-  setTimeout(() => {
-    if (dropdownRef.value && !dropdownRef.value.contains(document.activeElement)) {
-      closeDropdown()
-    }
-  }, 100)
+const handleResize = () => {
+  // Close dropdown on resize to avoid positioning issues
+  if (isOpen.value) {
+    closeDropdown()
+  }
 }
 
 // Lifecycle hooks
 onMounted(() => {
-  // Initialize i18n with proper error handling
-  initializeI18n()
-
   if (process.client) {
-    // Set up event listeners
     document.addEventListener('click', handleClickOutside)
     document.addEventListener('keydown', handleEscape)
-    document.addEventListener('focusout', handleFocusOut)
-
-    // Additional initialization after hydration
-    nextTick(() => {
-      setTimeout(() => {
-        if (!isReady.value) {
-          initializeI18n()
-        }
-      }, 100)
-    })
+    window.addEventListener('resize', handleResize)
   }
 })
 
@@ -278,7 +296,7 @@ onUnmounted(() => {
   if (process.client) {
     document.removeEventListener('click', handleClickOutside)
     document.removeEventListener('keydown', handleEscape)
-    document.removeEventListener('focusout', handleFocusOut)
+    window.removeEventListener('resize', handleResize)
   }
 })
 
@@ -286,15 +304,6 @@ onUnmounted(() => {
 watch(() => route?.path, () => {
   closeDropdown()
 })
-
-// Watch for hydration completion
-if (process.client) {
-  watch(() => process.client, (isClient) => {
-    if (isClient && !isReady.value) {
-      initializeI18n()
-    }
-  }, { immediate: true })
-}
 </script>
 
 <style scoped>
@@ -420,10 +429,5 @@ a:focus-visible {
 
 .no-underline:hover {
   text-decoration: none !important;
-}
-
-/* Loading state */
-.language-switcher:not(.ready) {
-  visibility: hidden;
 }
 </style>
