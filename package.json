@@ -9,8 +9,8 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "npm run sitemap:generate && nuxt generate",
-    "generate:sitemap": "nuxt generate && npm run sitemap:post-generate",
+    "generate": "npm run sitemap:prebuild && nuxt generate",
+    "generate:safe": "nuxt generate --ignore-dependencies",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint . --ext .vue,.js,.ts",
@@ -19,18 +19,14 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
-    "clean": "rm -rf .nuxt .output dist node_modules/.cache",
+    "clean": "rm -rf .nuxt .output dist node_modules/.cache public/sitemap.xml",
     "analyze": "nuxt build --analyze",
-    "sitemap:generate": "node scripts/generate-sitemap.js",
-    "sitemap:post-generate": "node scripts/generate-sitemap.js",
-    "prebuild": "npm run sitemap:generate",
-    "pregenerate": "npm run sitemap:generate"
+    "sitemap:prebuild": "node scripts/generate-sitemap-static.js",
+    "sitemap:check": "curl -s http://localhost:3000/sitemap.xml | grep -c '<url>' || echo 'Server nicht gestartet'"
   },
   "dependencies": {
     "@nuxt/content": "^2.13.2",
     "@nuxtjs/i18n": "8.5.6",
-    "@nuxtjs/robots": "5.5.5",
-    "@nuxtjs/sitemap": "7.4.7",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@vueuse/nuxt": "^11.1.0",
     "gsap": "^3.12.2",
@@ -72,14 +68,17 @@
     "general-contractor",
     "nuxt",
     "vue",
-    "typescript"
+    "typescript",
+    "sitemap",
+    "seo",
+    "multilingual"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joelruizcabrera/gravon-projektbau-website.git"
+    "url": "git+https://github.com/gravon-projektbau/website.git"
   },
   "bugs": {
-    "url": "https://github.com/joelruizcabrera/gravon-projektbau-website/issues"
+    "url": "https://github.com/gravon-projektbau/website/issues"
   },
   "homepage": "https://gravon-projektbau.de"
 }

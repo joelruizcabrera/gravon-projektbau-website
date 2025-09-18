@@ -1,11 +1,15 @@
+// scripts/generate-sitemap-static.js
+// Erstellt eine statische Sitemap für den Build-Prozess
 import { writeFileSync } from 'fs'
 import { resolve } from 'path'
 
 const baseURL = process.env.NUXT_PUBLIC_SITE_URL || 'https://gravon-projektbau.de'
 
-// Alle Seiten mit Metadaten definieren
+console.log('🔧 Generiere statische Sitemap für Build...')
+
+// Alle Seiten definieren - IDENTISCH zur API-Route
 const pages = [
-    // Deutsche Hauptseiten (Default Locale)
+    // DEUTSCHE SEITEN (Default-Locale ohne Präfix)
     {
         loc: '/',
         priority: '1.0',
@@ -41,8 +45,6 @@ const pages = [
         lastmod: new Date().toISOString(),
         images: ['/images/contact-hero.jpg']
     },
-
-    // Deutsche Legal-Seiten
     {
         loc: '/privacy',
         priority: '0.3',
@@ -62,7 +64,7 @@ const pages = [
         lastmod: new Date().toISOString()
     },
 
-    // Englische Seiten
+    // ENGLISCHE SEITEN
     {
         loc: '/en',
         priority: '0.9',
@@ -98,8 +100,6 @@ const pages = [
         lastmod: new Date().toISOString(),
         images: ['/images/contact-hero.jpg']
     },
-
-    // Englische Legal-Seiten
     {
         loc: '/en/privacy',
         priority: '0.2',
@@ -117,17 +117,80 @@ const pages = [
         priority: '0.2',
         changefreq: 'yearly',
         lastmod: new Date().toISOString()
+    },
+
+    // SPANISCHE SEITEN
+    {
+        loc: '/es',
+        priority: '0.9',
+        changefreq: 'weekly',
+        lastmod: new Date().toISOString(),
+        images: ['/images/hero-bg.jpg']
+    },
+    {
+        loc: '/es/services',
+        priority: '0.8',
+        changefreq: 'monthly',
+        lastmod: new Date().toISOString(),
+        images: ['/images/services-hero.jpg']
+    },
+    {
+        loc: '/es/projects',
+        priority: '0.8',
+        changefreq: 'weekly',
+        lastmod: new Date().toISOString(),
+        images: ['/images/projects-hero.jpg']
+    },
+    {
+        loc: '/es/about',
+        priority: '0.7',
+        changefreq: 'monthly',
+        lastmod: new Date().toISOString(),
+        images: ['/images/about-hero.jpg']
+    },
+    {
+        loc: '/es/contact',
+        priority: '0.7',
+        changefreq: 'monthly',
+        lastmod: new Date().toISOString(),
+        images: ['/images/contact-hero.jpg']
+    },
+    {
+        loc: '/es/privacy',
+        priority: '0.2',
+        changefreq: 'yearly',
+        lastmod: new Date().toISOString()
+    },
+    {
+        loc: '/es/terms',
+        priority: '0.2',
+        changefreq: 'yearly',
+        lastmod: new Date().toISOString()
+    },
+    {
+        loc: '/es/imprint',
+        priority: '0.2',
+        changefreq: 'yearly',
+        lastmod: new Date().toISOString()
     }
 ]
 
-// Hilfsfunktionen für XML-Generierung
+// Hilfsfunktionen
 const generateAlternateLinks = (path) => {
-    const isEnglish = path.startsWith('/en')
-    const cleanPath = isEnglish ? path.replace('/en', '') : path
+    let cleanPath = path
+
+    if (path.startsWith('/en/')) {
+        cleanPath = path.replace('/en', '')
+    } else if (path.startsWith('/es/')) {
+        cleanPath = path.replace('/es', '')
+    }
+
+    if (cleanPath === '') cleanPath = '/'
 
     return `
     <xhtml:link rel="alternate" hreflang="de" href="${baseURL}${cleanPath}" />
     <xhtml:link rel="alternate" hreflang="en" href="${baseURL}/en${cleanPath}" />
+    <xhtml:link rel="alternate" hreflang="es" href="${baseURL}/es${cleanPath}" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${baseURL}${cleanPath}" />`
 }
 
@@ -139,7 +202,7 @@ const generateImageTags = (images = []) => {
     </image:image>`).join('')
 }
 
-// XML Sitemap erstellen
+// XML Sitemap generieren
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
@@ -151,28 +214,14 @@ ${pages.map(page => `  <url>
   </url>`).join('\n')}
 </urlset>`
 
-// Sitemap in verschiedene Zielverzeichnisse schreiben
+// Statische Sitemap erstellen
 try {
-    // In das public Verzeichnis für Development
     writeFileSync(resolve('public/sitemap.xml'), sitemap)
-    console.log('✅ Sitemap erfolgreich in public/sitemap.xml erstellt')
-
-    // In das .output Verzeichnis für Production (falls vorhanden)
-    try {
-        writeFileSync(resolve('.output/public/sitemap.xml'), sitemap)
-        console.log('✅ Sitemap erfolgreich in .output/public/sitemap.xml erstellt')
-    } catch (error) {
-        console.log('ℹ️  .output Verzeichnis nicht gefunden (normal bei Development)')
-    }
-
-    // In das dist Verzeichnis (falls vorhanden)
-    try {
-        writeFileSync(resolve('dist/sitemap.xml'), sitemap)
-        console.log('✅ Sitemap erfolgreich in dist/sitemap.xml erstellt')
-    } catch (error) {
-        console.log('ℹ️  dist Verzeichnis nicht gefunden (normal bei Development)')
-    }
-
+    console.log('✅ Statische Sitemap erstellt: public/sitemap.xml')
+    console.log(`📊 ${pages.length} URLs generiert`)
+    console.log(`   Deutsche URLs: ${pages.filter(p => !p.loc.includes('/') || (p.loc.startsWith('/') && !p.loc.startsWith('/en') && !p.loc.startsWith('/es'))).length}`)
+    console.log(`   Englische URLs: ${pages.filter(p => p.loc.startsWith('/en')).length}`)
+    console.log(`   Spanische URLs: ${pages.filter(p => p.loc.startsWith('/es')).length}`)
 } catch (error) {
     console.error('❌ Fehler beim Erstellen der Sitemap:', error)
     process.exit(1)
