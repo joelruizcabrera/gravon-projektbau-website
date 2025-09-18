@@ -78,18 +78,18 @@
                   <div class="text-gray-300 space-y-2">
                     <p>
                       <a
-                          href="mailto:info@gravon.de"
+                          href="mailto:info@gravon-projektbau.de"
                           class="hover:text-yellow-400 transition-colors duration-300 font-medium break-all"
                       >
-                        info@gravon.de
+                        info@gravon-projektbau.de
                       </a>
                     </p>
                     <p>
                       <a
-                          href="mailto:projekt@gravon.de"
+                          href="mailto:projekt@ravon-projektbau.de"
                           class="hover:text-yellow-400 transition-colors duration-300 font-medium break-all"
                       >
-                        projekt@gravon.de
+                        projekt@ravon-projektbau.de
                       </a>
                     </p>
                   </div>

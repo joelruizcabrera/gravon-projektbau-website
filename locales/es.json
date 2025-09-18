@@ -371,13 +371,13 @@
         "subtitle": "sede",
         "description": "Nuestra sede en el corazón de la metrópoli financiera, ubicada centralmente para proyectos en Alemania."
       },
-      "munich": {
-        "title": "Munich",
+      "wiesbaden": {
+        "title": "Wiesbaden",
         "subtitle": "Sur de Alemania",
-        "description": "Nuestra ubicación para Baviera y el sur de Alemania con un enfoque en proyectos residenciales y comerciales."
+        "description": "Nuestra ubicación para Wiesbaden y el sur de Alemania con un enfoque en proyectos residenciales y comerciales."
       },
-      "hamburg": {
-        "title": "Hamburgo",
+      "osnabrueck": {
+        "title": "Osnabrück",
         "subtitle": "Alemania del norte",
         "description": "Competencia sanseatic para el norte de Alemania con un enfoque en logística y edificios industriales."
       }

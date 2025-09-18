@@ -371,15 +371,15 @@
         "subtitle": "Hauptsitz",
         "description": "Unser Hauptsitz im Herzen der Finanzmetropole - zentral gelegen für Projekte in ganz Deutschland."
       },
-      "munich": {
-        "title": "München",
+      "wiesbaden": {
+        "title": "Wiesbaden",
         "subtitle": "Süddeutschland",
-        "description": "Unser Standort für Bayern und den süddeutschen Raum mit Fokus auf Wohn- und Gewerbeprojekte."
+        "description": "Unser Standort für Wiesbaden und den süddeutschen Raum mit Fokus auf Wohn- und Gewerbeprojekte."
       },
-      "hamburg": {
-        "title": "Hamburg",
+      "osnabrueck": {
+        "title": "Osnabrück",
         "subtitle": "Norddeutschland",
-        "description": "Hanseatische Kompetenz für Norddeutschland mit Schwerpunkt Logistik und Industriebau."
+        "description": "Nordische Kompetenz mit Schwerpunkt Logistik und Industriebau."
       }
     },
     "form": {

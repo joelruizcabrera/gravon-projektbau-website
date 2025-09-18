@@ -198,7 +198,7 @@ onMounted(() => {
 /* Performance optimizations */
 .about-content,
 .about-image {
-  contain: layout style paint;
+  contain: layout style;
 }
 
 /* Responsive adjustments */

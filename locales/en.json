@@ -371,13 +371,13 @@
         "subtitle": "Headquarters",
         "description": "Our headquarters in the heart of the financial metropolis - centrally located for projects throughout Germany."
       },
-      "munich": {
-        "title": "Munich",
+      "wiesbaden": {
+        "title": "Wiesbaden",
         "subtitle": "Southern Germany",
-        "description": "Our location for Bavaria and southern Germany with focus on residential and commercial projects."
+        "description": "Our location for Wiesbaden and southern Germany with focus on residential and commercial projects."
       },
-      "hamburg": {
-        "title": "Hamburg",
+      "osnabrueck": {
+        "title": "Osnabrück",
         "subtitle": "Northern Germany",
         "description": "Hanseatic competence for northern Germany with focus on logistics and industrial construction."
       }

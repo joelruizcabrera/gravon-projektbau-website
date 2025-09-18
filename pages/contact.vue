@@ -70,8 +70,8 @@
                 <div>
                   <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ $t('contact.email.title') }}</h3>
                   <div class="text-gray-600 space-y-1">
-                    <p><a href="mailto:info@gravon.de" class="hover:text-yellow-600 transition-colors">info@gravon.de</a></p>
-                    <p><a href="mailto:projekt@gravon.de" class="hover:text-yellow-600 transition-colors">projekt@gravon.de</a></p>
+                    <p><a href="mailto:info@gravon-projektbau.de" class="hover:text-yellow-600 transition-colors">info@gravon-projektbau.de</a></p>
+                    <p><a href="mailto:projekt@gravon-projektbau.de" class="hover:text-yellow-600 transition-colors">projekt@gravon-projektbau.de</a></p>
                   </div>
                 </div>
               </div>
@@ -331,31 +331,31 @@
             </div>
           </div>
 
-          <!-- Munich -->
+          <!-- Wiesbaden -->
           <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ $t('contact.locations.munich.title') }}</h3>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ $t('contact.locations.wiesbaden.title') }}</h3>
             <div class="space-y-2 text-gray-600 mb-6">
-              <p class="font-medium">{{ $t('contact.locations.munich.subtitle') }}</p>
+              <p class="font-medium">{{ $t('contact.locations.wiesbaden.subtitle') }}</p>
               <p>Maximilianstraße 45</p>
               <p>80538 München</p>
               <p>+49 89 987 654 321</p>
             </div>
             <div class="bg-blue-100 p-4 rounded-lg">
-              <p class="text-sm text-gray-700">{{ $t('contact.locations.munich.description') }}</p>
+              <p class="text-sm text-gray-700">{{ $t('contact.locations.wiesbaden.description') }}</p>
             </div>
           </div>
 
-          <!-- Hamburg -->
+          <!-- Osnabrück -->
           <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ $t('contact.locations.hamburg.title') }}</h3>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ $t('contact.locations.osnabrueck.title') }}</h3>
             <div class="space-y-2 text-gray-600 mb-6">
-              <p class="font-medium">{{ $t('contact.locations.hamburg.subtitle') }}</p>
-              <p>Speicherstadt 12</p>
-              <p>20457 Hamburg</p>
+              <p class="font-medium">{{ $t('contact.locations.osnabrueck.subtitle') }}</p>
+              <p>Georgsstraße 10</p>
+              <p>49074 Osnabrück</p>
               <p>+49 40 555 123 456</p>
             </div>
             <div class="bg-green-100 p-4 rounded-lg">
-              <p class="text-sm text-gray-700">{{ $t('contact.locations.hamburg.description') }}</p>
+              <p class="text-sm text-gray-700">{{ $t('contact.locations.osnabrueck.description') }}</p>
             </div>
           </div>
         </div>
