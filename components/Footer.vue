@@ -182,10 +182,10 @@
             <div>
               <p class="font-medium text-white mb-1">{{ $t('contact.email.title') }}:</p>
               <a
-                  href="mailto:info@gravon.de"
+                  href="mailto:info@gravon-projektbau.de"
                   class="text-sm hover:text-yellow-500 transition-colors duration-300"
               >
-                info@gravon.de
+                info@gravon-projektbau.de
               </a>
             </div>
             <div class="pt-2">

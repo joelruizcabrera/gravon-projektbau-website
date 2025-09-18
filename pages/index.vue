@@ -46,7 +46,7 @@ useHead({
     },
     {
       property: 'og:url',
-      content: 'https://www.gravon.de'
+      content: 'https://gravon-projektbau.de'
     },
     {
       name: 'twitter:card',
@@ -68,7 +68,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: 'https://www.gravon.de'
+      href: 'https://gravon-projektbau.de'
     }
   ]
 })

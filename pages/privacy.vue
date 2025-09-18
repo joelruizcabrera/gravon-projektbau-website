@@ -28,7 +28,7 @@
               <p class="text-gray-600 mb-1">60311 Frankfurt am Main</p>
               <p class="text-gray-600 mb-1">Deutschland</p>
               <p class="text-gray-600 mb-1">{{ $t('contact.phone.title') }}: +49 69 123 456 789</p>
-              <p class="text-gray-600">{{ $t('contact.email.title') }}: info@gravon.de</p>
+              <p class="text-gray-600">{{ $t('contact.email.title') }}: info@gravon-projektbau.de</p>
             </div>
           </div>
 
@@ -86,7 +86,7 @@
             <p class="text-gray-600 mb-4">{{ $t('privacy.contact.content') }}</p>
             <div class="bg-yellow-50 border border-yellow-200 p-6 rounded-lg">
               <p class="text-gray-900 font-semibold mb-2">{{ $t('privacy.contact.dpo') }}</p>
-              <p class="text-gray-600">{{ $t('contact.email.title') }}: datenschutz@gravon.de</p>
+              <p class="text-gray-600">{{ $t('contact.email.title') }}: datenschutz@gravon-projektbau.de</p>
               <p class="text-gray-600">{{ $t('contact.phone.title') }}: +49 69 123 456 789</p>
             </div>
           </div>

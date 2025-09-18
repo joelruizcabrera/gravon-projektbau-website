@@ -78,7 +78,7 @@ export default defineNuxtConfig({
     // Enhanced runtime configuration
     runtimeConfig: {
         public: {
-            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.gravon.de',
+            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://gravon-projektbau.de',
             gtag: {
                 id: process.env.NUXT_GTAG_ID || ''
             }

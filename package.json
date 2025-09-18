@@ -71,10 +71,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gravon-projektbau/website.git"
+    "url": "git+https://github.com/joelruizcabrera/gravon-projektbau-website.git"
   },
   "bugs": {
-    "url": "https://github.com/gravon-projektbau/website/issues"
+    "url": "https://github.com/joelruizcabrera/gravon-projektbau-website/issues"
   },
-  "homepage": "https://www.gravon.de"
+  "homepage": "https://gravon-projektbau.de"
 }

@@ -162,7 +162,7 @@
             <div class="bg-yellow-50 border border-yellow-200 p-6 rounded-lg">
               <p class="text-gray-600 mb-4">{{ $t('terms.contact.content') }}</p>
               <div class="space-y-1 text-gray-600">
-                <p><span class="font-medium">{{ $t('contact.email.title') }}:</span> recht@gravon.de</p>
+                <p><span class="font-medium">{{ $t('contact.email.title') }}:</span> recht@gravon-projektbau.de</p>
                 <p><span class="font-medium">{{ $t('contact.phone.title') }}:</span> +49 69 123 456 789</p>
               </div>
             </div>

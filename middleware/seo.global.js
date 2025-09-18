@@ -118,8 +118,8 @@ export default defineNuxtRouteMiddleware((to) => {
             { name: 'business:contact_data:postal_code', content: '60311' },
             { name: 'business:contact_data:country_name', content: 'Deutschland' },
             { name: 'business:contact_data:phone_number', content: '+49 69 123 456 789' },
-            { name: 'business:contact_data:email', content: 'info@gravon.de' },
-            { name: 'business:contact_data:website', content: 'https://www.gravon.de' }
+            { name: 'business:contact_data:email', content: 'info@gravon-projektbau.de' },
+            { name: 'business:contact_data:website', content: 'https://gravon-projektbau.de' }
         ]
     })
 

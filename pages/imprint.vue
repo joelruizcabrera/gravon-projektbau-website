@@ -72,7 +72,7 @@
                 <p>Maximilianstraße 45</p>
                 <p>80538 München</p>
                 <p>{{ $t('contact.phone.title') }}: +49 89 987 654 321</p>
-                <p>{{ $t('contact.email.title') }}: muenchen@gravon.de</p>
+                <p>{{ $t('contact.email.title') }}: muenchen@gravon-projektbau.de</p>
               </div>
             </div>
 
@@ -82,7 +82,7 @@
                 <p>Speicherstadt 12</p>
                 <p>20457 Hamburg</p>
                 <p>{{ $t('contact.phone.title') }}: +49 40 555 123 456</p>
-                <p>{{ $t('contact.email.title') }}: hamburg@gravon.de</p>
+                <p>{{ $t('contact.email.title') }}: hamburg@gravon-projektbau.de</p>
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@
           <div class="bg-gray-50 p-6 rounded-lg">
             <p class="text-gray-600 mb-4">{{ $t('imprint.legalContact.content') }}</p>
             <div class="space-y-1 text-gray-600">
-              <p><span class="font-medium">{{ $t('contact.email.title') }}:</span> recht@gravon.de</p>
+              <p><span class="font-medium">{{ $t('contact.email.title') }}:</span> recht@gravon-projektbau.de</p>
               <p><span class="font-medium">{{ $t('contact.phone.title') }}:</span> +49 69 123 456 789</p>
             </div>
           </div>

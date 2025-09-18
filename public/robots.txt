@@ -36,7 +36,7 @@ User-agent: SemrushBot
 Disallow: /
 
 # Sitemap
-Sitemap: https://www.gravon.de/sitemap.xml
+Sitemap: https://gravon-projektbau.de/sitemap.xml
 
 # Crawl-delay for general bots
 Crawl-delay: 1
