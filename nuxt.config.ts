@@ -67,6 +67,16 @@ export default defineNuxtConfig({
                 { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
                 { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
                 { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap' }
+            ],
+            script: [
+                {
+                    type: 'text/javascript',
+                    src: 'https://cdn.consentmanager.net/delivery/autoblocking/ed0afd57427d4.js',
+                    'data-cmp-ab': '1',
+                    'data-cmp-host': 'a.delivery.consentmanager.net',
+                    'data-cmp-cdn': 'cdn.consentmanager.net',
+                    'data-cmp-codesrc': '16'
+                }
             ]
         }
     },
