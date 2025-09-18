@@ -318,12 +318,12 @@ const allProjects = [
     description: 'projects.project1.description',
     longDescription: 'projects.project1.longDescription',
     fullDescription: 'projects.project1.fullDescription',
-    image: '/images/projects/business-tower-frankfurt.jpg',
+    image: '/images/frankfurt-skyline.jpg',
     gallery: [
-      '/images/projects/business-tower-1.jpg',
-      '/images/projects/business-tower-2.jpg',
-      '/images/projects/business-tower-3.jpg',
-      '/images/projects/business-tower-4.jpg'
+      '/images/frankfurt-skyline.jpg',
+      '/images/frankfurt-skyline.jpg',
+      '/images/frankfurt-skyline.jpg',
+      '/images/frankfurt-skyline.jpg'
     ],
     category: 'commercial',
     tags: ['office', 'modern', 'sustainable'],
@@ -345,11 +345,11 @@ const allProjects = [
     description: 'projects.project2.description',
     longDescription: 'projects.project2.longDescription',
     fullDescription: 'projects.project2.fullDescription',
-    image: '/images/projects/residenz-muenchen.jpg',
+    image: '/images/frankfurt-skyline.jpg',
     gallery: [
-      '/images/projects/residenz-1.jpg',
-      '/images/projects/residenz-2.jpg',
-      '/images/projects/residenz-3.jpg'
+      '/images/frankfurt-skyline.jpg',
+      '/images/frankfurt-skyline.jpg',
+      '/images/frankfurt-skyline.jpg'
     ],
     category: 'residential',
     tags: ['luxury', 'apartments', 'premium'],
@@ -371,10 +371,10 @@ const allProjects = [
     description: 'projects.project3.description',
     longDescription: 'projects.project3.longDescription',
     fullDescription: 'projects.project3.fullDescription',
-    image: '/images/projects/logistichub-hamburg.jpg',
+    image: '/images/frankfurt-skyline.jpg',
     gallery: [
-      '/images/projects/logistichub-1.jpg',
-      '/images/projects/logistichub-2.jpg'
+      '/images/frankfurt-skyline.jpg',
+      '/images/frankfurt-skyline.jpg'
     ],
     category: 'industrial',
     tags: ['logistics', 'automated', 'sustainable'],
@@ -396,7 +396,7 @@ const allProjects = [
     description: 'projects.project4.description',
     longDescription: 'projects.project4.longDescription',
     fullDescription: 'projects.project4.fullDescription',
-    image: '/images/projects/shopping-center-berlin.jpg',
+    image: '/images/frankfurt-skyline.jpg',
     category: 'commercial',
     tags: ['retail', 'modern', 'entertainment'],
     location: 'Berlin',
@@ -416,7 +416,7 @@ const allProjects = [
     description: 'projects.project5.description',
     longDescription: 'projects.project5.longDescription',
     fullDescription: 'projects.project5.fullDescription',
-    image: '/images/projects/bridge-construction.jpg',
+    image: '/images/frankfurt-skyline.jpg',
     category: 'infrastructure',
     tags: ['bridge', 'engineering', 'public'],
     location: 'Köln',
@@ -436,7 +436,7 @@ const allProjects = [
     description: 'projects.project6.description',
     longDescription: 'projects.project6.longDescription',
     fullDescription: 'projects.project6.fullDescription',
-    image: '/images/projects/hospital-stuttgart.jpg',
+    image: '/images/frankfurt-skyline.jpg',
     category: 'infrastructure',
     tags: ['healthcare', 'complex', 'modern'],
     location: 'Stuttgart',

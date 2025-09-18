@@ -286,12 +286,12 @@ const allProjects = [
     description: 'projects.project1.description',
     longDescription: 'projects.project1.longDescription',
     fullDescription: 'projects.project1.fullDescription',
-    image: '/images/projects/business-tower-frankfurt.jpg',
+    image: '/images/frankfurt-skyline.jpg',
     gallery: [
-      '/images/projects/business-tower-1.jpg',
-      '/images/projects/business-tower-2.jpg',
-      '/images/projects/business-tower-3.jpg',
-      '/images/projects/business-tower-4.jpg'
+      '/images/frankfurt-skyline.jpg',
+      '/images/frankfurt-skyline.jpg',
+      '/images/frankfurt-skyline.jpg',
+      '/images/frankfurt-skyline.jpg'
     ],
     category: 'commercial',
     tags: ['office', 'modern', 'sustainable'],
