@@ -4,9 +4,7 @@ Allow: /
 # Block admin and api areas
 User-agent: *
 Disallow: /admin/
-Disallow: /_nuxt/
 Disallow: /api/
-Disallow: /.nuxt/
 Disallow: /.well-known/
 
 # Block legal pages from indexing
