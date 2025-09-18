@@ -48,6 +48,12 @@ export default defineNuxtConfig({
         }
     },
 
+    sitemap: {
+        sources: [
+            '/api/__sitemap__/urls',
+        ]
+    },
+
     // Enhanced app configuration
     app: {
         head: {
