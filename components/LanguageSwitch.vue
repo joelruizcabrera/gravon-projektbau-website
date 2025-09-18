@@ -24,12 +24,10 @@
       </svg>
     </button>
 
-    <!-- Desktop Dropdown -->
     <Transition name="dropdown">
       <div
-          v-if="isOpen && !isMobile"
-          class="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden min-w-[160px]"
-          style="z-index: 9999;"
+          v-if="isOpen"
+          class="dropdown-menu absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden min-w-[160px]"
           role="menu"
           :aria-label="$t('nav.switchLanguage')"
       >
@@ -71,65 +69,14 @@
         </NuxtLinkLocale>
       </div>
     </Transition>
-
-    <!-- Mobile Dropdown (using Teleport to avoid clipping) -->
-    <Teleport to="body">
-      <Transition name="dropdown">
-        <div
-            v-if="isOpen && isMobile"
-            class="fixed inset-0 z-[10000] flex items-start justify-end pt-20 pr-4"
-            @click="closeDropdown"
-        >
-          <div
-              class="bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden min-w-[200px] max-w-[90vw]"
-              role="menu"
-              :aria-label="$t('nav.switchLanguage')"
-              @click.stop
-          >
-            <NuxtLinkLocale
-                v-for="locale in availableLocales"
-                :key="locale.code"
-                :to="getLocalizedPath(locale.code)"
-                @click="handleLocaleClick(locale)"
-                class="flex items-center space-x-3 px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200 no-underline"
-                :class="{ 'bg-yellow-50 border-l-4 border-yellow-500': locale.code === currentLocaleCode }"
-                role="menuitem"
-                :aria-current="locale.code === currentLocaleCode ? 'true' : 'false'"
-            >
-              <!-- Flag placeholder -->
-              <div class="w-8 h-6 bg-gray-200 rounded-sm flex items-center justify-center overflow-hidden">
-                <span
-                    class="text-xs font-bold"
-                    :class="getFlagClass(locale.code)"
-                    :title="locale.name"
-                >
-                  {{ locale.code.toUpperCase() }}
-                </span>
-              </div>
-
-              <div class="flex-1">
-                <div class="font-medium">{{ locale.name }}</div>
-                <div class="text-xs text-gray-500">{{ locale.nativeName || locale.name }}</div>
-              </div>
-
-              <svg
-                  v-if="locale.code === currentLocaleCode"
-                  class="w-4 h-4 text-yellow-500"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-              >
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-              </svg>
-            </NuxtLinkLocale>
-          </div>
-        </div>
-      </Transition>
-    </Teleport>
   </div>
 </template>
 
 <script setup>
+const { locale: currentLocale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+const route = useRoute()
+
 // Reactive state
 const isOpen = ref(false)
 const dropdownRef = ref(null)
@@ -141,42 +88,16 @@ const localeConfig = {
   es: { name: 'Español', nativeName: 'Español', flag: '🇪🇸' }
 }
 
-// Safe i18n initialization with fallbacks
-let currentLocale, locales, switchLocalePath, route, t
-
-try {
-  const i18n = useI18n()
-  currentLocale = i18n.locale
-  locales = i18n.locales
-  t = i18n.t
-  switchLocalePath = useSwitchLocalePath()
-  route = useRoute()
-} catch (error) {
-  // Fallbacks for SSG/SSR issues
-  console.warn('i18n initialization error, using fallbacks:', error)
-  currentLocale = ref('de')
-  locales = ref([
-    { code: 'de', name: 'Deutsch' },
-    { code: 'en', name: 'English' }
-  ])
-  t = (key) => {
-    const fallbacks = {
-      'nav.switchLanguage': 'Sprache wechseln'
-    }
-    return fallbacks[key] || key
-  }
-  switchLocalePath = (locale) => locale === 'de' ? '/' : `/${locale}/`
-  route = { path: '/' }
-}
-
-// Computed properties with safe access
+// Computed properties
 const currentLocaleCode = computed(() => {
-  return currentLocale?.value || 'de'
+  return currentLocale.value || 'de'
 })
 
 const availableLocales = computed(() => {
-  if (!Array.isArray(locales?.value)) {
+  if (!Array.isArray(locales.value)) {
+    console.warn('Locales not properly configured')
     return [
+      { code: 'de', name: 'Deutsch', nativeName: 'Deutsch' },
       { code: 'en', name: 'English', nativeName: 'English' }
     ].filter(locale => locale.code !== currentLocaleCode.value)
   }
@@ -188,12 +109,6 @@ const availableLocales = computed(() => {
         ...localeConfig[locale.code],
         name: locale.name || localeConfig[locale.code]?.name || locale.code.toUpperCase()
       }))
-})
-
-// Mobile detection
-const isMobile = computed(() => {
-  if (!process.client) return false
-  return window.innerWidth < 768
 })
 
 // Methods
@@ -210,15 +125,11 @@ const handleLocaleClick = (locale) => {
 
   // Optional: Track language change event
   if (process.client && window.gtag) {
-    try {
-      window.gtag('event', 'language_change', {
-        event_category: 'engagement',
-        event_label: `${currentLocaleCode.value}_to_${locale.code}`,
-        value: 1
-      })
-    } catch (error) {
-      console.warn('Analytics tracking error:', error)
-    }
+    window.gtag('event', 'language_change', {
+      event_category: 'engagement',
+      event_label: `${currentLocaleCode.value}_to_${locale.code}`,
+      value: 1
+    })
   }
 }
 
@@ -228,7 +139,7 @@ const getLocalizedPath = (localeCode) => {
   } catch (error) {
     console.warn('Error getting localized path:', error)
     // Fallback: manually construct path
-    const currentPath = route?.path || '/'
+    const currentPath = route.path
     const isDefaultLocale = localeCode === 'de'
 
     if (isDefaultLocale) {
@@ -251,18 +162,6 @@ const getFlagClass = (localeCode) => {
   return flagColors[localeCode] || 'text-gray-600'
 }
 
-// Safe translation function
-const $t = (key) => {
-  try {
-    return t(key)
-  } catch (error) {
-    const fallbacks = {
-      'nav.switchLanguage': 'Sprache wechseln'
-    }
-    return fallbacks[key] || key
-  }
-}
-
 // Event handlers
 const handleClickOutside = (event) => {
   if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
@@ -276,10 +175,26 @@ const handleEscape = (event) => {
   }
 }
 
-const handleResize = () => {
-  // Close dropdown on resize to avoid positioning issues
-  if (isOpen.value) {
-    closeDropdown()
+const handleFocusOut = (event) => {
+  // Close dropdown if focus moves outside the component
+  setTimeout(() => {
+    if (dropdownRef.value && !dropdownRef.value.contains(document.activeElement)) {
+      closeDropdown()
+    }
+  }, 100)
+}
+
+// Provide fallback translations if not available
+const { t } = useI18n()
+const fallbackTranslations = {
+  'nav.switchLanguage': 'Switch language'
+}
+
+const $t = (key) => {
+  try {
+    return t(key)
+  } catch (error) {
+    return fallbackTranslations[key] || key
   }
 }
 
@@ -288,7 +203,7 @@ onMounted(() => {
   if (process.client) {
     document.addEventListener('click', handleClickOutside)
     document.addEventListener('keydown', handleEscape)
-    window.addEventListener('resize', handleResize)
+    document.addEventListener('focusout', handleFocusOut)
   }
 })
 
@@ -296,12 +211,12 @@ onUnmounted(() => {
   if (process.client) {
     document.removeEventListener('click', handleClickOutside)
     document.removeEventListener('keydown', handleEscape)
-    window.removeEventListener('resize', handleResize)
+    document.removeEventListener('focusout', handleFocusOut)
   }
 })
 
 // Watch for route changes to close dropdown
-watch(() => route?.path, () => {
+watch(() => route.path, () => {
   closeDropdown()
 })
 </script>
@@ -309,6 +224,14 @@ watch(() => route?.path, () => {
 <style scoped>
 .language-switcher {
   user-select: none;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Critical: Dropdown menu z-index fix */
+.dropdown-menu {
+  z-index: 9999 !important;
+  position: absolute !important;
 }
 
 .dropdown-enter-active,
@@ -354,7 +277,7 @@ a:focus-visible {
     min-width: 44px;
   }
 
-  .language-switcher div[role="menu"] {
+  .dropdown-menu {
     right: 0;
     left: auto;
     min-width: 200px;
@@ -363,7 +286,7 @@ a:focus-visible {
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .language-switcher div[role="menu"] {
+  .dropdown-menu {
     background-color: #1f2937;
     border-color: #374151;
   }
@@ -390,7 +313,7 @@ a:focus-visible {
 }
 
 /* Enhanced dropdown shadow */
-.language-switcher div[role="menu"] {
+.dropdown-menu {
   box-shadow:
       0 10px 25px -5px rgba(0, 0, 0, 0.1),
       0 10px 10px -5px rgba(0, 0, 0, 0.04),

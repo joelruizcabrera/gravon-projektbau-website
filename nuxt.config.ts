@@ -31,6 +31,13 @@ export default defineNuxtConfig({
                 name: 'English',
                 file: 'en.json',
                 dir: 'ltr'
+            },
+            {
+                code: 'es',
+                iso: 'es-ES',
+                name: 'Español',
+                file: 'es.json',
+                dir: 'ltr'
             }
         ],
         lazy: true,
@@ -116,18 +123,25 @@ export default defineNuxtConfig({
                 '/en',
                 '/services',
                 '/en/services',
+                '/es/services',
                 '/projects',
                 '/en/projects',
+                '/es/projects',
                 '/about',
                 '/en/about',
+                '/es/about',
                 '/contact',
                 '/en/contact',
+                '/es/contact',
                 '/imprint',
                 '/en/imprint',
+                '/es/imprint',
                 '/privacy',
                 '/en/privacy',
+                '/es/privacy',
                 '/terms',
-                '/en/terms'
+                '/en/terms',
+                '/es/terms'
             ],
             crawlLinks: true
         },
