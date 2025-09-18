@@ -237,24 +237,13 @@
             © {{ new Date().getFullYear() }} GRAVON Projektbau GmbH. {{ $t('footer.rights') }}
           </p>
           <div class="flex flex-wrap gap-6">
-            <NuxtLink
-                :to="localePath('/privacy')"
+            <NuxtLinkLocale
                 class="text-gray-400 hover:text-yellow-500 text-sm transition-colors duration-300"
+                v-for="lawLink in lawLinks"
+                :to="lawLink.to"
             >
-              {{ $t('footer.legal.privacy') }}
-            </NuxtLink>
-            <NuxtLink
-                :to="localePath('/terms')"
-                class="text-gray-400 hover:text-yellow-500 text-sm transition-colors duration-300"
-            >
-              {{ $t('footer.legal.terms') }}
-            </NuxtLink>
-            <NuxtLink
-                :to="localePath('/imprint')"
-                class="text-gray-400 hover:text-yellow-500 text-sm transition-colors duration-300"
-            >
-              {{ $t('footer.legal.imprint') }}
-            </NuxtLink>
+              {{ $t(lawLink.label) }}
+            </NuxtLinkLocale>
             <a
                 href="/sitemap.xml"
                 class="text-gray-400 hover:text-yellow-500 text-sm transition-colors duration-300"
@@ -332,6 +321,21 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
+
+const lawLinks = ref([
+  {
+    label: 'footer.legal.privacy',
+    to: '/privacy'
+  },
+  {
+    label: 'footer.legal.imprint',
+    to: '/imprint'
+  },
+  {
+    label: 'footer.legal.terms',
+    to: '/terms'
+  }
+])
 </script>
 
 <style scoped>

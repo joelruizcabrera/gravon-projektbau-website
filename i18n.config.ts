@@ -37,6 +37,22 @@ export default defineI18nConfig(() => ({
                 style: 'percent',
                 useGrouping: false
             }
+        },
+        es: {
+            currency: {
+                style: 'currency',
+                currency: 'EUR',
+                notation: 'standard'
+            },
+            decimal: {
+                style: 'decimal',
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            },
+            percent: {
+                style: 'percent',
+                useGrouping: false
+            }
         }
     },
 
@@ -67,7 +83,20 @@ export default defineI18nConfig(() => ({
                 day: 'numeric',
                 weekday: 'long'
             }
-        }
+        },
+        es: {
+            short: {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            },
+            long: {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                weekday: 'long'
+            }
+        },
     },
 
     // Message compilation options
@@ -90,6 +119,11 @@ export default defineI18nConfig(() => ({
             return 2
         },
         en: (choice: number, choicesLength: number) => {
+            if (choice === 0) return 0
+            if (choice === 1) return 1
+            return 2
+        },
+        es: (choice: number, choicesLength: number) => {
             if (choice === 0) return 0
             if (choice === 1) return 1
             return 2

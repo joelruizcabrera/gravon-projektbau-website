@@ -1,0 +1,709 @@
+{
+  "nav": {
+    "home": "COMENZAR",
+    "services": "Beneficios",
+    "projects": "Referencias",
+    "about": "SOBRE NOSOTROS",
+    "contact": "CONTACTO",
+    "switchLanguage": "Cambiar lenguaje",
+    "openMobileMenu": "Menú abierto",
+    "closeMobileMenu": "Cerrar el menú"
+  },
+  "hero": {
+    "subtitle": "Proyectos llave en mano con sustancia.",
+    "cta": "Pregunte ahora sin obligación",
+    "learnMore": "Obtenga más información",
+    "scroll": "Voluta",
+    "stats": {
+      "projects": "Proyectos",
+      "years": "Años",
+      "employees": "Empleados",
+      "volume": "Millones de €"
+    }
+  },
+  "services": {
+    "title": "Nuestros servicios",
+    "subtitle": "Desde la primera idea hasta la entrega de llave llave: lo acompañamos a través de todas las fases de proyectos con el más alto profesionalismo y muchos años de experiencia.",
+    "learnMore": "Obtenga más información",
+    "viewAll": "Ver todos los servicios",
+    "badge": "servicio",
+    "included": "Incluido",
+    "benefits": "Tus ventajas",
+    "requestQuote": "Oferta de solicitud",
+    "downloadBrochure": "Descarga el folleto",
+    "generalContractor": {
+      "title": "Empresa general",
+      "description": "Como contratista general confiable, asumimos la responsabilidad completa de su proyecto de construcción, desde la planificación hasta la entrega de llave llave.",
+      "longDescription": "Como contratista general experimentado, le ofrecemos el procesamiento completo del proyecto desde una sola fuente. Desde la primera fase de planificación hasta la entrega final, coordinamos todas las operaciones y le garantizamos la seguridad de la más alta calidad, cita y costos.",
+      "feature1": "Responsabilidad del proyecto uniforme",
+      "feature2": "Coordinación de todas las operaciones",
+      "feature3": "Garantía de cita y costo",
+      "feature4": "Garantía de calidad integral",
+      "detailedFeature1": "Procesamiento de proyecto completo desde una sola fuente",
+      "detailedFeature2": "Coordinación profesional de todos los oficios",
+      "detailedFeature3": "Cita vinculante y garantía de costos",
+      "detailedFeature4": "Garantía y control de calidad completo",
+      "detailedFeature5": "Gestión de garantía integral",
+      "detailedFeature6": "Comunicación e informes transparentes"
+    },
+    "planning": {
+      "title": "Planificación y arquitectura",
+      "description": "Soluciones de planificación innovadores que combinan la funcionalidad, la estética y la economía en un equilibrio perfecto, para edificios orientados al futuro.",
+      "longDescription": "Nuestros arquitectos y planificadores experimentados desarrollan soluciones innovadoras que cumplen con los más altos requisitos estéticos y convencen económica y funcionalmente. Desde el primer boceto hasta la planificación de la ejecución.",
+      "feature1": "Desarrollo del concepto arquitectónico",
+      "feature2": "Planificación detallada técnica",
+      "feature3": "Gestión de aprobación",
+      "feature4": "Visualización 3D y BIM",
+      "detailedFeature1": "Desarrollo del concepto arquitectónico innovador",
+      "detailedFeature2": "Planificación técnica detallada de todas las operaciones",
+      "detailedFeature3": "Gestión de aprobación profesional",
+      "detailedFeature4": "Visualización 3D moderna y modelado BIM",
+      "detailedFeature5": "Enfoques de planificación sostenible y eficiente",
+      "detailedFeature6": "Optimización de costos y recursos"
+    },
+    "projectManagement": {
+      "title": "Control de proyectos",
+      "description": "El control profesional del proyecto garantiza procesos suaves, uso óptimo de recursos y finalización oportuna de su proyecto de construcción.",
+      "longDescription": "A través del control y control sistemáticos del proyecto, aseguramos procesos óptimos, el uso eficiente de los recursos y la implementación oportuna de su proyecto de construcción. La comunicación transparente y el monitoreo continuo son nuestro estándar.",
+      "feature1": "Horario integrado",
+      "feature2": "Control de costos continuos",
+      "feature3": "Control de calidad sistemático",
+      "feature4": "Gestión de riesgos proactivos",
+      "detailedFeature1": "Programación integrada profesional",
+      "detailedFeature2": "Control de costos continuo y transparente",
+      "detailedFeature3": "Control de calidad sistemático en todas las fases",
+      "detailedFeature4": "Gestión y minimización de riesgos proactivos",
+      "detailedFeature5": "Informes y comunicación regulares",
+      "detailedFeature6": "Coordinación entre todos los participantes del proyecto"
+    },
+    "overview": {
+      "point1": "Responsabilidad del proyecto uniforme",
+      "point2": "Coordinación de todas las operaciones",
+      "point3": "Garantía de cita y costo",
+      "point4": "Garantía de calidad integral",
+      "point5": "Desarrollo del concepto arquitectónico",
+      "point6": "Planificación detallada técnica",
+      "point7": "Gestión de aprobación",
+      "point8": "Visualización 3D y BIM",
+      "point9": "Horario integrado",
+      "point10": "Control de costos continuos",
+      "point11": "Control de calidad sistemático",
+      "point12": "Gestión de riesgos proactivos"
+    },
+    "process": {
+      "title": "Nuestro proceso de proyecto",
+      "subtitle": "Un proceso probado para proyectos exitosos, desde la primera idea hasta la entrega de llave en mano.",
+      "duration": "Tiempo",
+      "step1": {
+        "title": "Consejo y concepto",
+        "description": "Análisis de sus requisitos y desarrollo de un concepto hecho a medida."
+      },
+      "step2": {
+        "title": "Planificación y aprobación",
+        "description": "Planificación detallada y procesamiento de todos los procedimientos de aprobación necesarios."
+      },
+      "step3": {
+        "title": "Ejecución y control",
+        "description": "Construcción profesional con calidad continua y monitoreo de citas."
+      },
+      "step4": {
+        "title": "Entrega y servicio",
+        "description": "Vuelva a hacer para entregar y un servicio postventa integral."
+      }
+    },
+    "industries": {
+      "title": "Nuestras industrias",
+      "subtitle": "Implementamos proyectos en diversas áreas con experiencia específica de la industria.",
+      "commercial": "Edificio comercial",
+      "commercialDesc": "Edificio de oficinas, centros comerciales y parques empresariales",
+      "residential": "alojamiento",
+      "residentialDesc": "Complejos residenciales, edificios de apartamentos y cuartos de la ciudad",
+      "industrial": "Industrial",
+      "industrialDesc": "Salas de producción, centros de logística y plantas industriales",
+      "infrastructure": "Infraestructura",
+      "infrastructureDesc": "Rutas de tráfico, puentes y edificios públicos"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "subtitle": "Respuestas a las preguntas más importantes sobre nuestros servicios.",
+      "q1": "¿Cuánto tiempo lleva un proyecto de construcción típico?",
+      "a1": "La duración del proyecto depende del tamaño y la complejidad. Los proyectos más pequeños duran 6-12 meses, proyectos más grandes de 18 a 36 meses. Creamos un horario detallado para cada proyecto.",
+      "q2": "¿Ofrecen una garantía de costo?",
+      "a2": "Sí, como contratista general le ofrecemos una garantía de costo vinculante después de que el contrato haya sido concluido. Los costos adicionales solo surgen en caso de solicitudes de cambio.",
+      "q3": "¿Qué servicios de planificación están incluidos?",
+      "a3": "Nuestros servicios de planificación incluyen la arquitectura completa y la planificación especializada, la visualización 3D, la planificación de aprobación y la coordinación de todos los oficios técnicos.",
+      "q4": "¿También trabajas fuera de Alemania?",
+      "a4": "Actualmente nos estamos centrando en proyectos en Alemania, Austria y Suiza. Trabajamos con socios probados para proyectos internacionales.",
+      "q5": "¿Cómo funciona la garantía de calidad?",
+      "a5": "Realizamos controles de calidad regulares a través de todas las fases de construcción. Además, trabajamos con examinadores independientes y estamos certificados de acuerdo con ISO 9001."
+    },
+    "cta": {
+      "title": "¿Listo para tu proyecto?",
+      "subtitle": "Permítanos darnos cuenta de su visión juntos. Contáctenos para obtener asesoramiento no vinculante.",
+      "contact": "Contacto ahora",
+      "download": "Descarga el folleto"
+    },
+    "meta": {
+      "description": "Servicios de construcción del proyecto Gravon: Compañía General, Planificación y Arquitectura, Control del proyecto. Su socio para proyectos de construcción llave en mano."
+    }
+  },
+  "projects": {
+    "title": "Nuestras referencias",
+    "subtitle": "Descubra una selección de nuestros proyectos realizados con éxito: cada prueba de nuestra competencia y pasión por excelentes edificios.",
+    "heroSubtitle": "Más de 200 proyectos realizados con éxito hablan de nuestra experiencia y confiabilidad.",
+    "viewAll": "Ver todos los proyectos",
+    "loadMore": "Cargar más proyectos",
+    "loading": "Cargas ...",
+    "categories": {
+      "all": "Todos los proyectos",
+      "commercial": "Edificio comercial",
+      "residential": "alojamiento",
+      "industrial": "Industrial",
+      "infrastructure": "Infraestructura"
+    },
+    "tags": {
+      "office": "Oficina",
+      "modern": "Moderno",
+      "sustainable": "Sostenible",
+      "luxury": "lujo",
+      "apartments": "Apartamentos",
+      "premium": "De primera calidad",
+      "logistics": "logística",
+      "automated": "Automatizado",
+      "retail": "minorista",
+      "entertainment": "entretenimiento",
+      "bridge": "Puente",
+      "engineering": "Ingeniería",
+      "public": "Público",
+      "healthcare": "Cuidado de la salud",
+      "complex": "Complejo"
+    },
+    "modal": {
+      "description": "Descripción del proyecto",
+      "challenges": "desafíos",
+      "gallery": "Galería de imágenes",
+      "details": "Detalles del proyecto",
+      "client": "Cliente",
+      "location": "Ubicación",
+      "duration": "Período de construcción",
+      "size": "Tamaño",
+      "year": "Año",
+      "services": "Servicios proporcionados",
+      "tags": "Categorías",
+      "contact": "Investigue un proyecto similar"
+    },
+    "stats": {
+      "title": "Nuestro historial",
+      "subtitle": "Números que hablan por sí mismos, una descripción general de nuestros proyectos realizados.",
+      "completed": "Proyectos completados",
+      "volume": "Mio €",
+      "years": "Años de experiencia",
+      "satisfaction": "% Satisfacción del cliente"
+    },
+    "project1": {
+      "title": "Torre de negocios Frankfurt",
+      "description": "El complejo de oficinas pionero en el corazón de la metrópoli financiera con arquitectura sostenible y la última tecnología de construcción.",
+      "longDescription": "La torre de negocios de 20 pisos Frankfurt combina la última tecnología de oficina con arquitectura sostenible. El edificio ofrece un espacio de oficina de alta calidad de 15,000 m² y fue certificado de acuerdo con LEED Gold Standard.",
+      "fullDescription": "La torre de negocios Frankfurt es un proyecto pionero en el corazón de la metrópoli financiera. Con su arquitectura sostenible y la tecnología de construcción más moderna, establece nuevos estándares para la construcción ecológica en las habitaciones urbanas. El gran altura de 20 pisos ofrece espacio de oficinas de alta calidad para empresas internacionales con 15,000 m² de espacio utilizable.",
+      "challenge1": "Integración de la última tecnología de construcción inteligente",
+      "challenge2": "Lograr la certificación LEED Gold",
+      "challenge3": "Edificio en las operaciones de la ciudad en curso"
+    },
+    "project2": {
+      "title": "Residencia munich maxvorstadt",
+      "description": "Complejo residencial exclusivo en la ubicación más buscada de Munich con 120 unidades de vida premium y equipos de primera clase.",
+      "longDescription": "Este lujoso complejo residencial en Münchner Maxvorstadt ofrece 120 apartamentos exclusivos con alto equipo. El proyecto incluye estacionamiento subterráneo, área de bienestar y servicio de conserje de 24 horas.",
+      "fullDescription": "La residencia de Munich Maxorstadt es un proyecto de lujo en uno de los lugares más solicitados en Munich. El complejo residencial con 120 apartamentos exclusivos combina la arquitectura clásica de Munich con la última comodidad viva. Cada apartamento tiene equipos de alta calidad y espaciosos balcones o terrazas.",
+      "challenge1": "Considere los requisitos de protección del monumento",
+      "challenge2": "Equipo de lujo en un entorno histórico",
+      "challenge3": "Protección contra el ruido en una ubicación central del centro"
+    },
+    "project3": {
+      "title": "Logisticub Hamburgo",
+      "description": "Centro de logística moderna con tecnología de almacén totalmente automatizada y suministro de energía sostenible con 25,000 m².",
+      "longDescription": "LogistisChub Hamburg establece nuevos estándares en almacenamiento automatizado. Las últimas tecnologías para procesos logísticos neutrales y altamente eficientes de CO2 se utilizan en 25,000 m².",
+      "fullDescription": "Logisticub Hamburg es un hito de la arquitectura de logística moderna. Con tecnología de almacén totalmente automatizada y suministro de energía sostenible a través de sistemas solares y energía geotérmica, el centro de neutralidad de CO2 alcanza. La tecnología de construcción inteligente optimiza todos los procesos para obtener la máxima eficiencia.",
+      "challenge1": "Integración de la tecnología de automatización compleja",
+      "challenge2": "Realizar el suministro de energía neutral en neutral de CO2",
+      "challenge3": "Operación las 24 horas, los 7 días de la semana, durante la fase de construcción"
+    },
+    "project4": {
+      "title": "Centro comercial Berlín",
+      "description": "Centro comercial moderno con un innovador concepto minorista y un área de entretenimiento a 45,000 m².",
+      "longDescription": "Un centro comercial con aspecto de avance en Berlín con innovadores conceptos minoristas, una gran área de entretenimiento y tecnología de construcción sostenible.",
+      "fullDescription": "El centro comercial Berlín combina minorista, gastronomía y entretenimiento bajo un mismo techo. Con un área de 45,000 m², ofrece espacio para más de 150 tiendas, un cine multiplex y un patio de comidas. El concepto de energía sostenible lo convierte en uno de los centros comerciales más ecológicos de Alemania.",
+      "challenge1": "Infraestructura compleja para diferentes usos",
+      "challenge2": "Gestionar altos flujos de visitantes durante la fase de construcción"
+    },
+    "project5": {
+      "title": "Rheinbrücke Colonia",
+      "description": "Nuevo puente de carretera y ferrocarril sobre el Rin con ingeniería innovadora y materiales sostenibles.",
+      "longDescription": "Un nuevo puente combinado de calle y ferrocarril sobre el Rin en Colonia, que se realizó con ingeniería innovadora y materiales sostenibles.",
+      "fullDescription": "El nuevo Rheinbrücke Colonia es una obra maestra de la ingeniería moderna. El puente de 1.200 metros de largo combina el tráfico de carreteras y ferroviarios y se realizó con materiales sostenibles y técnicas de construcción innovadoras. Mejora significativamente la infraestructura de transporte de la región.",
+      "challenge1": "Construir sobre una de las vías fluviales más ocupadas de Europa",
+      "challenge2": "Deterioro mínimo del tráfico de envío"
+    },
+    "project6": {
+      "title": "Clínica Stuttgart Neubau",
+      "description": "Edificio de la clínica moderna alta con la última tecnología médica y arquitectura orientada al paciente en 32,000 m².",
+      "longDescription": "Un nuevo edificio clínico en Stuttgart con la última tecnología médica, arquitectura orientada al paciente y sistemas de construcción con eficiencia energética.",
+      "fullDescription": "El nuevo edificio de la Clínica Stuttgart establece nuevos estándares en la construcción del hospital. Se crearon salas de tratamiento modernas, teatros operativos y salas de pacientes con 32,000 m². La arquitectura se basa en las necesidades de los pacientes y el personal, mientras que la última tecnología médica se ha integrado.",
+      "challenge1": "Requisitos de higiene en todas las fases de construcción",
+      "challenge2": "Infraestructura técnica compleja para tecnología médica",
+      "challenge3": "Edificio en operaciones hospitalarias en curso"
+    },
+    "meta": {
+      "description": "Referencias de construcción del proyecto Gravon: más de 200 proyectos implementados con éxito en construcción comercial, residencial, industrial e infraestructura."
+    }
+  },
+  "about": {
+    "title": "Sobre Gravon",
+    "heroSubtitle": "Su socio para exigir proyectos de construcción durante más de 25 años, con pasión, experiencia e innovación.",
+    "paragraph1": "La construcción del Proyecto Gravon ha representado la más alta calidad, confiabilidad e innovación en la construcción durante más de 25 años. Como una empresa general líder, hemos implementado con éxito más de 200 proyectos exigentes.",
+    "paragraph2": "Nuestro equipo interdisciplinario de arquitectos, ingenieros y gerentes de proyectos experimentados trabaja en estrecha colaboración con nuestros clientes para desarrollar soluciones hechas a medida que convencen tanto funcional como estéticamente.",
+    "paragraph3": "La sostenibilidad y la innovación son el foco de nuestro trabajo. Confiamos constantemente en las últimas tecnologías de construcción, materiales amigables con el medio ambiente y soluciones eficientes en energía para edificios sostenibles.",
+    "yearsExperience": "Años de experiencia",
+    "story": {
+      "title": "Nuestra historia",
+      "paragraph1": "En 1998, el Dr. Michael Gravon y su Equipo de Construcción del Proyecto Gravon con la visión de realizar proyectos de construcción al más alto nivel. Lo que comenzó como una pequeña oficina de planificación en Frankfurt se ha convertido en una de las compañías generales líderes en Alemania a lo largo de los años.",
+      "paragraph2": "La clave de nuestro éxito radica en la combinación de artesanías tradicionales y tecnologías innovadoras. Siempre nos hemos orientado a los últimos desarrollos y nunca perdimos de vista nuestros valores básicos: calidad, confiabilidad y proximidad del cliente.",
+      "paragraph3": "Hoy empleamos a más de 50 empleados calificados en tres ubicaciones y hemos implementado un volumen de construcción de más de 500 millones de euros. Nuestros proyectos dan forma al paisaje urbano de las metrópolis alemanas y establecen estándares para la construcción sostenible."
+    },
+    "timeline": {
+      "founded": "Fundación de la construcción del proyecto Gravon en Frankfurt",
+      "expansion": "Expansión a Munich y Hamburgo",
+      "digital": "Digitalización e introducción de BIM",
+      "today": "Más de 200 proyectos y € 500 millones de volumen de construcción"
+    },
+    "team": {
+      "title": "Nuestro equipo de gestión",
+      "subtitle": "Expertos expertos con pasión por excelentes proyectos de construcción",
+      "ceo": {
+        "position": "Director general",
+        "description": "Ingeniero civil con más de 30 años de experiencia en la industria y especialista para proyectos complejos a gran escala."
+      },
+      "architect": {
+        "position": "Arquitecto principal",
+        "description": "Especialista para arquitectura sostenible y conceptos innovadores de planificación con una reputación internacional."
+      },
+      "pm": {
+        "position": "Jefe de Gestión de Proyectos",
+        "description": "Experto para la gestión y programación de proyectos con un enfoque pronunciado en la calidad y la eficiencia."
+      }
+    },
+    "values": {
+      "title": "Nuestros valores",
+      "subtitle": "Los principios básicos que determinan nuestras acciones y constituyen nuestro éxito.",
+      "quality": {
+        "title": "Calidad",
+        "description": "Los más altos estándares en todas las fases del proyecto, desde la planificación hasta la finalización."
+      },
+      "sustainability": {
+        "title": "sostenibilidad",
+        "description": "Soluciones ecológicas y eficientes en energía para edificios sostenibles."
+      },
+      "innovation": {
+        "title": "innovación",
+        "description": "Uso de las últimas tecnologías y procedimientos para resultados óptimos del proyecto."
+      },
+      "partnership": {
+        "title": "asociación",
+        "description": "Relaciones a largo plazo de los clientes basadas en la confianza y la confiabilidad."
+      }
+    },
+    "stats": {
+      "title": "Números y hechos",
+      "subtitle": "Nuestro historial en los números: prueba de competencia y confiabilidad.",
+      "projects": "Proyectos",
+      "projectsDesc": "Completado con éxito",
+      "years": "Años",
+      "yearsDesc": "Experiencia de la industria",
+      "employees": "Experto",
+      "employeesDesc": "Empleados calificados",
+      "volume": "Volumen de mio €",
+      "volumeDesc": "Volumen de construcción realizado"
+    },
+    "certifications": {
+      "title": "Certificaciones y estándares",
+      "subtitle": "Nuestras calificaciones y certificaciones confirman nuestros estándares de alta calidad.",
+      "iso9001": "Gestión de calidad según ISO 9001",
+      "iso14001": "Gestión ambiental según ISO 14001",
+      "dgnb": "Certificación para edificios sostenibles",
+      "vbi": "Membresía en la Asociación de Ingenieros de Asesoría"
+    },
+    "cta": {
+      "title": "Conviértete en nuestro próximo éxito",
+      "subtitle": "Permítanos darnos cuenta de su proyecto juntos. Con más de 25 años de experiencia, somos su compañero ideal.",
+      "contact": "Contacto ahora",
+      "projects": "Ver nuestros proyectos"
+    },
+    "learnMore": "Más sobre nosotros",
+    "meta": {
+      "description": "Acerca de la construcción del proyecto Gravon: más de 25 años de experiencia, más de 200 proyectos, más de 50 expertos. Su socio confiable para proyectos de construcción exigentes."
+    }
+  },
+  "contact": {
+    "title": "contacto",
+    "subtitle": "Permítanos darnos cuenta de su próximo proyecto juntos. Contáctenos para una consulta inicial no vinculante: esperamos su desafío.",
+    "followUs": "Síganos",
+    "info": {
+      "title": "Información del contacto"
+    },
+    "address": {
+      "title": "Nuestra dirección"
+    },
+    "phone": {
+      "title": "teléfono",
+      "hours": "Mon -fri: 8:00 a.m. - 6:00 p.m."
+    },
+    "email": {
+      "title": "correo electrónico"
+    },
+    "map": {
+      "title": "Ubicación",
+      "placeholder": "La tarjeta interactiva se carga aquí"
+    },
+    "locations": {
+      "title": "Nuestras ubicaciones",
+      "subtitle": "Gravon está representado en tres ubicaciones estratégicas en Alemania.",
+      "frankfurt": {
+        "title": "Frankfurt soy principal",
+        "subtitle": "sede",
+        "description": "Nuestra sede en el corazón de la metrópoli financiera, ubicada centralmente para proyectos en Alemania."
+      },
+      "munich": {
+        "title": "Munich",
+        "subtitle": "Sur de Alemania",
+        "description": "Nuestra ubicación para Baviera y el sur de Alemania con un enfoque en proyectos residenciales y comerciales."
+      },
+      "hamburg": {
+        "title": "Hamburgo",
+        "subtitle": "Alemania del norte",
+        "description": "Competencia sanseatic para el norte de Alemania con un enfoque en logística y edificios industriales."
+      }
+    },
+    "form": {
+      "title": "Su solicitud de proyecto",
+      "firstName": "Nombre de pila",
+      "lastName": "Apellido",
+      "email": "Dirección de correo electrónico",
+      "phone": "Número telefónico",
+      "company": "Buscar",
+      "companyPlaceholder": "Tu empresa",
+      "projectType": "Tipo de proyecto",
+      "selectProjectType": "Elija el tipo de proyecto",
+      "projectTypes": {
+        "commercial": "Edificio comercial",
+        "residential": "alojamiento",
+        "industrial": "Industrial",
+        "infrastructure": "Infraestructura"
+      },
+      "subject": "Acerca de",
+      "message": "Tu mensaje",
+      "privacy": "Estoy de acuerdo con el procesamiento de mis datos según",
+      "send": "Enviar un mensaje",
+      "sending": "Se transfiere ...",
+      "success": "¡Gracias por su consulta! Nos comunicaremos con usted dentro de las 24 horas.",
+      "error": "Lo sentimos, se produjo un error al enviar. Vuelva a intentarlo o contáctenos directamente por teléfono.",
+      "firstNamePlaceholder": "Tu primer nombre",
+      "lastNamePlaceholder": "Tu apellido",
+      "emailPlaceholder": "your.email{'@'}.com",
+      "phonePlaceholder": "+49 (0) 123 456 789",
+      "subjectPlaceholder": "Sujeto a su solicitud",
+      "messagePlaceholder": "Describe tu proyecto para nosotros, estaremos encantados de aconsejarte ...",
+      "errors": {
+        "firstNameRequired": "Se requiere el primer nombre",
+        "lastNameRequired": "Se requiere apellido",
+        "emailInvalid": "Por favor, introduce una dirección de correo electrónico válida",
+        "subjectRequired": "Se requiere sujeto",
+        "messageRequired": "Se requiere mensaje",
+        "privacyRequired": "Acuerde con la Declaración de Protección de Datos"
+      }
+    },
+    "meta": {
+      "description": "Contacto con Gravon Project Construction: por teléfono, por correo electrónico o por nuestro formulario de contacto. Estaríamos encantados de asesorarlo sobre su proyecto de construcción."
+    }
+  },
+  "footer": {
+    "company": {
+      "description": "La construcción del Proyecto Gravon ha representado la calidad de la primera clase, la confiabilidad absoluta y la innovación pionera en la construcción durante más de 25 años.",
+      "certifications": "Certificaciones"
+    },
+    "services": {
+      "title": "Nuestros servicios",
+      "general": "Empresa general",
+      "planning": "Planificación y arquitectura",
+      "management": "Control de proyectos",
+      "consulting": "Consejo de construcción"
+    },
+    "projects": {
+      "title": "Proyecto de áreas",
+      "commercial": "Edificio comercial",
+      "residential": "alojamiento",
+      "industrial": "Industrial",
+      "infrastructure": "Proyectos de infraestructura"
+    },
+    "contact": {
+      "title": "contacto",
+      "cta": "Solicitar el proyecto"
+    },
+    "newsletter": {
+      "title": "Suscríbete al boletín",
+      "subtitle": "Manténgase actualizado sobre nuestros últimos proyectos y noticias de la industria.",
+      "placeholder": "Su dirección de correo electrónico",
+      "subscribe": "Suscribirse a",
+      "subscribing": "Se envía ...",
+      "disclaimer": "Puede darse de baja en cualquier momento. Protección de datos"
+    },
+    "legal": {
+      "privacy": "Protección de datos",
+      "terms": "Términos y condiciones",
+      "imprint": "imprimir",
+      "sitemap": "Mapa del sitio"
+    },
+    "rights": "Reservados todos los derechos.",
+    "backToTop": "Arriba"
+  },
+  "privacy": {
+    "title": "Declaración de protección de datos",
+    "subtitle": "Su privacidad es importante para nosotros. Aquí puede averiguar cómo tratamos sus datos.",
+    "intro": {
+      "title": "Introducción",
+      "content1": "Esperamos su interés en nuestra empresa. Proteger sus datos personales es muy importante para nosotros. En esta declaración de protección de datos, le informaremos sobre el procesamiento de datos personales cuando use nuestro sitio web.",
+      "content2": "Los datos personales son toda la información que se relaciona con una persona natural identificada o identificable."
+    },
+    "responsible": {
+      "title": "Responsable"
+    },
+    "collection": {
+      "title": "Adquisición de datos",
+      "website": {
+        "title": "Visita al sitio web",
+        "content": "Al visitar nuestro sitio web, la información se envía automáticamente al servidor de nuestro sitio web. Esta información se guarda temporalmente en un archivo de registro de SO."
+      },
+      "contact": {
+        "title": "Formulario de contacto",
+        "content": "Al usar nuestro formulario de contacto, solo recopilamos datos personales en la medida en que nos informa voluntariamente."
+      },
+      "cookies": {
+        "title": "Galletas",
+        "content": "Nuestro sitio web usa cookies. Las cookies son pequeños archivos de texto que se almacenan en su dispositivo final."
+      }
+    },
+    "usage": {
+      "title": "Uso de los datos",
+      "purpose1": "Procesamiento de sus consultas y comunicación",
+      "purpose2": "Mejora de nuestro sitio web y servicios",
+      "purpose3": "Cumplimiento de obligaciones legales",
+      "purpose4": "Protección contra el abuso y el fraude"
+    },
+    "rights": {
+      "title": "Tus derechos",
+      "access": {
+        "title": "Derecho de información",
+        "content": "Tiene derecho a obtener información sobre los datos almacenados sobre usted."
+      },
+      "correction": {
+        "title": "Corrección derecha",
+        "content": "Tiene derecho a corregir datos incorrectos."
+      },
+      "deletion": {
+        "title": "Extinguiendo derecho",
+        "content": "Tiene derecho a eliminar sus datos personales."
+      },
+      "objection": {
+        "title": "Derecho de contradicciones",
+        "content": "Tiene derecho a contradecir el procesamiento de sus datos."
+      }
+    },
+    "contact": {
+      "title": "contacto",
+      "content": "Si tiene alguna pregunta sobre la protección de datos, puede comunicarse con nuestro oficial de protección de datos en cualquier momento:",
+      "dpo": "Oficial de protección de datos"
+    },
+    "lastUpdated": "Última actualización",
+    "meta": {
+      "description": "Declaración de protección de datos de construcción del proyecto Gravon: información sobre cómo usar sus datos personales."
+    }
+  },
+  "imprint": {
+    "title": "imprimir",
+    "subtitle": "Información legal sobre Gravon Projektbau GmbH de acuerdo con § 5 tmg.",
+    "company": {
+      "title": "Compañía"
+    },
+    "legal": {
+      "title": "Información legal",
+      "management": "Gestión",
+      "register": "Registro comercial",
+      "vat": "ID de IVA",
+      "chamber": "cámara"
+    },
+    "locations": {
+      "title": "Otras ubicaciones",
+      "munich": "Oficina de Munich",
+      "hamburg": "Oficina de Hamburgo"
+    },
+    "disclaimer": {
+      "title": "Descargo de responsabilidad",
+      "content": {
+        "title": "Responsabilidad por contenido",
+        "text1": "Como proveedor de servicios, somos responsables de nuestro propio contenido de acuerdo con las leyes generales de acuerdo con la Sección 7 (1) TMG.",
+        "text2": "Sin embargo, de acuerdo con las §§ 8 a 10 TMG, como proveedor de servicios, no estamos obligados a monitorear la información extranjera transmitida o almacenada en todas las circunstancias."
+      },
+      "links": {
+        "title": "Responsabilidad por enlaces",
+        "text1": "Nuestra oferta contiene enlaces a sitios web externos de tercera parte, cuyo contenido no tenemos influencia en el contenido.",
+        "text2": "Por lo tanto, no podemos garantizar este contenido extranjero."
+      },
+      "copyright": {
+        "title": "derechos de autor",
+        "text1": "El contenido y las obras creadas por los operadores del sitio están sujetos a la ley de derechos de autor alemán.",
+        "text2": "La duplicación, procesamiento, distribución y cualquier tipo de utilización fuera de los límites de la ley de derechos de autor requieren el consentimiento por escrito del autor o creador respectivo."
+      }
+    },
+    "dispute": {
+      "title": "Disputar",
+      "content": "No estamos listos u obligados a participar en los procedimientos de liquidación de disputas frente a una junta de arbitraje del consumidor."
+    },
+    "legalContact": {
+      "title": "Contacto para cuestiones legales",
+      "content": "Para cuestiones e inquietudes legales, comuníquese con:"
+    },
+    "lastUpdated": "Última actualización",
+    "meta": {
+      "description": "Impresión de Gravon Projektbau: información legal e información de contacto de la empresa."
+    }
+  },
+  "terms": {
+    "title": "Términos y condiciones generales de negocios",
+    "subtitle": "Nuestros términos y condiciones para los servicios de construcción y planificación.",
+    "intro": {
+      "title": "Introducción",
+      "content1": "Estos términos y condiciones generales (AGB) se aplican a todos los contratos para los servicios de construcción y planificación de Gravon Projektbau GMBH.",
+      "content2": "Las condiciones de desviar del cliente solo se vuelven efectivas si aceptamos expresamente esto por escrito."
+    },
+    "scope": {
+      "title": "Alcance",
+      "paragraph1": "Estos términos y condiciones se aplican a todos los servicios de Gravon Projektbau GmbH en el área de empresas generales, planificación y control de proyectos.",
+      "paragraph2": "También se aplican a futuras relaciones comerciales sin tener que señalarlas por separado.",
+      "paragraph3": "Los cambios y adiciones a estos términos y condiciones requieren el formulario escrito."
+    },
+    "contract": {
+      "title": "Conclusión del contrato",
+      "paragraph1": "El contrato se concluye a través de nuestra oferta escrita y su aceptación por escrito por parte del cliente.",
+      "paragraph2": "El procesamiento del proyecto tiene lugar en las siguientes fases:",
+      "phases": {
+        "title": "Fases de proyectos",
+        "phase1": "Planificación de la demanda y borrador preliminar",
+        "phase2": "Planificación de diseño y aprobación",
+        "phase3": "Planificación de ejecución y licitación",
+        "phase4": "Construcción y monitoreo de objetos"
+      }
+    },
+    "services": {
+      "title": "Alcance de los servicios",
+      "planning": {
+        "title": "Servicios de planificación",
+        "item1": "Diseños arquitectónicos",
+        "item2": "Planificación técnica",
+        "item3": "Procedimiento de aprobación",
+        "item4": "Visualización 3D"
+      },
+      "execution": {
+        "title": "Servicios de ejecución",
+        "item1": "Coordinación de todas las operaciones",
+        "item2": "Control de calidad",
+        "item3": "Monitoreo de citas",
+        "item4": "Aceptación y entrega"
+      }
+    },
+    "payment": {
+      "title": "Precios y pago",
+      "paragraph1": "Nuestros precios son más el IVA legal.",
+      "paragraph2": "El pago se realiza sin deducción dentro de los 14 días posteriores a la facturación.",
+      "schedule": {
+        "title": "Plan de pago",
+        "item1": "30% cuando se concluye el contrato",
+        "item2": "40% en la construcción",
+        "item3": "25% en caso de un diseño en bruto",
+        "item4": "5% después de la aceptación"
+      }
+    },
+    "deadlines": {
+      "title": "Fechas y plazos",
+      "paragraph1": "Los nombramientos acordados son solo vinculantes si se les conoce expresamente como tales.",
+      "paragraph2": "Los retrasos debido a la fuerza mayor o circunstancias impredecibles no están en nuestras cargas.",
+      "paragraph3": "Si se retrasa con cita previa, tenemos derecho a solicitar una extensión apropiada de la fecha límite."
+    },
+    "warranty": {
+      "title": "Garantía",
+      "paragraph1": "Garantizamos nuestros servicios de acuerdo con las disposiciones legales.",
+      "paragraph2": "Los períodos de garantía se basan en el tipo de servicio prestado:",
+      "periods": {
+        "title": "Períodos de garantía",
+        "building": "Edificios: 5 años",
+        "technical": "Sistemas técnicos: 2 años",
+        "equipment": "Equipo: 1 año"
+      }
+    },
+    "liability": {
+      "title": "Responsabilidad",
+      "paragraph1": "Nuestra responsabilidad por daños se limita a la intención y la negligencia grave.",
+      "paragraph2": "En caso de ligera negligencia, solo somos responsables de la violación de las obligaciones contractuales esenciales.",
+      "paragraph3": "La responsabilidad se limita al daño típico y predecible."
+    },
+    "insurance": {
+      "title": "Seguro",
+      "liability": {
+        "title": "Responsabilidad operativa",
+        "amount": "10 millones de €"
+      },
+      "professional": {
+        "title": "Responsabilidad profesional",
+        "amount": "5 millones de €"
+      },
+      "construction": {
+        "title": "Seguro de construcción",
+        "amount": "Proyecto -específico"
+      }
+    },
+    "final": {
+      "title": "Disposiciones finales",
+      "law": "La ley alemana se aplica a la exclusión de la ley de ventas de la ONU.",
+      "court": "El lugar de la jurisdicción es Frankfurt am Main.",
+      "severability": "Si las disposiciones individuales son ineficaces, la efectividad del resto del contrato no se ve afectada."
+    },
+    "contact": {
+      "title": "contacto",
+      "content": "Si tiene alguna pregunta sobre estos términos y condiciones, comuníquese con:"
+    },
+    "lastUpdated": "Última actualización",
+    "meta": {
+      "description": "Términos y condiciones generales de la construcción del proyecto de Gravon para servicios de construcción y planificación."
+    }
+  },
+  "error": {
+    "404": {
+      "title": "Página no encontrada",
+      "message": "La página solicitada no existe o ha sido pospuesta. Verifique la URL o regrese a la página de inicio."
+    },
+    "500": {
+      "title": "Error del servidor",
+      "message": "Se produjo un error inesperado. Nuestro equipo fue notificado y trabaja en una solución."
+    },
+    "generic": {
+      "title": "Se ha producido un error",
+      "message": "Lo siento, algo salió mal. Por favor intente de nuevo."
+    },
+    "tryAgain": "Intentar otra vez",
+    "goHome": "A la página de inicio",
+    "needHelp": "¿Necesitas ayuda? Contáctenos:"
+  },
+  "meta": {
+    "home": {
+      "title": "Construcción del proyecto Gravon - Planificación. Construir. Completo.",
+      "description": "Construcción del proyecto Gravon: su socio confiable para proyectos llave en mano con sustancia. Compañías generales para exigir proyectos de construcción y bienes raíces."
+    }
+  }
+}

@@ -17,7 +17,7 @@
     </button>
 
     <Transition name="dropdown">
-      <div v-if="isOpen" class="absolute top-full right-lg-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50 min-w-[140px]">
+      <div v-if="isOpen" class="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50 min-w-[140px]">
         <NuxtLink
             v-for="locale in availableLocales"
             :key="locale.code"

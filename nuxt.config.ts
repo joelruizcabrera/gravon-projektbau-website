@@ -23,6 +23,12 @@ export default defineNuxtConfig({
                 language: 'en-US',
                 name: 'English',
                 file: 'en.json'
+            },
+            {
+                code: 'es',
+                language: 'es-ES',
+                name: 'Spanish',
+                file: 'es.json'
             }
         ],
         defaultLocale: 'de',
@@ -43,7 +49,7 @@ export default defineNuxtConfig({
 
     // Content configuration
     content: {
-        locales: ['de', 'en'],
+        locales: ['de', 'en', 'es'],
         defaultLocale: 'de',
         markdown: {
             anchorLinks: false,
@@ -77,6 +83,7 @@ export default defineNuxtConfig({
                 { property: 'og:type', content: 'website' },
                 { property: 'og:locale', content: 'de_DE' },
                 { property: 'og:locale:alternate', content: 'en_US' },
+                { property: 'og:locale:alternate', content: 'es_ES' },
                 { name: 'twitter:card', content: 'summary_large_image' },
                 { name: 'twitter:site', content: '@gravon_bau' },
                 { name: 'robots', content: 'index, follow' },
