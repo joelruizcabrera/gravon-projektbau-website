@@ -20,10 +20,10 @@
     </div>
 
     <!-- Animated Background Elements -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="floating-shape w-20 h-20 bg-yellow-500 rounded-full opacity-20 absolute top-1/4 left-1/4 gsap-fade"></div>
-      <div class="floating-shape w-32 h-32 bg-blue-500 rounded-full opacity-10 absolute top-3/4 right-1/4 gsap-fade" style="animation-delay: 2s;"></div>
-      <div class="floating-shape w-16 h-16 bg-white rounded-full opacity-30 absolute top-1/2 right-1/3 gsap-fade" style="animation-delay: 4s;"></div>
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+      <div class="floating-shape w-20 h-20 bg-yellow-500/10 border-yellow-500/25 border-2 rounded-full opacity-20 absolute top-1/4 left-1/4 gsap-fade"></div>
+      <div class="floating-shape w-32 h-32 bg-blue-500/10 border-blue-500/25 border-2 rounded-full opacity-10 absolute top-3/4 right-1/4 gsap-fade" style="animation-delay: 2s;"></div>
+      <div class="floating-shape w-16 h-16 bg-white/10 border-white/25 border-2 rounded-full opacity-30 absolute top-1/2 right-1/3 gsap-fade" style="animation-delay: 4s;"></div>
     </div>
 
     <!-- Content mit GSAP Klassen -->

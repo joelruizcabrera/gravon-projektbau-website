@@ -345,7 +345,6 @@
   "contact": {
     "title": "Kontakt",
     "subtitle": "Lassen Sie uns gemeinsam Ihr nächstes Projekt verwirklichen. Kontaktieren Sie uns für eine unverbindliche Erstberatung - wir freuen uns auf Ihre Herausforderung.",
-    "followUs": "Folgen Sie uns",
     "info": {
       "title": "Kontaktinformationen"
     },
@@ -354,44 +353,24 @@
     },
     "phone": {
       "title": "Telefon",
-      "hours": "Mo-Fr: 8:00 - 18:00 Uhr"
+      "call": "Jetzt anrufen"
     },
     "email": {
-      "title": "E-Mail"
-    },
-    "map": {
-      "title": "Standort",
-      "placeholder": "Interaktive Karte wird hier geladen"
-    },
-    "locations": {
-      "title": "Unsere Standorte",
-      "subtitle": "GRAVON ist an drei strategischen Standorten in Deutschland vertreten.",
-      "frankfurt": {
-        "title": "Frankfurt am Main",
-        "subtitle": "Hauptsitz",
-        "description": "Unser Hauptsitz im Herzen der Finanzmetropole - zentral gelegen für Projekte in ganz Deutschland."
-      },
-      "wiesbaden": {
-        "title": "Wiesbaden",
-        "subtitle": "Süddeutschland",
-        "description": "Unser Standort für Wiesbaden und den süddeutschen Raum mit Fokus auf Wohn- und Gewerbeprojekte."
-      },
-      "osnabrueck": {
-        "title": "Osnabrück",
-        "subtitle": "Norddeutschland",
-        "description": "Nordische Kompetenz mit Schwerpunkt Logistik und Industriebau."
-      }
+      "title": "E-Mail",
+      "send": "E-Mail senden"
     },
     "form": {
       "title": "Ihre Projektanfrage",
-      "firstName": "Vorname",
-      "lastName": "Nachname",
-      "email": "E-Mail-Adresse",
-      "phone": "Telefonnummer",
+      "name": "Name",
+      "namePlaceholder": "Ihr vollständiger Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "ihre.email{'@'}beispiel.de",
+      "phone": "Telefon",
+      "phonePlaceholder": "+49 123 456 789",
       "company": "Unternehmen",
-      "companyPlaceholder": "Ihr Unternehmen",
-      "projectType": "Projekttyp",
-      "selectProjectType": "Projekttyp wählen",
+      "companyPlaceholder": "Ihr Unternehmen (optional)",
+      "projectType": "Projektart",
+      "selectProjectType": "Bitte wählen Sie eine Projektart",
       "projectTypes": {
         "commercial": "Gewerbebau",
         "residential": "Wohnungsbau",
@@ -399,29 +378,17 @@
         "infrastructure": "Infrastruktur"
       },
       "subject": "Betreff",
-      "message": "Ihre Nachricht",
-      "privacy": "Ich stimme der Verarbeitung meiner Daten gemäß",
-      "send": "NACHRICHT SENDEN",
-      "sending": "Wird übertragen...",
-      "success": "Vielen Dank für Ihre Anfrage! Wir melden uns innerhalb von 24 Stunden bei Ihnen zurück.",
-      "error": "Entschuldigung, beim Versenden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt telefonisch.",
-      "firstNamePlaceholder": "Ihr Vorname",
-      "lastNamePlaceholder": "Ihr Nachname",
-      "emailPlaceholder": "ihre.email{'@'}unternehmen.de",
-      "phonePlaceholder": "+49 (0) 123 456 789",
       "subjectPlaceholder": "Betreff Ihrer Anfrage",
-      "messagePlaceholder": "Beschreiben Sie uns Ihr Projekt - wir beraten Sie gerne...",
-      "errors": {
-        "firstNameRequired": "Vorname ist erforderlich",
-        "lastNameRequired": "Nachname ist erforderlich",
-        "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
-        "subjectRequired": "Betreff ist erforderlich",
-        "messageRequired": "Nachricht ist erforderlich",
-        "privacyRequired": "Bitte stimmen Sie der Datenschutzerklärung zu"
-      }
+      "message": "Nachricht",
+      "messagePlaceholder": "Beschreiben Sie hier Ihr Projekt und Ihre Wünsche...",
+      "privacy": "Ich habe die",
+      "privacyLink": "Datenschutzerklärung",
+      "privacyText": "gelesen und akzeptiert.",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet..."
     },
     "meta": {
-      "description": "Kontakt zu GRAVON Projektbau: Telefonisch, per E-Mail oder über unser Kontaktformular. Wir beraten Sie gerne zu Ihrem Bauprojekt."
+      "description": "Kontaktieren Sie GRAVON Projektbau für Ihre Bau- und Immobilienprojekte. Unverbindliche Erstberatung und professionelle Projektabwicklung."
     }
   },
   "footer": {

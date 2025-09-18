@@ -205,23 +205,49 @@ export default defineNuxtPlugin(() => {
 
         // Auto-initialize common animations
         const initAutoAnimations = () => {
-            // Auto-animate elements with GSAP classes
             setTimeout(() => {
-                animationUtils.fadeInUp('.gsap-animate')
-                animationUtils.slideInFromLeft('.gsap-slide-left')
-                animationUtils.slideInFromRight('.gsap-slide-right')
-                animationUtils.scaleIn('.gsap-scale')
-
-                // Fade animations
-                gsap.fromTo('.gsap-fade',
-                    { opacity: 0 },
+                // Slide animations
+                gsap.fromTo('.gsap-slide-left',
+                    { x: -50, opacity: 0 },
                     {
+                        x: 0,
                         opacity: 1,
                         duration: 1,
-                        stagger: 0.1,
+                        ease: "power3.out",
                         scrollTrigger: {
-                            trigger: '.gsap-fade',
-                            start: "top 85%",
+                            trigger: '.gsap-slide-left',
+                            start: "top 80%",
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                )
+
+                gsap.fromTo('.gsap-slide-right',
+                    { x: 50, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 1,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: '.gsap-slide-right',
+                            start: "top 80%",
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                )
+
+                // Scale animations
+                gsap.fromTo('.gsap-scale',
+                    { scale: 0.9, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "back.out(1.7)",
+                        scrollTrigger: {
+                            trigger: '.gsap-scale',
+                            start: "top 80%",
                             toggleActions: "play none none reverse"
                         }
                     }
