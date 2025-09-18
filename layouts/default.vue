@@ -1,5 +1,3 @@
-// @ts-ignore-file
-
 <template>
   <div class="min-h-screen flex flex-col">
     <Header />
@@ -15,12 +13,35 @@ import Header from "~/components/Header.vue"
 import Footer from "~/components/Footer.vue"
 
 const { t } = useI18n()
+const route = useRoute()
 
 // Page transition configuration
 definePageMeta({
   pageTransition: {
     name: 'page',
-    mode: 'out-in'
+    mode: 'out-in',
+    onBeforeEnter: (el) => {
+      // Scroll to top when new page enter
+      console.log(el)
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
+  }
+})
+
+// Alternative: Watch route changes
+watch(() => route.path, (newPath, oldPath) => {
+  if (newPath !== oldPath) {
+    nextTick(() => {
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        })
+      }, 150) // Warten bis Page Transition abgeschlossen
+    })
   }
 })
 </script>

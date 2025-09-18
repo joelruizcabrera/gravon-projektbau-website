@@ -3,13 +3,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://gravon-projektbau.de/</loc>
-    <lastmod>2025-09-18T16:54:52.304Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.839Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/hero-bg.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -21,13 +21,13 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/services</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/services" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/services" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/services" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/services" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/services" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/services" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/services" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/services" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/services-hero.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -35,13 +35,13 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/projects</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/projects" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/projects" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/projects" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/projects" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/projects" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/projects" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/projects" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/projects" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/projects-hero.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -49,13 +49,13 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/about</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/about" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/about" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/about" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/about" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/about" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/about" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/about" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/about-hero.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -63,13 +63,13 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/contact</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/contact" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/contact" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/contact" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/contact" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/contact" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/contact-hero.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -77,43 +77,43 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/privacy</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/privacy" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/privacy" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/privacy" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/privacy" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/privacy" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/privacy" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/privacy" />
   </url>
   <url>
     <loc>https://gravon-projektbau.de/terms</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/terms" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/terms" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/terms" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/terms" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/terms" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/terms" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/terms" />
   </url>
   <url>
     <loc>https://gravon-projektbau.de/imprint</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/imprint" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/imprint" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/imprint" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/imprint" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/imprint" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/imprint" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/imprint" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/imprint" />
   </url>
   <url>
     <loc>https://gravon-projektbau.de/en</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/en" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/en" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/en" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/en" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/en" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/en" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/en" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/hero-bg.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -121,13 +121,13 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/en/services</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/services" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/services" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/services" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/services" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/services" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/services" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/services" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/services" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/services-hero.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -135,13 +135,13 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/en/projects</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/projects" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/projects" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/projects" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/projects" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/projects" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/projects" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/projects" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/projects" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/projects-hero.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -149,13 +149,13 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/en/about</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/about" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/about" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/about" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/about" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/about" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/about" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/about" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/about-hero.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -163,13 +163,13 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/en/contact</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/contact" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/contact" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/contact" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/contact" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/contact" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/contact-hero.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -177,43 +177,43 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/en/privacy</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/privacy" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/privacy" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/privacy" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/privacy" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/privacy" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/privacy" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/privacy" />
   </url>
   <url>
     <loc>https://gravon-projektbau.de/en/terms</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/terms" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/terms" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/terms" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/terms" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/terms" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/terms" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/terms" />
   </url>
   <url>
     <loc>https://gravon-projektbau.de/en/imprint</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/imprint" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/imprint" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/imprint" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/imprint" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/imprint" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/imprint" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/imprint" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/imprint" />
   </url>
   <url>
     <loc>https://gravon-projektbau.de/es</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/es" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/es" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/es" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/es" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/es" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/es" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/es" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/es" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/hero-bg.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -221,13 +221,13 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/es/services</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/services" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/services" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/services" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/services" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/services" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/services" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/services" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/services" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/services-hero.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -235,13 +235,13 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/es/projects</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/projects" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/projects" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/projects" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/projects" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/projects" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/projects" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/projects" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/projects" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/projects-hero.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -249,13 +249,13 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/es/about</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/about" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/about" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/about" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/about" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/about" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/about" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/about" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/about-hero.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -263,13 +263,13 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/es/contact</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/contact" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/contact" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/contact" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/contact" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/contact" />
     <image:image>
       <image:loc>https://gravon-projektbau.de/images/contact-hero.jpg</image:loc>
       <image:caption>GRAVON Projektbau</image:caption>
@@ -277,32 +277,32 @@
   </url>
   <url>
     <loc>https://gravon-projektbau.de/es/privacy</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/privacy" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/privacy" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/privacy" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/privacy" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/privacy" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/privacy" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/privacy" />
   </url>
   <url>
     <loc>https://gravon-projektbau.de/es/terms</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/terms" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/terms" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/terms" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/terms" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/terms" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/terms" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/terms" />
   </url>
   <url>
     <loc>https://gravon-projektbau.de/es/imprint</loc>
-    <lastmod>2025-09-18T16:54:52.305Z</lastmod>
+    <lastmod>2025-09-18T17:01:00.840Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/imprint" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/imprint" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/imprint" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/imprint" />
+    <link rel="alternate" hreflang="de" href="https://gravon-projektbau.de/imprint" />
+    <link rel="alternate" hreflang="en" href="https://gravon-projektbau.de/en/imprint" />
+    <link rel="alternate" hreflang="es" href="https://gravon-projektbau.de/es/imprint" />
+    <link rel="alternate" hreflang="x-default" href="https://gravon-projektbau.de/imprint" />
   </url>
 </urlset>
