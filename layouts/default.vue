@@ -1,9 +1,17 @@
 <template>
   <div class="min-h-screen flex flex-col">
     <Header />
-    <main class="flex-grow pt-20">
+
+    <!-- Main Content mit korrektem tabindex für Skip Links -->
+    <main
+        id="main-content"
+        class="flex-grow pt-20"
+        tabindex="-1"
+        role="main"
+    >
       <slot />
     </main>
+
     <Footer />
   </div>
 </template>
@@ -19,58 +27,31 @@ const route = useRoute()
 definePageMeta({
   pageTransition: {
     name: 'page',
-    mode: 'out-in',
-    onBeforeEnter: (el) => {
-      // Scroll to top when new page enter
-      console.log(el)
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })
-    }
-  }
-})
-
-// Alternative: Watch route changes
-watch(() => route.path, (newPath, oldPath) => {
-  if (newPath !== oldPath) {
-    nextTick(() => {
-      setTimeout(() => {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        })
-      }, 150) // Warten bis Page Transition abgeschlossen
-    })
+    mode: 'out-in'
   }
 })
 </script>
 
 <style>
-/* Page transitions */
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(10px);
 }
 
-/* Global scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Focus styles for accessibility */
+/* Global Focus Management */
 *:focus-visible {
   outline: 2px solid #f59e0b;
   outline-offset: 2px;
+  border-radius: 2px;
 }
 
-/* Selection styles */
+/* Selection Styles */
 ::selection {
   background-color: #fef3c7;
   color: #92400e;

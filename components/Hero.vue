@@ -2,7 +2,22 @@
   <section class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
     <!-- Background Image with Parallax Effect -->
     <div class="absolute inset-0 z-0">
-      <div class="parallax-bg w-full h-full bg-cover bg-center bg-no-repeat"></div>
+      <NuxtImg
+          src="/images/frankfurt-skyline.jpg"
+          alt="Frankfurt Skyline - GRAVON Projektbau Hintergrund"
+          width="1920"
+          height="1080"
+          format="webp"
+          quality="85"
+          loading="eager"
+          fetchpriority="high"
+          preload
+          class="w-full h-full object-cover"
+          :style="{
+            contentVisibility: 'visible',
+            containIntrinsicSize: '1920px 1080px'
+          }"
+      />
       <div class="absolute inset-0 hero-gradient"></div>
     </div>
 
@@ -234,15 +249,8 @@ onUnmounted(() => {
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  33% {
-    transform: translateY(-20px) rotate(10deg);
-  }
-  66% {
-    transform: translateY(10px) rotate(-10deg);
-  }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
 }
 
 .hero-word {

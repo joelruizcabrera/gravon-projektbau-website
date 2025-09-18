@@ -4,6 +4,22 @@
       :class="headerClasses"
       role="banner"
   >
+    <div class="skip-links">
+      <a
+          href="#main-content"
+          class="skip-link"
+          @click="focusMainContent"
+          @keydown.enter="focusMainContent"
+      >
+        Zum Hauptinhalt springen
+      </a>
+      <a
+          href="#main-navigation"
+          class="skip-link"
+      >
+        Zur Navigation springen
+      </a>
+    </div>
     <nav class="container mx-auto px-4 lg:px-8 py-6" role="navigation" aria-label="Hauptnavigation">
       <div class="flex justify-between items-center">
         <!-- Logo -->
@@ -207,6 +223,36 @@ watch(() => route.path, () => {
 </script>
 
 <style scoped>
+/* Skip Links Styles */
+.skip-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  padding: 8px 16px;
+  background: #111827;
+  color: #f9fafb;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.skip-link:focus {
+  left: 6px;
+  top: 6px;
+}
+
+.skip-link:hover {
+  background: #374151;
+}
+
 /* Mobile menu transitions */
 .mobile-menu-enter-active,
 .mobile-menu-leave-active {

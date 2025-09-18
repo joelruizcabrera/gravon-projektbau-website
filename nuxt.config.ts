@@ -2,13 +2,8 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     compatibilityDate: '2025-09-18',
 
-    modules: [
-        '@nuxtjs/tailwindcss',
-        '@nuxt/content',
-        '@nuxtjs/i18n',
-        '@vueuse/nuxt'
-        // WICHTIG: @nuxtjs/sitemap NICHT verwenden - wir nutzen unsere manuelle API
-    ],
+    modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxtjs/i18n', // WICHTIG: @nuxtjs/sitemap NICHT verwenden - wir nutzen unsere manuelle API
+    '@vueuse/nuxt', '@nuxt/image'],
 
     // Internationalization configuration
     i18n: {
@@ -98,7 +93,23 @@ export default defineNuxtConfig({
                 { rel: 'manifest', href: '/site.webmanifest' },
                 { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
                 { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-                { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' }
+                { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+                {
+                    rel: 'preconnect',
+                    href: 'https://fonts.googleapis.com',
+                    crossorigin: 'anonymous'
+                },
+                {
+                    rel: 'preconnect',
+                    href: 'https://fonts.gstatic.com',
+                    crossorigin: 'anonymous'
+                },
+                {
+                    rel: 'preload',
+                    href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap',
+                    as: 'style',
+                    onload: "this.onload=null;this.rel='stylesheet'"
+                }
             ],
             script: [
                 {
@@ -312,6 +323,38 @@ export default defineNuxtConfig({
 
         // Admin und API blockieren
         '/admin/**': { headers: { 'X-Robots-Tag': 'noindex' } },
-        '/api/**': { cors: true }
-    }
+        '/api/**': { cors: true },
+
+        '/**': {
+            headers: {
+                'Content-Security-Policy': [
+                    "default-src 'self'",
+                    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+                    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+                    "font-src 'self' https://fonts.gstatic.com",
+                    "img-src 'self' data: https:",
+                    "connect-src 'self' https://www.google-analytics.com",
+                    "frame-ancestors 'none'",
+                    "base-uri 'self'",
+                    "object-src 'none'"
+                ].join('; '),
+                'X-Frame-Options': 'DENY',
+                'X-Content-Type-Options': 'nosniff',
+                'Referrer-Policy': 'strict-origin-when-cross-origin',
+                'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
+            }
+        }
+    },
+    image: {
+        format: ['webp'],
+        quality: 85,
+        screens: {
+            xs: 320,
+            sm: 640,
+            md: 768,
+            lg: 1024,
+            xl: 1280,
+            xxl: 1536,
+        }
+    },
 })
