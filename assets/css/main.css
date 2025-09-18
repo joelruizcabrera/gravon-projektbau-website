@@ -26,6 +26,11 @@
         scroll-behavior: smooth;
     }
 
+    main section {
+        max-width: 100lvw;
+        overflow-x: hidden;
+    }
+
     /* Enhanced typography scale */
     h1, h2, h3, h4, h5, h6 {
         @apply font-bold;

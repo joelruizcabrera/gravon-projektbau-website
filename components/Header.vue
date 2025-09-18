@@ -3,27 +3,27 @@
     <nav class="container mx-auto px-4 lg:px-8 py-6" role="navigation" aria-label="Hauptnavigation">
       <div class="flex justify-between items-center">
         <!-- Logo -->
-        <NuxtLink
-            :to="localePath('/')"
+        <NuxtLinkLocale
+            to="/"
             class="text-white font-bold text-2xl tracking-wider hover:text-yellow-500 transition-colors duration-300"
             :aria-label="$t('nav.home')"
         >
           GRAVON<sup class="text-sm">®</sup>
-        </NuxtLink>
+        </NuxtLinkLocale>
 
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex items-center space-x-8">
-          <NuxtLink
+          <NuxtLinkLocale
               v-for="item in navigation"
               :key="item.path"
-              :to="localePath(item.path)"
+              :to="item.path"
               class="nav-link text-white hover:text-yellow-500 font-medium uppercase tracking-wide transition-all duration-300 relative group py-2"
               active-class="text-yellow-500"
               :aria-current="$route.path === localePath(item.path) ? 'page' : null"
           >
             {{ $t(item.label) }}
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
-          </NuxtLink>
+          </NuxtLinkLocale>
 
           <LanguageSwitch />
         </div>
@@ -56,17 +56,17 @@
             role="menu"
         >
           <div class="flex flex-col space-y-4">
-            <NuxtLink
+            <NuxtLinkLocale
                 v-for="item in navigation"
                 :key="item.path"
-                :to="localePath(item.path)"
+                :to="item.path"
                 @click="closeMobileMenu"
                 class="text-white hover:text-yellow-500 font-medium uppercase tracking-wide transition-colors duration-300 py-2 border-b border-gray-700 border-opacity-50"
                 active-class="text-yellow-500"
                 role="menuitem"
             >
               {{ $t(item.label) }}
-            </NuxtLink>
+            </NuxtLinkLocale>
 
             <div class="pt-4 border-t border-gray-700">
               <LanguageSwitch />
