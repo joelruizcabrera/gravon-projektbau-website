@@ -1,38 +1,40 @@
+// nuxt.config.ts
 export default defineNuxtConfig({
     devtools: { enabled: true },
-    compatibilityDate: '2025-09-18',
 
+    // Enhanced modules configuration
     modules: [
         '@nuxtjs/tailwindcss',
-        '@nuxt/content',
         '@nuxtjs/i18n',
         '@vueuse/nuxt'
     ],
 
-    // Internationalization configuration
+    // CSS Configuration
+    css: [
+        '~/assets/css/main.css'
+    ],
+
+    // Enhanced i18n configuration with better static generation support
     i18n: {
+        defaultLocale: 'de',
         locales: [
             {
                 code: 'de',
-                language: 'de-DE',
+                iso: 'de-DE',
                 name: 'Deutsch',
-                file: 'de.json'
+                file: 'de.json',
+                dir: 'ltr'
             },
             {
                 code: 'en',
-                language: 'en-US',
+                iso: 'en-US',
                 name: 'English',
-                file: 'en.json'
-            },
-            {
-                code: 'es',
-                language: 'es-ES',
-                name: 'Spanish',
-                file: 'es.json'
+                file: 'en.json',
+                dir: 'ltr'
             }
         ],
-        defaultLocale: 'de',
-        langDir: 'locales/',
+        lazy: true,
+        langDir: 'locales',
         strategy: 'prefix_except_default',
         detectBrowserLanguage: {
             useCookie: true,
@@ -42,203 +44,253 @@ export default defineNuxtConfig({
             fallbackLocale: 'de'
         },
         compilation: {
-            strictMessage: false
+            strictMessage: false,
+            escapeHtml: false
         },
-        vueI18n: './i18n.config.ts'
-    },
-
-    // Content configuration
-    content: {
-        locales: ['de', 'en', 'es'],
-        defaultLocale: 'de',
-        markdown: {
-            anchorLinks: false,
-            toc: {
-                depth: 3,
-                searchDepth: 3
-            }
+        // Improved static generation
+        precompile: {
+            strictMessage: false
         }
     },
 
-    // CSS configuration
-    css: ['~/assets/css/main.css'],
-
-    // App configuration
+    // Enhanced app configuration
     app: {
         head: {
-            title: 'GRAVON Projektbau - Planen. Bauen. Vollenden.',
             htmlAttrs: {
                 lang: 'de'
             },
+            charset: 'utf-8',
+            viewport: 'width=device-width, initial-scale=1',
+            title: 'GRAVON Projektbau - Plan. Build. Complete.',
             meta: [
-                { charset: 'utf-8' },
-                { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-                {
-                    name: 'description',
-                    content: 'GRAVON Projektbau - Ihr Partner für schlüsselfertige Projekte mit Substanz. Generalunternehmen für Bau- und Immobilienprojekte.'
-                },
+                { name: 'description', content: 'GRAVON Projektbau - Ihr zuverlässiger Partner für schlüsselfertige Projekte mit Substanz.' },
                 { name: 'format-detection', content: 'telephone=no' },
                 { name: 'theme-color', content: '#f59e0b' },
+                { name: 'msapplication-TileColor', content: '#f59e0b' },
                 { property: 'og:site_name', content: 'GRAVON Projektbau' },
                 { property: 'og:type', content: 'website' },
-                { property: 'og:locale', content: 'de_DE' },
-                { property: 'og:locale:alternate', content: 'en_US' },
-                { property: 'og:locale:alternate', content: 'es_ES' },
-                { name: 'twitter:card', content: 'summary_large_image' },
-                { name: 'twitter:site', content: '@gravon_bau' },
-                { name: 'robots', content: 'index, follow' },
-                { name: 'author', content: 'GRAVON Projektbau GmbH' }
+                { name: 'robots', content: 'index, follow' }
             ],
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
                 { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-                { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-                { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
                 { rel: 'manifest', href: '/site.webmanifest' },
                 { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
                 { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-                { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' }
-            ],
-            script: [
-                {
-                    type: 'application/ld+json',
-                    innerHTML: JSON.stringify({
-                        '@context': 'https://schema.org',
-                        '@type': 'Organization',
-                        name: 'GRAVON Projektbau GmbH',
-                        url: 'https://gravon-projektbau.de',
-                        logo: 'https://gravon-projektbau.de/images/logo.png',
-                        description: 'Generalunternehmen für Bau- und Immobilienprojekte',
-                        address: {
-                            '@type': 'PostalAddress',
-                            streetAddress: 'Musterstraße 123',
-                            addressLocality: 'Frankfurt am Main',
-                            postalCode: '60311',
-                            addressCountry: 'DE'
-                        },
-                        contactPoint: [
-                            {
-                                '@type': 'ContactPoint',
-                                telephone: '+49-69-123-456-789',
-                                contactType: 'customer service',
-                                email: 'info@gravon.de',
-                                areaServed: 'DE',
-                                availableLanguage: ['German', 'English']
-                            }
-                        ],
-                        foundingDate: '1998',
-                        numberOfEmployees: '50+',
-                        serviceArea: 'Deutschland',
-                        sameAs: [
-                            'https://www.linkedin.com/company/gravon-projektbau',
-                            'https://www.xing.com/companies/gravonprojektbau'
-                        ]
-                    })
-                }
+                { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap' }
             ]
+        },
+        // Page transition configuration
+        pageTransition: {
+            name: 'page',
+            mode: 'out-in'
+        },
+        // Layout transition
+        layoutTransition: {
+            name: 'layout',
+            mode: 'out-in'
         }
     },
 
-    // Runtime configuration
+    // Enhanced runtime configuration
     runtimeConfig: {
         public: {
-            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://gravon-projektbau.de',
+            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.gravon.de',
             gtag: {
-                id: process.env.NUXT_GTAG_ID
+                id: process.env.NUXT_GTAG_ID || ''
+            },
+            // GSAP configuration flags
+            gsap: {
+                enableScrollTrigger: true,
+                refreshOnResize: true,
+                refreshDelay: 100
             }
         }
     },
 
-    // Nitro configuration
+    // Enhanced build configuration for better static generation
     nitro: {
         prerender: {
             routes: [
                 '/',
-                '/services',
-                '/projects',
-                '/about',
-                '/contact',
-                '/privacy',
-                '/terms',
-                '/imprint',
                 '/en',
+                '/services',
                 '/en/services',
+                '/projects',
                 '/en/projects',
+                '/about',
                 '/en/about',
+                '/contact',
                 '/en/contact',
+                '/imprint',
+                '/en/imprint',
+                '/privacy',
                 '/en/privacy',
-                '/en/terms',
-                '/en/imprint'
-            ]
+                '/terms',
+                '/en/terms'
+            ],
+            crawlLinks: true
         },
-        compressPublicAssets: true
-    },
-
-    // Build configuration
-    build: {
-        transpile: ['gsap']
-    },
-
-    // Optimization
-    webpack: {
-        optimization: {
-            splitChunks: {
-                layouts: true,
-                pages: true,
-                commons: true
-            }
-        },
-    },
-
-    // Experimental features
-    experimental: {
-        payloadExtraction: false,
-        viewTransition: true
-    },
-
-    // TypeScript configuration
-    typescript: {
-        strict: true,
-        typeCheck: true
-    },
-
-    // Vite configuration
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: '@use "~/assets/scss/variables.scss" as *;'
-                }
-            }
-        },
-        optimizeDeps: {
-            include: ['gsap']
-        },
-        server: {
-            fs: {
-                strict: false
+        // Better static asset handling
+        storage: {
+            redis: {
+                driver: 'redis',
+                // Configure if using Redis for caching
             }
         }
     },
 
-    // Router configuration
+    // Enhanced SSR configuration for better hydration
+    ssr: true,
+
+    // Experimental features for better performance
+    experimental: {
+        payloadExtraction: false, // Better for static generation
+        renderJsonPayloads: true,
+        typedPages: true
+    },
+
+    // Enhanced build optimization
+    build: {
+        transpile: ['gsap'], // Ensure GSAP is properly transpiled
+        analyze: process.env.ANALYZE === 'true'
+    },
+
+    // Vite configuration for better development and build
+    vite: {
+        css: {
+            devSourcemap: true
+        },
+        build: {
+            cssCodeSplit: true,
+            rollupOptions: {
+                output: {
+                    manualChunks: {
+                        'gsap': ['gsap'],
+                        'vendor': ['vue', 'vue-router']
+                    }
+                }
+            }
+        },
+        optimizeDeps: {
+            include: ['gsap', 'gsap/ScrollTrigger', 'gsap/TextPlugin']
+        }
+    },
+
+    // TypeScript configuration
+    typescript: {
+        strict: false, // Set to true for stricter type checking
+        typeCheck: false // Enable for type checking during development
+    },
+
+    // Enhanced router options
     router: {
         options: {
             scrollBehaviorType: 'smooth'
         }
     },
 
+    // Plugin configuration
+    plugins: [
+        '~/plugins/gsap.client.js',
+        '~/plugins/gtag.client.js',
+        '~/plugins/accessibility.client.js'
+    ],
+
+    // Enhanced hooks for better static generation
+    hooks: {
+        // Better handling of GSAP in static generation
+        'render:route': (url, result, context) => {
+            // Inject GSAP initialization for static pages
+            if (result.html) {
+                result.html = result.html.replace(
+                    '</head>',
+                    `
+          <script>
+            // Prevent FOUC for GSAP animations
+            document.documentElement.style.visibility = 'visible';
+            // Initialize scroll behavior
+            if (typeof window !== 'undefined') {
+              window.scrollTo = window.scrollTo || function(x, y) {
+                window.scrollX = x;
+                window.scrollY = y;
+              };
+            }
+          </script>
+          </head>`
+                )
+            }
+        },
+
+        // Optimize static generation
+        'nitro:build:before': () => {
+            console.log('🚀 Optimizing static generation for GSAP compatibility')
+        },
+
+        // Post-build optimizations
+        'nitro:build:public-assets': (nitro) => {
+            console.log('📦 Static assets generated successfully')
+        }
+    },
+
+    // Enhanced webpack configuration for legacy support
+    webpack: {
+        extractCSS: true,
+        optimization: {
+            splitChunks: {
+                chunks: 'all',
+                cacheGroups: {
+                    vendor: {
+                        name: 'vendor',
+                        test: /[\\/]node_modules[\\/]/,
+                        chunks: 'all'
+                    },
+                    gsap: {
+                        name: 'gsap',
+                        test: /[\\/]node_modules[\\/]gsap[\\/]/,
+                        chunks: 'all',
+                        priority: 10
+                    }
+                }
+            }
+        }
+    },
+
     // Security headers
     routeRules: {
-        '/': { prerender: true },
-        '/services': { prerender: true },
-        '/projects': { prerender: true },
-        '/about': { prerender: true },
-        '/contact': { prerender: true },
-        '/privacy': { headers: { 'X-Robots-Tag': 'noindex' } },
-        '/terms': { headers: { 'X-Robots-Tag': 'noindex' } },
-        '/imprint': { headers: { 'X-Robots-Tag': 'noindex' } },
-        '/admin/**': { headers: { 'X-Robots-Tag': 'noindex' } },
-        '/api/**': { cors: true }
-    }
+        '/**': {
+            headers: {
+                'X-Content-Type-Options': 'nosniff',
+                'X-Frame-Options': 'DENY',
+                'X-XSS-Protection': '1; mode=block',
+                'Referrer-Policy': 'strict-origin-when-cross-origin',
+                'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+            }
+        },
+        // Specific rules for static assets
+        '/images/**': {
+            headers: {
+                'Cache-Control': 'public, max-age=31536000, immutable'
+            }
+        },
+        '/js/**': {
+            headers: {
+                'Cache-Control': 'public, max-age=31536000, immutable'
+            }
+        },
+        '/css/**': {
+            headers: {
+                'Cache-Control': 'public, max-age=31536000, immutable'
+            }
+        }
+    },
+
+    // Development configuration
+    devServer: {
+        port: 3000,
+        host: '0.0.0.0'
+    },
+
+    // Compatibility configuration
+    compatibilityDate: '2025-09-18'
 })

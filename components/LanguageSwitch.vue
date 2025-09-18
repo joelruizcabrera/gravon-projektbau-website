@@ -1,5 +1,5 @@
 <template>
-  <div class="relative language-switcher" ref="dropdownRef">
+  <div v-if="isReady" class="relative language-switcher" ref="dropdownRef">
     <button
         @click="toggleDropdown"
         class="flex items-center space-x-2 text-white hover:text-yellow-500 transition-colors duration-300 p-2 rounded-lg hover:bg-white hover:bg-opacity-10"
@@ -73,11 +73,8 @@
 </template>
 
 <script setup>
-const { locale: currentLocale, locales } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
-const route = useRoute()
-
 // Reactive state
+const isReady = ref(false)
 const isOpen = ref(false)
 const dropdownRef = ref(null)
 
@@ -88,16 +85,72 @@ const localeConfig = {
   es: { name: 'Español', nativeName: 'Español', flag: '🇪🇸' }
 }
 
-// Computed properties
+// Initialize with fallbacks for static generation
+let currentLocale, locales, switchLocalePath, route
+let $t = (key) => key // Fallback translation function
+
+// Safe initialization of i18n
+const initializeI18n = () => {
+  try {
+    if (process.client) {
+      // Client-side: Full i18n functionality
+      const i18n = useI18n()
+      currentLocale = i18n.locale
+      locales = i18n.locales
+      switchLocalePath = useSwitchLocalePath()
+      route = useRoute()
+
+      // Enhanced translation function with fallbacks
+      const { t } = i18n
+      $t = (key) => {
+        try {
+          return t(key)
+        } catch (error) {
+          const fallbackTranslations = {
+            'nav.switchLanguage': 'Switch language'
+          }
+          return fallbackTranslations[key] || key
+        }
+      }
+    } else {
+      // Server-side: Use minimal fallbacks for SSG
+      currentLocale = ref('de')
+      locales = ref([
+        { code: 'de', name: 'Deutsch' },
+        { code: 'en', name: 'English' }
+      ])
+      switchLocalePath = (locale) => locale === 'de' ? '/' : `/${locale}/`
+      route = { path: '/' }
+    }
+
+    isReady.value = true
+  } catch (error) {
+    console.warn('LanguageSwitch initialization error:', error)
+
+    // Final fallback
+    currentLocale = ref('de')
+    locales = ref([
+      { code: 'de', name: 'Deutsch' },
+      { code: 'en', name: 'English' }
+    ])
+    switchLocalePath = (locale) => locale === 'de' ? '/' : `/${locale}/`
+    route = { path: '/' }
+
+    isReady.value = true
+  }
+}
+
+// Computed properties with safe access
 const currentLocaleCode = computed(() => {
-  return currentLocale.value || 'de'
+  if (!isReady.value) return 'de'
+  return currentLocale?.value || 'de'
 })
 
 const availableLocales = computed(() => {
-  if (!Array.isArray(locales.value)) {
-    console.warn('Locales not properly configured')
+  if (!isReady.value) return []
+
+  if (!Array.isArray(locales?.value)) {
     return [
-      { code: 'de', name: 'Deutsch', nativeName: 'Deutsch' },
       { code: 'en', name: 'English', nativeName: 'English' }
     ].filter(locale => locale.code !== currentLocaleCode.value)
   }
@@ -113,6 +166,7 @@ const availableLocales = computed(() => {
 
 // Methods
 const toggleDropdown = () => {
+  if (!isReady.value) return
   isOpen.value = !isOpen.value
 }
 
@@ -125,21 +179,35 @@ const handleLocaleClick = (locale) => {
 
   // Optional: Track language change event
   if (process.client && window.gtag) {
-    window.gtag('event', 'language_change', {
-      event_category: 'engagement',
-      event_label: `${currentLocaleCode.value}_to_${locale.code}`,
-      value: 1
-    })
+    try {
+      window.gtag('event', 'language_change', {
+        event_category: 'engagement',
+        event_label: `${currentLocaleCode.value}_to_${locale.code}`,
+        value: 1
+      })
+    } catch (error) {
+      console.warn('Analytics tracking error:', error)
+    }
   }
 }
 
 const getLocalizedPath = (localeCode) => {
+  if (!isReady.value || !switchLocalePath) {
+    // Fallback path construction
+    const isDefaultLocale = localeCode === 'de'
+    if (isDefaultLocale) {
+      return '/'
+    } else {
+      return `/${localeCode}/`
+    }
+  }
+
   try {
     return switchLocalePath(localeCode)
   } catch (error) {
     console.warn('Error getting localized path:', error)
     // Fallback: manually construct path
-    const currentPath = route.path
+    const currentPath = route?.path || '/'
     const isDefaultLocale = localeCode === 'de'
 
     if (isDefaultLocale) {
@@ -186,10 +254,23 @@ const handleFocusOut = (event) => {
 
 // Lifecycle hooks
 onMounted(() => {
+  // Initialize i18n with proper error handling
+  initializeI18n()
+
   if (process.client) {
+    // Set up event listeners
     document.addEventListener('click', handleClickOutside)
     document.addEventListener('keydown', handleEscape)
     document.addEventListener('focusout', handleFocusOut)
+
+    // Additional initialization after hydration
+    nextTick(() => {
+      setTimeout(() => {
+        if (!isReady.value) {
+          initializeI18n()
+        }
+      }, 100)
+    })
   }
 })
 
@@ -202,22 +283,17 @@ onUnmounted(() => {
 })
 
 // Watch for route changes to close dropdown
-watch(() => route.path, () => {
+watch(() => route?.path, () => {
   closeDropdown()
 })
 
-// Provide fallback translations if not available
-const { t } = useI18n()
-const fallbackTranslations = {
-  'nav.switchLanguage': 'Switch language'
-}
-
-const $t = (key) => {
-  try {
-    return t(key)
-  } catch (error) {
-    return fallbackTranslations[key] || key
-  }
+// Watch for hydration completion
+if (process.client) {
+  watch(() => process.client, (isClient) => {
+    if (isClient && !isReady.value) {
+      initializeI18n()
+    }
+  }, { immediate: true })
 }
 </script>
 
@@ -344,5 +420,10 @@ a:focus-visible {
 
 .no-underline:hover {
   text-decoration: none !important;
+}
+
+/* Loading state */
+.language-switcher:not(.ready) {
+  visibility: hidden;
 }
 </style>
