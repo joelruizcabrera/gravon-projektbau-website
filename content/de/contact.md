@@ -1,6 +1,6 @@
 ---
-title: "Kontakt"
-description: "Kontaktieren Sie uns für Ihr nächstes Projekt"
+title: Kontakt
+description: Kontaktieren Sie uns für Ihr nächstes Projekt
 ---
 
 # Kontakt
@@ -9,36 +9,24 @@ Lassen Sie uns gemeinsam Ihr nächstes Projekt realisieren. Unser erfahrenes Tea
 
 ## Hauptsitz Frankfurt
 
-**GRAVON Projektbau GmbH**  
-Musterstraße 123  
-60311 Frankfurt am Main  
-Deutschland
+**GRAVON Projektbau GmbH**:br Musterstraße 123 :br 60311 Frankfurt am Main :br Deutschland
 
-**Telefon**: +49 69 123 456 789  
-**E-Mail**: info@gravon.de  
-**Web**: www.gravon.de
+**Telefon**: +49 69 123 456 789 :br**E-Mail**: <info@gravon.de>:br**Web**: [www.gravon.de](http://www.gravon.de)
 
-**Öffnungszeiten**:  
-Mo-Fr: 8:00 - 18:00 Uhr  
-Sa: 9:00 - 12:00 Uhr (nach Vereinbarung)
+**Öffnungszeiten**: :br Mo-Fr: 8:00 - 18:00 Uhr :br Sa: 9:00 - 12:00 Uhr (nach Vereinbarung)
 
 ## Weitere Standorte
 
 ### München
-Maximilianstraße 45  
-80538 München  
-Tel: +49 89 987 654 321
+
+Maximilianstraße 45 :br 80538 München :br Tel: +49 89 987 654 321
 
 ### Hamburg
-Speicherstadt 12  
-20457 Hamburg  
-Tel: +49 40 555 123 456
+
+Speicherstadt 12 :br 20457 Hamburg :br Tel: +49 40 555 123 456
 
 ## Ansprechpartner
 
-**Allgemeine Anfragen**: info@gravon.de  
-**Projektanfragen**: projekt@gravon.de  
-**Bewerbungen**: karriere@gravon.de  
-**Presse**: presse@gravon.de
+**Allgemeine Anfragen**: <info@gravon.de>:br**Projektanfragen**: <projekt@gravon.de>:br**Bewerbungen**: <karriere@gravon.de>:br**Presse**: <presse@gravon.de>
 
 Wir freuen uns auf Ihre Kontaktaufnahme!

@@ -1,6 +1,6 @@
 ---
-title: "About us"
-description: "Learn more about GRAVON Projektbau"
+title: About us
+description: Learn more about GRAVON Projektbau
 ---
 
 # About GRAVON Projektbau
@@ -15,14 +15,11 @@ Our interdisciplinary team of experienced architects, engineers, project manager
 
 ### Leadership Team
 
-**Dr. Michael Gravon** - Managing Director  
-Civil engineer with over 30 years of industry experience
+**Dr. Michael Gravon** - Managing Director :br Civil engineer with over 30 years of industry experience
 
-**Sarah Weber** - Lead Architect  
-Specialized in sustainable architecture and innovative planning concepts
+**Sarah Weber** - Lead Architect :br Specialized in sustainable architecture and innovative planning concepts
 
-**Thomas Klein** - Head of Project Management  
-Expert for complex large projects and scheduling
+**Thomas Klein** - Head of Project Management :br Expert for complex large projects and scheduling
 
 ## Our Values
 

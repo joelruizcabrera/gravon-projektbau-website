@@ -1,6 +1,6 @@
 ---
-title: "GRAVON Projektbau - Homepage"
-description: "Turnkey projects with substance"
+title: GRAVON Projektbau - Homepage
+description: Turnkey projects with substance
 ---
 
 # Welcome to GRAVON Projektbau

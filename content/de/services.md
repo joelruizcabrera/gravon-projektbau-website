@@ -1,6 +1,6 @@
 ---
-title: "Leistungen"
-description: "Unsere Leistungen im Überblick"
+title: Leistungen
+description: Unsere Leistungen im Überblick
 ---
 
 # Unsere Leistungen
@@ -10,6 +10,7 @@ description: "Unsere Leistungen im Überblick"
 Als erfahrener Generalunternehmer übernehmen wir die komplette Abwicklung Ihres Bauprojekts aus einer Hand. Von der Planung bis zur Übergabe koordinieren wir alle Gewerke und garantieren Ihnen Termin- und Kostensicherheit.
 
 ### Leistungsumfang:
+
 - Komplette Projektabwicklung
 - Koordination aller Gewerke
 - Termin- und Kostengarantie
@@ -21,6 +22,7 @@ Als erfahrener Generalunternehmer übernehmen wir die komplette Abwicklung Ihres
 Unsere erfahrenen Architekten und Planer entwickeln innovative Lösungen, die Funktionalität, Ästhetik und Wirtschaftlichkeit optimal vereinen.
 
 ### Planungsleistungen:
+
 - Architektonische Entwürfe
 - Technische Planung (TGA, Statik)
 - Genehmigungsverfahren
@@ -32,6 +34,7 @@ Unsere erfahrenen Architekten und Planer entwickeln innovative Lösungen, die Fu
 Professionelle Projektsteuerung für reibungslose Abläufe und termingerechte Fertigstellung.
 
 ### Management-Services:
+
 - Terminplanung & -kontrolle
 - Kostenmanagement
 - Qualitätskontrolle

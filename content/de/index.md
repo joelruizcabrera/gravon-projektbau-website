@@ -1,6 +1,6 @@
 ---
-title: "GRAVON Projektbau - Startseite"
-description: "Schlüsselfertige Projekte mit Substanz"
+title: GRAVON Projektbau - Startseite
+description: Schlüsselfertige Projekte mit Substanz
 ---
 
 # Willkommen bei GRAVON Projektbau
