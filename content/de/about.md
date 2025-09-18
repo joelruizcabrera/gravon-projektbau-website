@@ -1,6 +1,6 @@
 ---
-title: "Über uns"
-description: "Erfahren Sie mehr über GRAVON Projektbau"
+title: Über uns
+description: Erfahren Sie mehr über GRAVON Projektbau
 ---
 
 # Über GRAVON Projektbau
@@ -15,14 +15,11 @@ Unser interdisziplinäres Team aus erfahrenen Architekten, Ingenieuren, Projektm
 
 ### Führungsteam
 
-**Dr. Michael Gravon** - Geschäftsführer  
-Bauingenieur mit über 30 Jahren Branchenerfahrung
+**Dr. Michael Gravon** - Geschäftsführer :br Bauingenieur mit über 30 Jahren Branchenerfahrung
 
-**Sarah Weber** - Leitende Architektin  
-Spezialisiert auf nachhaltige Architektur und innovative Planungskonzepte
+**Sarah Weber** - Leitende Architektin :br Spezialisiert auf nachhaltige Architektur und innovative Planungskonzepte
 
-**Thomas Klein** - Leiter Projektmanagement  
-Experte für komplexe Großprojekte und Terminplanung
+**Thomas Klein** - Leiter Projektmanagement :br Experte für komplexe Großprojekte und Terminplanung
 
 ## Unsere Werte
 
