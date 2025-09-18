@@ -10,6 +10,11 @@ export default defineNuxtConfig({
         '~/assets/css/main.css'
     ],
 
+    experimental: {
+        payloadExtraction: false,
+        viewTransition: true
+    },
+
     // Enhanced i18n configuration
     i18n: {
         defaultLocale: 'de',
@@ -45,13 +50,11 @@ export default defineNuxtConfig({
             redirectOn: 'root',
             alwaysRedirect: false,
             fallbackLocale: 'de'
-        }
-    },
-
-    sitemap: {
-        sources: [
-            '/api/__sitemap__/urls',
-        ]
+        },
+        compilation: {
+            strictMessage: false
+        },
+        vueI18n: './i18n.config.ts'
     },
 
     // Enhanced app configuration
@@ -123,10 +126,12 @@ export default defineNuxtConfig({
                 '/es/privacy',
                 '/terms',
                 '/en/terms',
-                '/es/terms'
+                '/es/terms',
+                '/sitemap.xml'
             ],
             crawlLinks: true
-        }
+        },
+        compressPublicAssets: true,
     },
 
     // Enhanced SSR configuration
@@ -144,6 +149,11 @@ export default defineNuxtConfig({
         },
         optimizeDeps: {
             include: ['gsap', 'vue-router'],
+        },
+        server: {
+            fs: {
+                strict: false,
+            }
         }
     },
 
@@ -162,12 +172,82 @@ export default defineNuxtConfig({
 
     // Security headers
     routeRules: {
-        '/**': {
+        // Hauptseiten prerendern
+        '/': { prerender: true },
+        '/services': { prerender: true },
+        '/projects': { prerender: true },
+        '/about': { prerender: true },
+        '/contact': { prerender: true },
+
+        // Englische Seiten prerendern
+        '/en': { prerender: true },
+        '/en/services': { prerender: true },
+        '/en/projects': { prerender: true },
+        '/en/about': { prerender: true },
+        '/en/contact': { prerender: true },
+
+        // Spanische Seiten prerendern
+        '/es': { prerender: true },
+        '/es/services': { prerender: true },
+        '/es/projects': { prerender: true },
+        '/es/about': { prerender: true },
+        '/es/contact': { prerender: true },
+
+        // Legal-Seiten mit noindex
+        '/privacy': {
+            prerender: true,
+            headers: { 'X-Robots-Tag': 'noindex' }
+        },
+        '/terms': {
+            prerender: true,
+            headers: { 'X-Robots-Tag': 'noindex' }
+        },
+        '/imprint': {
+            prerender: true,
+            headers: { 'X-Robots-Tag': 'noindex' }
+        },
+        '/en/privacy': {
+            prerender: true,
+            headers: { 'X-Robots-Tag': 'noindex' }
+        },
+        '/en/terms': {
+            prerender: true,
+            headers: { 'X-Robots-Tag': 'noindex' }
+        },
+        '/en/imprint': {
+            prerender: true,
+            headers: { 'X-Robots-Tag': 'noindex' }
+        },
+        '/es/privacy': {
+            prerender: true,
+            headers: { 'X-Robots-Tag': 'noindex' }
+        },
+        '/es/terms': {
+            prerender: true,
+            headers: { 'X-Robots-Tag': 'noindex' }
+        },
+        '/es/imprint': {
+            prerender: true,
+            headers: { 'X-Robots-Tag': 'noindex' }
+        },
+
+        // KRITISCH: Sitemap statisch generieren
+        '/sitemap.xml': {
+            prerender: true,
             headers: {
-                'X-Content-Type-Options': 'nosniff',
-                'X-Frame-Options': 'DENY',
-                'X-XSS-Protection': '1; mode=block'
+                'Content-Type': 'application/xml',
+                'Cache-Control': 'max-age=86400' // 24 Stunden Cache
             }
+        },
+
+        // Admin und API-Bereiche blockieren
+        '/admin/**': { headers: { 'X-Robots-Tag': 'noindex' } },
+        '/api/**': { cors: true }
+    },
+
+    router: {
+        options: {
+            scrollBehaviorType: 'smooth'
         }
     },
 

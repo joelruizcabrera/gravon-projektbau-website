@@ -9,7 +9,8 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "npm run sitemap:generate && nuxt generate",
+    "generate:sitemap": "nuxt generate && npm run sitemap:post-generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint . --ext .vue,.js,.ts",
@@ -20,7 +21,10 @@
     "test:coverage": "vitest --coverage",
     "clean": "rm -rf .nuxt .output dist node_modules/.cache",
     "analyze": "nuxt build --analyze",
-    "sitemap": "nuxt build && node scripts/generate-sitemap.js"
+    "sitemap:generate": "node scripts/generate-sitemap.js",
+    "sitemap:post-generate": "node scripts/generate-sitemap.js",
+    "prebuild": "npm run sitemap:generate",
+    "pregenerate": "npm run sitemap:generate"
   },
   "dependencies": {
     "@nuxt/content": "^2.13.2",
