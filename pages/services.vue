@@ -127,7 +127,7 @@
             <div class="flex items-center justify-between mt-auto pt-4">
               <button
                   @click="openServiceModal(service)"
-                  class="px-4 py-2 bg-yellow-500 text-black text-sm font-medium rounded-lg hover:bg-yellow-600 transition-colors duration-200"
+                  class="px-4 py-2 bg-yellow-500 text-black text-sm font-medium rounded-lg hover:bg-yellow-600 transition-colors duration-200 service-learn-more-btn"
               >
                 {{ $t('services.learnMore') }}
               </button>
@@ -222,15 +222,21 @@
     <Teleport to="body">
       <div
           v-if="selectedService"
-          class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+          class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 service-modal"
           @click.self="closeServiceModal"
+          role="dialog"
+          aria-modal="true"
+          :aria-labelledby="selectedService ? `modal-title-${selectedService.title}` : ''"
       >
         <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
           <div class="p-8">
             <!-- Header -->
             <div class="flex justify-between items-start mb-6">
               <div>
-                <h2 class="text-3xl font-bold text-gray-900 mb-2">
+                <h2
+                    :id="selectedService ? `modal-title-${selectedService.title}` : ''"
+                    class="text-3xl font-bold text-gray-900 mb-2"
+                >
                   {{ selectedService ? $t(selectedService.title) : '' }}
                 </h2>
                 <p class="text-gray-600">
@@ -239,7 +245,8 @@
               </div>
               <button
                   @click="closeServiceModal"
-                  class="text-gray-400 hover:text-gray-600 transition-colors"
+                  class="text-gray-400 hover:text-gray-600 transition-colors p-2 rounded-lg hover:bg-gray-100"
+                  aria-label="Modal schließen"
               >
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -287,7 +294,7 @@
 </template>
 
 <script setup>
-const { $gsap, $ScrollTrigger } = useNuxtApp()
+const { $gsap, $ScrollTrigger, $animationUtils } = useNuxtApp()
 const localePath = useLocalePath()
 const { t: $t } = useI18n()
 
@@ -369,99 +376,147 @@ const serviceOverview = [
 // Detailed services (same data, different presentation)
 const detailedServices = serviceOverview
 
+// Initialize animations
+const initAnimations = () => {
+  if (!$animationUtils || !$gsap || !$ScrollTrigger) {
+    console.warn('Animation utilities not available')
+    return
+  }
+
+  try {
+    // Hero animations with timeline
+    const heroTl = $gsap.timeline({ delay: 0.3 })
+
+    // Set initial states
+    $gsap.set('.page-hero-title-word', { y: 30, opacity: 0 })
+    $gsap.set('.page-hero-subtitle', { y: 20, opacity: 0 })
+    $gsap.set('.page-hero-cta', { y: 15, opacity: 0 })
+
+    // Animate in sequence
+    heroTl
+        .to('.page-hero-title-word', {
+          duration: 0.6,
+          y: 0,
+          opacity: 1,
+          stagger: 0.08,
+          ease: 'power2.out'
+        })
+        .to('.page-hero-subtitle', {
+          duration: 0.5,
+          y: 0,
+          opacity: 1,
+          ease: 'power2.out'
+        }, '-=0.3')
+        .to('.page-hero-cta', {
+          duration: 0.4,
+          y: 0,
+          opacity: 1,
+          ease: 'power2.out'
+        }, '-=0.2')
+
+    // Use animation utils for scroll-triggered animations
+    $animationUtils.scaleIn('.universal-card', {
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'back.out(1.7)',
+      scrollTrigger: {
+        start: 'top 85%',
+        toggleActions: 'play none none reverse'
+      }
+    })
+
+    $animationUtils.slideInFromLeft('.gsap-slide-left', {
+      duration: 0.8,
+      stagger: 0.2,
+      scrollTrigger: {
+        start: 'top 85%',
+        toggleActions: 'play none none reverse'
+      }
+    })
+
+    $animationUtils.slideInFromRight('.gsap-slide-right', {
+      duration: 0.8,
+      stagger: 0.2,
+      scrollTrigger: {
+        start: 'top 85%',
+        toggleActions: 'play none none reverse'
+      }
+    })
+
+  } catch (error) {
+    console.warn('Animation initialization failed:', error)
+  }
+}
+
 // Methods
 const openServiceModal = (service) => {
+  if (!service) return
+
   selectedService.value = service
   document.body.style.overflow = 'hidden'
+
+  // Focus trap for accessibility
+  nextTick(() => {
+    const modal = document.querySelector('.service-modal')
+    if (modal) {
+      const focusableElements = modal.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      )
+      if (focusableElements.length > 0) {
+        focusableElements[0].focus()
+      }
+    }
+  })
 }
 
 const closeServiceModal = () => {
   selectedService.value = null
   document.body.style.overflow = 'auto'
-}
 
-// Initialize animations
-const initAnimations = () => {
-  if (!$gsap || !$ScrollTrigger) return
-
-  // Hero animations
-  $gsap.set('.page-hero-title-word', { y: 50, opacity: 0 })
-  $gsap.set('.page-hero-subtitle', { y: 30, opacity: 0 })
-  $gsap.set('.page-hero-cta', { y: 20, opacity: 0 })
-
-  const heroTl = $gsap.timeline({ delay: 0.5 })
-
-  heroTl
-      .to('.page-hero-title-word', {
-        duration: 0.8,
-        y: 0,
-        opacity: 1,
-        stagger: 0.1,
-        ease: 'power3.out'
-      })
-      .to('.page-hero-subtitle', {
-        duration: 0.6,
-        y: 0,
-        opacity: 1,
-        ease: 'power3.out'
-      }, '-=0.4')
-      .to('.page-hero-cta', {
-        duration: 0.5,
-        y: 0,
-        opacity: 1,
-        ease: 'power3.out'
-      }, '-=0.3')
-
-  // Service cards animation
-  $gsap.from('.universal-card', {
-    scrollTrigger: {
-      trigger: '.universal-card',
-      start: 'top 80%'
-    },
-    duration: 1,
-    y: 50,
-    opacity: 0,
-    stagger: 0.2,
-    ease: 'power3.out'
-  })
-
-  // Detailed sections animation
-  $gsap.from('.gsap-slide-left', {
-    scrollTrigger: {
-      trigger: '.gsap-slide-left',
-      start: 'top 80%'
-    },
-    duration: 1,
-    x: -50,
-    opacity: 0,
-    stagger: 0.3,
-    ease: 'power3.out'
-  })
-
-  $gsap.from('.gsap-slide-right', {
-    scrollTrigger: {
-      trigger: '.gsap-slide-right',
-      start: 'top 80%'
-    },
-    duration: 1,
-    x: 50,
-    opacity: 0,
-    stagger: 0.3,
-    ease: 'power3.out'
-  })
-}
-
-// Lifecycle
-onMounted(() => {
+  // Return focus to trigger element
   nextTick(() => {
-    setTimeout(initAnimations, 100)
+    const activeButton = document.querySelector('button:focus')
+    if (!activeButton) {
+      // Find the last clicked service button
+      const serviceButtons = document.querySelectorAll('.service-learn-more-btn')
+      if (serviceButtons.length > 0) {
+        serviceButtons[serviceButtons.length - 1].focus()
+      }
+    }
+  })
+}
+
+// Handle ESC key for modal
+const handleKeyDown = (event) => {
+  if (event.key === 'Escape' && selectedService.value) {
+    closeServiceModal()
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', handleKeyDown)
+  // Wait for DOM to be ready
+  nextTick(() => {
+    setTimeout(() => {
+      initAnimations()
+    }, 100)
   })
 })
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
+  document.removeEventListener('keydown', handleKeyDown)
+  // Clean up
   document.body.style.overflow = 'auto'
+
+  // Kill all ScrollTrigger instances for this page
   if ($ScrollTrigger) {
-    $ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+    $ScrollTrigger.getAll().forEach(trigger => {
+      if (trigger.trigger && document.contains(trigger.trigger)) {
+        trigger.kill()
+      }
+    })
+    // Refresh remaining triggers
+    $ScrollTrigger.refresh()
   }
 })
 </script>
@@ -470,6 +525,7 @@ onUnmounted(() => {
 /* Page Hero Animations */
 .page-hero-title-word {
   display: inline-block;
+  will-change: transform, opacity;
 }
 
 /* Card Hover Effects */
@@ -477,10 +533,11 @@ onUnmounted(() => {
   transform-style: preserve-3d;
   backface-visibility: hidden;
   will-change: transform;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-hover:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-4px) scale(1.01);
 }
 
 /* Performance optimizations */
@@ -488,10 +545,30 @@ onUnmounted(() => {
   contain: layout style paint;
 }
 
+/* GSAP Animation Targets */
+.gsap-slide-left,
+.gsap-slide-right {
+  will-change: transform, opacity;
+}
+
+/* Smooth rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hardware acceleration for smooth animations */
+.page-hero-section,
+.universal-card,
+.gsap-slide-left,
+.gsap-slide-right {
+  transform: translateZ(0);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .card-hover:hover {
-    transform: translateY(-4px) scale(1.01);
+    transform: translateY(-2px) scale(1.005);
   }
 
   .page-hero-title {
@@ -503,10 +580,14 @@ onUnmounted(() => {
   }
 }
 
-/* Accessibility */
+/* Accessibility and reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .card-hover:hover {
     transform: none;
+  }
+
+  .universal-card {
+    transition: none;
   }
 
   * {
@@ -519,11 +600,27 @@ onUnmounted(() => {
 /* Modal transitions */
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
+}
+
+/* Loading states */
+.universal-card {
+  min-height: 320px; /* Prevent layout shift */
+}
+
+/* Improved focus states for accessibility */
+.universal-card:focus-within {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+button:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
 }
 </style>
