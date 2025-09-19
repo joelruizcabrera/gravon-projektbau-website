@@ -106,15 +106,15 @@
           <component
               v-for="(button, index) in buttons"
               :key="index"
-              :is="button.to ? 'NuxtLink' : 'button'"
-              :to="button.to ? localePath(button.to) : undefined"
+              :is="button.to ? NuxtLink : 'button'"
+              :to="button.to ? button.to : undefined"
               @click="button.onClick"
               :class="[
-              'px-8 py-4 font-semibold transition-all duration-300 uppercase tracking-wide',
-              button.variant === 'primary'
-                ? 'bg-yellow-500 text-black hover:bg-yellow-400 hover:scale-105'
-                : 'border-2 border-white bg-transparent text-white hover:bg-white hover:text-gray-900 hover:scale-105'
-            ]"
+                  'px-8 py-4 font-semibold transition-all duration-300 uppercase tracking-wide nav-link',
+                  button.variant === 'primary'
+                    ? 'bg-yellow-500 text-black hover:bg-yellow-400 hover:scale-105'
+                    : 'border-2 border-white bg-transparent text-white hover:bg-white hover:text-gray-900 hover:scale-105'
+              ]"
           >
             {{ button.text }}
             <svg
@@ -176,6 +176,8 @@
 </template>
 
 <script setup>
+import NuxtLink from "#app/components/nuxt-link.js";
+
 const props = defineProps({
   // Content Props
   title: {

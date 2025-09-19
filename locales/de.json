@@ -150,7 +150,7 @@
   "projects": {
     "title": "Unsere Referenzen",
     "subtitle": "Entdecken Sie eine Auswahl unserer erfolgreich realisierten Projekte - jedes ein Beweis für unsere Kompetenz und Leidenschaft für exzellente Bauwerke.",
-    "heroSubtitle": "Über 200 erfolgreich realisierte Projekte sprechen für unsere Expertise und Zuverlässigkeit.",
+    "heroSubtitle": "Über 27 erfolgreich realisierte Projekte sprechen für unsere Expertise und Zuverlässigkeit.",
     "viewAll": "Alle Projekte ansehen",
     "loadMore": "Weitere Projekte laden",
     "loading": "Lädt...",
@@ -258,29 +258,29 @@
   },
   "about": {
     "title": "Über GRAVON",
-    "heroSubtitle": "Seit über 25 Jahren Ihr Partner für anspruchsvolle Bauprojekte - mit Leidenschaft, Expertise und Innovation.",
-    "paragraph1": "Seit über 25 Jahren steht GRAVON Projektbau für höchste Qualität, Zuverlässigkeit und Innovation im Bauwesen. Als führendes Generalunternehmen haben wir über 200 anspruchsvolle Projekte erfolgreich realisiert.",
+    "heroSubtitle": "Seit über 10 Jahren Ihr Partner für anspruchsvolle Bauprojekte - mit Leidenschaft, Expertise und Innovation.",
+    "paragraph1": "Seit über 10 Jahren steht GRAVON Projektbau für höchste Qualität, Zuverlässigkeit und Innovation im Bauwesen. Als führendes Generalunternehmen haben wir über 200 anspruchsvolle Projekte erfolgreich realisiert.",
     "paragraph2": "Unser interdisziplinäres Team aus erfahrenen Architekten, Ingenieuren und Projektmanagern arbeitet eng mit unseren Kunden zusammen, um maßgeschneiderte Lösungen zu entwickeln, die sowohl funktional als auch ästhetisch überzeugen.",
     "paragraph3": "Nachhaltigkeit und Innovation stehen im Mittelpunkt unserer Arbeit. Wir setzen konsequent auf modernste Bautechnologien, umweltfreundliche Materialien und energieeffiziente Lösungen für zukunftsfähige Gebäude.",
     "yearsExperience": "Jahre Erfahrung",
     "story": {
       "title": "Unsere Geschichte",
-      "paragraph1": "1998 gründeten Dr. Michael Gravon und sein Team GRAVON Projektbau mit der Vision, Bauprojekte auf höchstem Niveau zu realisieren. Was als kleines Planungsbüro in Frankfurt begann, entwickelte sich über die Jahre zu einem der führenden Generalunternehmen Deutschlands.",
+      "paragraph1": "as als kleines Planungsbüro in Osnabrück begann, entwickelte sich über die Jahre zu einem der führenden Generalunternehmen Deutschlands.",
       "paragraph2": "Der Schlüssel unseres Erfolgs liegt in der Kombination aus traditionellem Handwerk und innovativen Technologien. Wir haben uns stets an den neuesten Entwicklungen orientiert und dabei unsere Grundwerte - Qualität, Zuverlässigkeit und Kundennähe - nie aus den Augen verloren.",
-      "paragraph3": "Heute beschäftigen wir über 50 qualifizierte Mitarbeiter an drei Standorten und haben ein Bauvolumen von über 500 Millionen Euro realisiert. Unsere Projekte prägen das Stadtbild deutscher Metropolen und setzen Maßstäbe für nachhaltiges Bauen."
+      "paragraph3": "Heute beschäftigen wir über 8 qualifizierte Mitarbeiter an drei Standorten und haben ein Bauvolumen von über 10 Millionen Euro realisiert. Unsere Projekte prägen das Stadtbild deutscher Metropolen und setzen Maßstäbe für nachhaltiges Bauen."
     },
     "timeline": {
-      "founded": "Gründung von GRAVON Projektbau in Frankfurt",
-      "expansion": "Expansion nach München und Hamburg",
+      "founded": "Gründung von GRAVON Projektbau in Osnabrück",
+      "expansion": "Expansion nach Frankfurt und Wiesbaden",
       "digital": "Digitalisierung und BIM-Einführung",
-      "today": "Über 200 Projekte und 500 Mio. € Bauvolumen"
+      "today": "Über 27 Projekte und 10 Mio. € Bauvolumen"
     },
     "team": {
       "title": "Unser Führungsteam",
       "subtitle": "Erfahrene Experten mit Leidenschaft für exzellente Bauprojekte",
-      "ceo": {
+      "leonardo": {
         "position": "Geschäftsführer",
-        "description": "Bauingenieur mit über 30 Jahren Branchenerfahrung und Spezialist für komplexe Großprojekte."
+        "description": "Bauingenieur mit über 10 Jahren Branchenerfahrung und Spezialist für komplexe Großprojekte."
       },
       "architect": {
         "position": "Leitende Architektin",
@@ -332,7 +332,7 @@
       "vbi": "Mitgliedschaft im Verband Beratender Ingenieure"
     },
     "cta": {
-      "title": "Werden Sie unser nächster Erfolg",
+      "title": "Werden Sie unser nächster Erfolg.",
       "subtitle": "Lassen Sie uns gemeinsam Ihr Projekt verwirklichen. Mit über 25 Jahren Erfahrung sind wir Ihr idealer Partner.",
       "contact": "Jetzt Kontakt aufnehmen",
       "projects": "Unsere Projekte ansehen"

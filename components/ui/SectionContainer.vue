@@ -86,7 +86,7 @@ const props = defineProps({
     type: String,
     default: 'white',
     validator: (value) => [
-      'white', 'gray', 'dark', 'gradient', 'transparent', 'pattern'
+      'white', 'gray', 'dark', 'gradient', 'transparent', 'pattern', 'slate', 'gradientYellow'
     ].includes(value)
   },
 
@@ -130,7 +130,9 @@ const backgroundClass = computed(() => {
     white: 'bg-white',
     gray: 'bg-gray-50',
     dark: 'bg-gray-900 text-white',
+    slate: 'bg-slate-900 text-white',
     gradient: 'bg-gradient-to-br from-gray-50 to-white',
+    gradientYellow: 'bg-gradient-to-r from-yellow-500 to-yellow-600 text-black',
     transparent: 'bg-transparent',
     pattern: 'bg-white bg-opacity-50 bg-pattern'
   }

@@ -1,88 +1,24 @@
 <template>
   <div>
     <!-- Page Hero Section -->
-    <section class="page-hero-section relative flex items-center justify-center overflow-hidden min-h-[60vh] py-16">
-      <!-- Background Image -->
-      <div class="absolute inset-0 z-0">
-        <NuxtImg
-            src="/images/frankfurt-skyline.jpg"
-            alt="Unsere Leistungen - GRAVON Projektbau"
-            class="w-full h-full object-cover"
-            loading="lazy"
-            width="1920"
-            height="1080"
-        />
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/60"></div>
-      </div>
-
-      <!-- Breadcrumbs -->
-      <div class="absolute top-8 left-0 right-0 z-20">
-        <div class="container mx-auto px-4 lg:px-8">
-          <nav class="breadcrumbs gsap-animate" aria-label="Breadcrumb">
-            <ol class="flex items-center space-x-2 text-sm text-white/80">
-              <li>
-                <NuxtLink :to="localePath('/')" class="hover:text-white transition-colors">
-                  {{ $t('nav.home') }}
-                </NuxtLink>
-              </li>
-              <li class="flex items-center">
-                <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span class="text-white">{{ $t('services.title') }}</span>
-              </li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-
-      <!-- Main Content -->
-      <div class="relative z-10 container mx-auto px-4 lg:px-8 text-white">
-        <div class="max-w-5xl mx-auto text-center">
-          <!-- Title -->
-          <h1 class="page-hero-title text-3xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
-            <span v-for="(word, index) in $t('services.title').split(' ')"
-                  :key="index"
-                  class="page-hero-title-word inline-block"
-                  :style="{ animationDelay: `${index * 0.1}s` }">
-              {{ word }}&nbsp;
-            </span>
-          </h1>
-
-          <!-- Subtitle -->
-          <p class="page-hero-subtitle text-lg lg:text-xl max-w-3xl mx-auto font-light mb-8">
-            {{ $t('services.subtitle') }}
-          </p>
-
-          <!-- CTA Button -->
-          <div class="page-hero-cta flex justify-center">
-            <NuxtLink
-                :to="localePath('/contact')"
-                class="px-8 py-4 font-semibold transition-all duration-300 uppercase tracking-wide bg-yellow-500 text-black hover:bg-yellow-400 hover:scale-105 rounded-lg inline-flex items-center"
-            >
-              {{ $t('services.requestQuote') }}
-              <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <PageHero
+        :title="$t('services.title')"
+        :subtitle="$t('services.subtitle')"
+        background-image="/images/frankfurt-skyline.jpg"
+        height="medium"
+        :show-breadcrumbs="true"
+        :buttons="[
+            {
+              text: $t('services.requestQuote'),
+              to: '/contact',
+              variant: 'primary',
+              icon: true,
+              iconPath: 'M17 8l4 4m0 0l-4 4m4-4H3',
+            }
+        ]"
+    />
     <!-- Service Overview -->
     <section class="section-container py-20 bg-white">
-      <!-- Section Header -->
-      <div class="container mx-auto px-4 lg:px-8 text-center max-w-4xl mx-auto mb-16">
-        <h2 class="text-4xl lg:text-5xl font-bold mb-6 gsap-animate">
-          {{ $t('services.title') }}
-        </h2>
-        <p class="text-xl text-gray-600 max-w-4xl mx-auto gsap-animate">
-          {{ $t('services.subtitle') }}
-        </p>
-      </div>
-
       <!-- Service Cards Grid -->
       <div class="container mx-auto px-4 lg:px-8">
         <div class="grid md:grid-cols-3 gap-8">

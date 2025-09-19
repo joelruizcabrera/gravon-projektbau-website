@@ -87,10 +87,10 @@
 const { $gsap, $ScrollTrigger, $animationUtils } = useNuxtApp()
 
 const stats = [
-  { value: '200', label: 'hero.stats.projects' },
-  { value: '25', label: 'hero.stats.years' },
-  { value: '50', label: 'hero.stats.employees' },
-  { value: '500', label: 'hero.stats.volume' }
+  { value: '27', label: 'hero.stats.projects' },
+  { value: '10', label: 'hero.stats.years' },
+  { value: '8', label: 'hero.stats.employees' },
+  { value: '10', label: 'hero.stats.volume' }
 ]
 
 const scrollToContact = () => {

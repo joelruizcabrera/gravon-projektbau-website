@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <PageHero
         :title="$t('about.title')"
-        :subtitle="$t('about.subtitle')"
+        :subtitle="$t('about.heroSubtitle')"
         background-image="/images/frankfurt-skyline.jpg"
         height="medium"
         :show-breadcrumbs="true"
@@ -47,38 +47,11 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-          <div
+          <MemberCard
               v-for="member in teamMembers"
               :key="member.name"
-              class="team-member text-center group"
-          >
-            <div class="relative mb-6">
-              <img
-                  :src="member.image"
-                  :alt="member.name"
-                  class="w-32 h-32 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-              />
-              <div class="absolute inset-0 w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-yellow-500/20 to-blue-500/20 group-hover:from-yellow-500/30 group-hover:to-blue-500/30 transition-all duration-300"></div>
-            </div>
-
-            <h3 class="text-xl font-bold text-gray-900 mb-2">{{ member.name }}</h3>
-            <p class="text-yellow-600 font-medium mb-4">{{ $t(member.position) }}</p>
-            <p class="text-gray-600 text-sm">{{ $t(member.description) }}</p>
-
-            <!-- Social Links -->
-            <div class="flex justify-center space-x-4 mt-6">
-              <a href="#" class="w-10 h-10 bg-gray-200 hover:bg-yellow-500 rounded-full flex items-center justify-center transition-colors duration-300">
-                <svg class="w-5 h-5 text-gray-600 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286z"/>
-                </svg>
-              </a>
-              <a href="#" class="w-10 h-10 bg-gray-200 hover:bg-yellow-500 rounded-full flex items-center justify-center transition-colors duration-300">
-                <svg class="w-5 h-5 text-gray-600 hover:text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
+              :member="member"
+          ></MemberCard>
         </div>
       </div>
     </section>
@@ -109,77 +82,20 @@
       </div>
     </section>
 
-    <!-- Statistics Section -->
-    <section class="section-padding bg-slate-900 text-white">
-      <div class="container mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold mb-6">{{ $t('about.stats.title') }}</h2>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto">{{ $t('about.stats.subtitle') }}</p>
-        </div>
+    <Statistics></Statistics>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div
-              v-for="stat in statistics"
-              :key="stat.label"
-              class="stat-item text-center p-6"
-          >
-            <div class="text-5xl font-bold text-yellow-500 mb-4 counter" :data-target="stat.value">
-              0
-            </div>
-            <div class="text-gray-300 text-lg">{{ $t(stat.label) }}</div>
-            <div class="text-gray-400 text-sm mt-2">{{ $t(stat.description) }}</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!--<Certifications></Certifications>-->
 
-    <!-- Certifications -->
-    <section class="section-padding bg-gray-50">
-      <div class="container mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-900 mb-6">{{ $t('about.certifications.title') }}</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">{{ $t('about.certifications.subtitle') }}</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div
-              v-for="cert in certifications"
-              :key="cert.name"
-              class="certification-card bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
-          >
-            <img
-                :src="cert.logo"
-                :alt="cert.name"
-                class="h-16 mx-auto mb-4 object-contain"
-            />
-            <h3 class="font-semibold text-gray-900 mb-2">{{ cert.name }}</h3>
-            <p class="text-gray-600 text-sm">{{ $t(cert.description) }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section-padding bg-gradient-to-r from-yellow-500 to-yellow-600 text-black">
-      <div class="container mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-6">{{ $t('about.cta.title') }}</h2>
-        <p class="text-xl mb-12 max-w-3xl mx-auto opacity-90">{{ $t('about.cta.subtitle') }}</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <NuxtLink :to="localePath('/contact')" class="bg-black text-white px-8 py-4 rounded-none font-semibold hover:bg-gray-900 transition-colors duration-300 uppercase tracking-wide">
-            {{ $t('about.cta.contact') }}
-          </NuxtLink>
-          <NuxtLink :to="localePath('/projects')" class="bg-transparent border-2 border-black text-black px-8 py-4 rounded-none font-semibold hover:bg-black hover:text-white transition-all duration-300 uppercase tracking-wide">
-            {{ $t('about.cta.projects') }}
-          </NuxtLink>
-        </div>
-      </div>
-    </section>
+    <CTABanner></CTABanner>
   </div>
 </template>
 
 <script setup>
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import MemberCard from "~/components/ui/MemberCard.vue";
+import Statistics from "~/components/Statistics.vue";
+import Certifications from "~/components/Certifications.vue";
+import CTABanner from "~/components/CTABanner.vue";
 
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -196,22 +112,12 @@ useHead({
 
 const teamMembers = [
   {
-    name: 'Dr. Michael Gravon',
-    position: 'about.team.ceo.position',
-    description: 'about.team.ceo.description',
-    image: '/images/frankfurt-skyline.jpg'
-  },
-  {
-    name: 'Sarah Weber',
-    position: 'about.team.architect.position',
-    description: 'about.team.architect.description',
-    image: '/images/frankfurt-skyline.jpg'
-  },
-  {
-    name: 'Thomas Klein',
-    position: 'about.team.pm.position',
-    description: 'about.team.pm.description',
-    image: '/images/frankfurt-skyline.jpg'
+    name: 'Leonardo Swadzba',
+    position: 'about.team.leonardo.position',
+    description: 'about.team.leonardo.description',
+    image: '/images/frankfurt-skyline.jpg',
+    email: 'swadzba@gravon-projektbau.de',
+    linkedin: 'https://de.linkedin.com/in/leonardo-swadzba-6687151a6'
   }
 ]
 
@@ -238,69 +144,7 @@ const companyValues = [
   }
 ]
 
-const statistics = [
-  { value: '200', label: 'about.stats.projects', description: 'about.stats.projectsDesc' },
-  { value: '25', label: 'about.stats.years', description: 'about.stats.yearsDesc' },
-  { value: '50', label: 'about.stats.employees', description: 'about.stats.employeesDesc' },
-  { value: '500', label: 'about.stats.volume', description: 'about.stats.volumeDesc' }
-]
-
-const certifications = [
-  {
-    name: 'ISO 9001',
-    description: 'about.certifications.iso9001',
-    logo: '/images/certs/iso-9001.png'
-  },
-  {
-    name: 'ISO 14001',
-    description: 'about.certifications.iso14001',
-    logo: '/images/certs/iso-14001.png'
-  },
-  {
-    name: 'DGNB',
-    description: 'about.certifications.dgnb',
-    logo: '/images/certs/dgnb.png'
-  },
-  {
-    name: 'VBI',
-    description: 'about.certifications.vbi',
-    logo: '/images/certs/vbi.png'
-  }
-]
-
-
-const animateCounters = () => {
-  const counters = document.querySelectorAll('.counter')
-  counters.forEach(counter => {
-    const target = parseInt(counter.dataset.target)
-    gsap.to(counter, {
-      duration: 2,
-      innerText: target,
-      roundProps: "innerText",
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: counter,
-        start: "top 90%",
-        toggleActions: "play none none none"
-      }
-    })
-  })
-}
-
 onMounted(() => {
-  // Animate team members
-  gsap.from('.team-member', {
-    scrollTrigger: {
-      trigger: '.team-member',
-      start: 'top 80%'
-    },
-    duration: 1,
-    y: 50,
-    opacity: 0,
-    stagger: 0.2,
-    ease: 'power3.out'
-  })
-
   // Animate values cards
   gsap.from('.value-card', {
     scrollTrigger: {
@@ -313,21 +157,5 @@ onMounted(() => {
     stagger: 0.15,
     ease: 'back.out(1.7)'
   })
-
-  // Animate stats
-  gsap.from('.stat-item', {
-    scrollTrigger: {
-      trigger: '.stat-item',
-      start: 'top 85%'
-    },
-    duration: 1,
-    y: 30,
-    opacity: 0,
-    stagger: 0.1,
-    ease: 'power3.out'
-  })
-
-  // Initialize counter animation
-  animateCounters()
 })
 </script>
