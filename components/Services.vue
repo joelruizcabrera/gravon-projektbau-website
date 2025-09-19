@@ -76,7 +76,7 @@
           class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm"
           @click="closeServiceModal"
       >
-        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-screen overflow-y-auto" @click.stop>
+        <div class="modal-content bg-white rounded-2xl max-w-4xl w-full max-h-screen overflow-y-auto" @click.stop>
           <div class="p-8">
             <!-- Modal Header -->
             <div class="flex items-center justify-between mb-6">
