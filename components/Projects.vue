@@ -103,29 +103,6 @@
       </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="section-padding bg-slate-900 text-white">
-      <div class="container mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold mb-6">{{ $t('projects.stats.title') }}</h2>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto">{{ $t('projects.stats.subtitle') }}</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div
-              v-for="stat in projectStats"
-              :key="stat.label"
-              class="text-center"
-          >
-            <div class="text-4xl font-bold text-yellow-500 mb-2 counter" :data-target="stat.value">
-              0
-            </div>
-            <div class="text-gray-300">{{ $t(stat.label) }}</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Project Modal -->
     <Teleport to="body">
       <div
@@ -412,14 +389,6 @@ const allProjects = [
       'projects.project6.challenge3'
     ]
   }
-]
-
-// Project statistics
-const projectStats = [
-  { value: '200', label: 'projects.stats.completed' },
-  { value: '500', label: 'projects.stats.volume' },
-  { value: '25', label: 'projects.stats.years' },
-  { value: '95', label: 'projects.stats.satisfaction' }
 ]
 
 // Computed properties

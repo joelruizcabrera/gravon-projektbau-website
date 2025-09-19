@@ -9,6 +9,9 @@
     <!-- Projects Section -->
     <Projects />
 
+    <!-- Stats Section -->
+    <Statistics></Statistics>
+
     <!-- About Section -->
     <About />
 
@@ -18,6 +21,8 @@
 </template>
 
 <script setup>
+import Statistics from "~/components/Statistics.vue";
+
 const { t } = useI18n()
 
 // Access GSAP utilities safely

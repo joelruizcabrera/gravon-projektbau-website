@@ -136,7 +136,7 @@
           class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm"
           @click="closeProjectModal"
       >
-        <div class="bg-white rounded-2xl max-w-6xl w-full max-h-screen overflow-y-auto" @click.stop>
+        <div class="modal-content bg-white rounded-2xl max-w-6xl w-full max-h-screen overflow-y-auto" @click.stop>
           <!-- Modal Header -->
           <div class="relative">
             <img

@@ -466,6 +466,7 @@
 }
 
 /* Enhanced Custom Scrollbar */
+/*
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -485,6 +486,7 @@
 ::-webkit-scrollbar-thumb:hover {
     @apply bg-yellow-600;
 }
+ */
 
 /* Enhanced Animation Keyframes */
 @keyframes loading {
